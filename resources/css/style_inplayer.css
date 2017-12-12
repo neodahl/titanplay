@@ -1,0 +1,2232 @@
+@charset "utf-8";
+
+
+/****************************************/
+/*  Name: Titan Play PC ver.
+/*  Version: 1.01 (171130)
+/*  Author: TitanPlatform
+/*  Description : In Player Style
+/****************************************/
+
+/*
+media query
+@media all and (min-width: 1005px) and (max-width: 1200px) {}
+@media all and (max-width: 1004px) {}
+*/
+
+
+/*Layout*/
+body {
+	background-color: #151515;
+}
+.inplayer_wrapper {
+	position: relative;
+	width: 100%;
+	min-width: 1200px;
+}
+.inplayer_main_container {
+	width: 1156px;
+	margin: 0 auto;
+	padding-top: 72px; /*header 영역 고려한 높이*/
+	padding-bottom: 100px;
+}
+@media all and (min-width: 1005px) and (max-width: 1200px) {
+	.inplayer_wrapper {
+		min-width: 1005px;
+	}
+	.inplayer_main_container {
+		width: 960px;
+	}
+}
+@media all and (max-width: 1004px) {
+	.inplayer_main_container {
+		width: 764px;
+	}
+}
+
+/*common styles*/
+.txt_desc01 li {
+	font-size: 13px;
+	color: #777;
+}
+.txt_desc01 li:before {
+	content: '*';
+	margin-right: 4px;
+}
+
+
+
+/*Round Spinner*/
+.spinner_wrapper {
+	text-align: center;
+}
+.loading_circle {
+	display: inline-block;
+	width: 6em;
+	height: 6em;
+	border-radius: 50%;
+	border: 4px solid transparent;
+	border-color: #ececec #ececec rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5);
+	animation: spinner_circuration 600ms linear infinite;
+}
+@keyframes spinner_circuration {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+
+/*Go to Top button*/
+.goto_top {
+	position: fixed;
+	z-index: 10;
+	right: -80px;
+	bottom: 22px;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: #3f3f3f url("../images/gateway/inplayer/btn_top.png") center center no-repeat;
+	text-indent: -9999px;
+	opacity: 0;
+	transition: all 0.3s;
+}
+.goto_top.on {
+	right: 22px;
+	opacity: 1;
+}
+
+
+/*스크롤바 감추기*/
+.hide_scrollbar {
+	width: 100vw;
+	height: 100vh;
+}
+.hide_scrollbar.inplayer_wrapper {
+	min-width: auto;
+}
+@media all and (max-width: 1200px) {
+	.hide_scrollbar.inplayer_wrapper {
+		min-width: auto;
+	}
+}
+/*custom scrollbar revisions*/
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	background-color: rgba(119, 119, 119, 0.5);
+	filter: "alpha(opacity=50)"; -ms-filter: "alpha(opacity=50)";
+}
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+	background-color: rgba(119, 119, 119, 0.8);
+	filter: "alpha(opacity=80)"; -ms-filter: "alpha(opacity=80)";
+}
+
+
+/*Header*/
+.inplayer_header_wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	transition: top 0.4s ease;
+	/*background-color: #151515; 여기에 bg적용하면 스크롤이 가려진다.*/
+}
+.inplayer_header_wrapper.gnb_hide {
+	top: -48px; /*헤더 높이값*/
+}
+.inplayer_header_container {
+	position: relative;
+	width: 1156px;
+	height: 48px;
+	margin: 0 auto;
+	background-color: #151515;
+}
+@media all and (min-width: 1005px) and (max-width: 1200px) {
+	.inplayer_header_container {
+		width: 960px;
+	}
+}
+@media all and (max-width: 1004px) {
+	.inplayer_header_container {
+		width: 764px;
+	}
+}
+.inplayer_header_container .left_list {
+	float: left;
+	margin-top: 12px;
+}
+.inplayer_header_container .left_list li {
+	float: left;
+	margin-right: 40px;
+}
+.inplayer_header_container .left_list li:last-of-type {
+	margin-right: 0;
+}
+.inplayer_header_container .left_list li a {
+	color: #8A8A8A;
+	font-size: 16px;
+	transition: all 0.3s;
+	/*font-family: "Roboto-regular";*/
+}
+.inplayer_header_container .left_list li.on a,
+.inplayer_header_container .left_list li a:hover {
+	color: #fff;
+}
+.inplayer_header_container .rigt_item_wrapper {
+	float: right;
+	margin-top: 8px;
+}
+
+.inplayer_header_container .rigt_item_wrapper ul li {
+	/*position: relative; 불필요 판단 주석처리*/
+	float: left;
+	margin-right: 20px;
+	font-size: 0;
+}
+.inplayer_header_container .rigt_item_wrapper ul li:last-of-type {
+	margin-right: 0;
+}
+.inplayer_header_container .rigt_item_wrapper ul li button {
+	width: 18px;
+	height: 30px;
+	text-indent: -9999px;
+	opacity: 0.5;
+	transition: all 0.3s;
+}
+.inplayer_header_container .rigt_item_wrapper ul li.on button,
+.inplayer_header_container .rigt_item_wrapper ul li button:hover {
+	opacity: 1;
+}
+.inplayer_header_container .rigt_item_wrapper .btn_search {
+	background: url("../images/gateway/inplayer/icon_search_hover.png") center center no-repeat;
+	background-size: contain;
+}
+.inplayer_header_container .rigt_item_wrapper .btn_upload {
+	background: url("../images/gateway/inplayer/icon_uproad_hover.png") center center no-repeat;
+	background-size: contain;
+}
+.inplayer_header_container .rigt_item_wrapper .btn_folder {
+	background: url("../images/gateway/inplayer/icon_folder_hover.png") center center no-repeat;
+	background-size: contain;
+}
+.inplayer_header_container .rigt_item_wrapper .btn_setting {
+	background: url("../images/gateway/inplayer/icon_setting_hover.png") center center no-repeat;
+	background-size: contain;
+}
+.inplayer_header_container .rigt_item_wrapper .btn_info {
+	background: url("../images/gateway/inplayer/icon_info_hover.png") center center no-repeat;
+	background-size: contain;
+}
+
+/*Header - Search*/
+.input_search {
+	width: 18px;
+	height: 30px;
+	border: none;
+	background: url("../images/gateway/inplayer/icon_search_hover.png") left center no-repeat;
+	background-size: 18px 18px;
+	opacity: 0.5;
+	transition: all 0.3s;
+	cursor: pointer;
+	text-indent: -9999px;
+}
+.input_search:hover {
+	opacity: 1;
+}
+li.on .search_box {
+	border: 1px solid #ddd;
+	height: 30px;
+	margin-top: -1px;
+}
+li.on .search_box .input_search {
+	opacity: 1;
+	text-indent: 0;
+	cursor: auto;
+	width: 220px;
+	background-position: 10px center;
+	background-color: transparent;
+	color: #fff;
+	padding-left: 38px;
+	outline: none;
+	font-size: 13px;
+}
+.search_box .btn_del_txt {
+	display: none;
+	text-indent: -9999px;
+	width: 30px !important;
+	height: 30px !important;
+	background: url("../images/gateway/inplayer/btn-delete.png") center center no-repeat;
+	vertical-align: top;
+	outline: none;
+}
+li.on .search_box .btn_del_txt {
+	display: inline-block;
+}
+
+
+
+
+/*Header - User area*/
+.inplayer_header_container .rigt_item_wrapper .btn_user {
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	overflow: hidden;
+	cursor: pointer;
+}
+.inplayer_header_container .rigt_item_wrapper .btn_user img {
+	display: block;
+	width:100%;
+	min-height: 30px;
+}
+.user_pop { /*사용자 메뉴 레이어 팝업*/
+	position: absolute;
+	top: -60px;
+	right: 0;
+	padding: 20px;
+	padding-right: 30px;
+	background-color: #444;
+	opacity: 0;
+	z-index: -1;
+	transition: all 0.4s;
+}
+.user_pop.on {
+	top: 48px;
+	opacity: 1;
+}
+.user_pop ul li {
+	float: none !important;
+	margin-right: 0 !important;
+	display: block !important;
+	margin-bottom: 7px;
+}
+.user_pop ul li:last-child {
+	margin-bottom: 0;
+}
+.user_pop ul li a {
+	color: #fff;
+	font-size: 13px;
+}
+.user_pop ul li a:hover {
+	text-decoration: underline;
+}
+
+
+/*Header - Login button*/
+.inplayer_header_container .rigt_item_wrapper .btn_sign_in {
+	width: 64px;
+	height: 30px;
+	margin-bottom: 0;
+	background-color: #c9338b;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 13px;
+	opacity: 1;
+	text-indent: 0;
+}
+
+
+
+/*slick-slider customizing*/
+.slider_basic_wrap {
+	/*slickslider 최초 로드시 아이템들의 정렬이 풀리는 문제가 있어 추가!*/
+	white-space: nowrap;
+	font-size: 0;
+}
+.slider_basic_wrap div.slide_item {
+	/*slickslider 최초 로드시 아이템들의 정렬이 풀리는 문제가 있어 추가!*/
+	display: inline-block;
+	height: auto;
+}
+.slick-slider .slick-prev,
+.slick-slider .slick-next {
+	transform: translate(0, -0); /*slick-theme.css 상쇄*/
+	-ms-transform: translate(0, -0);
+	-webkit-transform: translate(0, -0);
+	opacity: 0;
+	top: 82px;
+	width: 40px;
+	height: 60px;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: all 0.3s;
+}
+.slick-slider .slick-prev {
+	left: 0;
+	z-index: 1;
+}
+.slick-slider .slick-next {
+	right: 0;
+}
+.slick-slider:hover .slick-prev,
+.slick-slider:hover .slick-next {
+	opacity: 1;
+}
+.slick-prev:before,
+.slick-next:before {
+	content: '' !important;
+	display: inline-block;
+	width: 14px;
+	height: 26px;
+	opacity: 0.4;
+	transition: all 0.3s;
+}
+.slick-prev:before {
+	background: url("../images/gateway/btn_l_arrow_on.png") center center no-repeat;
+	background-size: contain;
+}
+.slick-next:before {
+	background: url("../images/gateway/btn_r_arrow_on.png") center center no-repeat;
+	background-size: contain;
+}
+
+.ch_list_container .slick-slider .slick-prev,
+.ch_list_container .slick-slider .slick-next {
+	/*슬라이더 컨테이너 보다 더 상위의 클래스를 이용해야 수정 가능하다.*/
+	top: 19px;
+}
+.follow_list .slick-slider .slick-prev,
+.follow_list .slick-slider .slick-next {
+	top: 42px;
+}
+.wbt_list_container .slick-slider .slick-prev,
+.wbt_list_container .slick-slider .slick-next {
+	top: 58px;
+}
+
+
+
+/*슬라이더 아이템 간격*/
+.slider_basic_wrap .basic_video_item,
+.slider_basic_wrap .basic_webtoon_item { /*슬라이더 동영상 아이템 & 웹툰*/
+	margin-right: 20px;
+}
+
+.slider_basic_wrap .basic_movie_item { /*슬라이더 영화 아이템*/
+	margin-right: 24px;
+}
+@media all and (min-width: 1005px) and (max-width: 1200px) {
+	.slider_basic_wrap .basic_movie_item {
+		margin-right: calc(96px/5);
+	}
+}
+@media all and (max-width: 1004px) {
+	.slider_basic_wrap .basic_movie_item {
+		margin-right: 16px;
+	}
+}
+
+.slider_basic_wrap .basic_ch_item { /*슬라이더 채널 아이템*/
+	margin-right: 24px;
+}
+@media all and (min-width: 1005px) and (max-width: 1200px) {
+	.slider_basic_wrap .basic_ch_item {
+		margin-right: calc(96px/5);
+	}
+}
+@media all and (max-width: 1004px) {
+	.slider_basic_wrap .basic_ch_item {
+		margin-right: 16px;
+	}
+}
+
+
+
+/*유료의 경우 티캐시 아이콘 - 사용처: 동영상, 웹툰에피소드*/
+.ico_Tcash:before {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+	background: url("../images/gateway/inplayer/icon_tcash_m.png") center center no-repeat;
+	background-size: contain;
+	vertical-align: -3px;
+}
+
+
+
+
+
+/*Video Item - Basic*/
+.basic_video_item {
+	position: relative;
+	display: inline-block;
+	width: 176px;
+}
+.basic_video_item .video_thumbnail_area {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 98px;
+	margin-bottom: 10px;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+.basic_video_item .video_thumbnail_area:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5) url("../images/gateway/inplayer/btn-thum-over.png") center center no-repeat;
+	opacity: 0;
+	transition: opacity 0.3s;
+	z-index: 5;
+}
+.basic_video_item.type_document .video_thumbnail_area:before {
+	background: rgba(0, 0, 0, 0.5) url("../images/gateway/inplayer/doc_thumb_over.png") center center no-repeat;
+}
+.basic_video_item .video_thumbnail_area:hover:before {
+	opacity: 1;
+}
+/*비공개 및 삭제, 만료 처리된 콘텐츠*/
+.basic_video_item.Privated .video_thumbnail_area:before,
+.basic_video_item.Deleted .video_thumbnail_area:before,
+.basic_video_item.Expired .video_thumbnail_area:before {
+	line-height: 98px;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.7);
+	color: #fff;
+	opacity: 1;
+	cursor: default;
+	transition: background 0.3s;
+}
+.basic_video_item.Privated .video_thumbnail_area:hover:before,
+.basic_video_item.Deleted .video_thumbnail_area:hover:before,
+.basic_video_item.Expired .video_thumbnail_area:hover:before {
+	background: rgba(0, 0, 0, 0.85);
+}
+.basic_video_item.Privated .video_thumbnail_area:before {
+	content: '';
+	display: block;
+	background: rgba(0, 0, 0, 0.7) url("../images/gateway/inplayer/icon_privated.png") center center no-repeat;
+}
+.basic_video_item.Privated .video_thumbnail_area:hover:before {
+	background: rgba(0, 0, 0, 0.85) url("../images/gateway/inplayer/icon_privated.png") center center no-repeat;
+}
+.basic_video_item.Deleted .video_thumbnail_area:before {
+	content: 'Deleted';
+}
+.basic_video_item.Expired .video_thumbnail_area:before {
+	content: '';
+	display: block;
+	background: rgba(0, 0, 0, 0.7) url("../images/gateway/inplayer/icon_secret_expired.png") center center no-repeat;
+}
+.basic_video_item.Expired .video_thumbnail_area:hover:before {
+	background: rgba(0, 0, 0, 0.85) url("../images/gateway/inplayer/icon_secret_expired.png") center center no-repeat;
+}
+
+/*.basic_video_item.Privated .tit_video:hover,
+.basic_video_item.Deleted .tit_video:hover,
+.basic_video_item.Expired .tit_video:hover {
+	cursor: default;
+	text-decoration: none;
+}*/
+
+.basic_video_item .video_thumbnail_area img {
+	/*height: 100%;*/
+	/*max-width: 100%;*/
+	display: inline-block;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
+}
+.basic_video_item .video_thumbnail_area .playback_time { /*재생시간*/
+	position: absolute;
+	right: 2px;
+	bottom: 2px;
+	padding: 0 3px 1px;
+	line-height: 16px;
+	font-size: 12px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.basic_video_item .video_thumbnail_area .ico_lock { /*비공개된 내 콘텐츠*/
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	text-indent: -9999px;
+	background: url("../images/gateway/inplayer/icon_lock_bg.png") center center no-repeat;
+	z-index: 1;
+}
+.basic_video_item .tit_video {
+	display: inline-block;
+	max-width: 100%;
+	height: 22px; /*정렬 문제로 의심되어 추가함. 171201*/
+	margin-bottom: 8px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 15px;
+	color: #fff;
+	z-index: 1;
+	cursor: pointer;
+}
+.basic_video_item .tit_video:hover {
+	text-decoration: underline;
+}
+.basic_video_item .video_info {
+	font-size: 13px;
+	color: #999;
+}
+.basic_video_item .video_info .user_nick {
+	display: block;
+	margin-bottom: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.basic_video_item .video_info .hit_count:before {
+	content: '';
+	display: inline-block;
+	width: 7px;
+	height: 9px;
+	margin-right: 2px;
+	background: url("../images/gateway/inplayer/icon-hits.png") center center no-repeat;
+	background-size: contain;
+}
+.basic_video_item .video_info .history_count:before {
+	content: '';
+	display: inline-block;
+	width: 9px;
+	height: 11px;
+	margin-right: 2px;
+	background: url("../images/gateway/inplayer/ico_history_arrow.png") center center no-repeat;
+	background-size: contain;
+}
+.basic_video_item .video_info .upload_date:before {
+	content: '·';
+	margin-right: 1px;
+}
+
+.basic_video_item .btn_edit { /*edit button*/
+	float: right;
+	width: 14px;
+	height: 17px;
+	opacity: 0.5;
+	background: url("../images/gateway/inplayer/btn-mychannel-edit-hover.png") center center no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+	outline: none;
+}
+.basic_video_item .btn_edit:hover,
+.basic_video_item .btn_edit.on {
+	opacity: 1;
+}
+
+.edit_pop { /*edit layer popup*/
+	position: absolute;
+	right: -20px;
+	margin-top: 2px;
+	padding: 20px;
+	padding-right: 24px;
+	background-color: #444;
+	z-index: -1;
+	cursor: default;
+	opacity: 0;
+	transition: all 0.4s;
+}
+.edit_pop.on {
+	right: 0;
+	opacity: 1;
+	z-index: 10;
+}
+.edit_pop button,
+.edit_pop a {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 13px;
+	color: #fff;
+}
+.edit_pop button:hover,
+.edit_pop a:hover {
+	text-decoration: underline;
+}
+.edit_pop *:last-child {
+	margin-bottom: 0;
+}
+
+.basic_video_item .video_info .btn_delete { /*delete button*/
+	float: right;
+	width: 11px;
+	height: 18px;
+	text-indent: -9999px;
+	background: url("../images/gateway/inplayer/btn-mychannel-delete-hover.png") center center no-repeat;
+	opacity: 0.5;
+}
+.basic_video_item .video_info .btn_delete:hover {
+	opacity: 1;
+}
+
+.basic_video_item .expired_time {
+	display: block;
+	font-size: 12px;
+	color: #c58649;
+	height: 18px;
+}
+.basic_video_item .expired_time:empty:after {
+	display: none;
+}
+.basic_video_item .expired_time:after {
+	content: '';
+	display: inline-block;
+	width: 7px;
+	height: 10px;
+	margin-left: 4px;
+	background: url("../images/gateway/inplayer/ico_expire.png") left center no-repeat;
+	background-size: contain;
+}
+
+
+
+
+
+
+
+/*Webtoon Item - Basic*/
+.basic_webtoon_item {
+	width: 176px;
+	display: inline-block;
+}
+.basic_webtoon_item .webtoon_thumbnail_area {
+	position: relative;
+	display: block;
+	height: 176px;
+	margin-bottom: 10px;
+}
+.basic_webtoon_item .webtoon_thumbnail_area img {
+	width: 100%;
+	height: 100%;
+}
+.basic_webtoon_item .tit_webtoon {
+	display: inline-block;
+	max-width: 100%;
+	color: #fff;
+	font-size: 13px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.basic_webtoon_item .tit_webtoon:hover {
+	text-decoration: underline;
+}
+.basic_webtoon_item .webtoon_info {
+	font-size: 12px;
+	color: #777;
+}
+
+.webtoon_rating,
+.upload_label {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	line-height: 25px;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	border-radius: 50%;
+}
+.upload_label {
+	right: auto;
+	left: 8px;
+	font-size: 11px;
+	background-color: rgba(126, 25, 233, 0.9);
+}
+
+
+
+
+
+/*Movie Channel Item - Basic*/
+.basic_movie_item {
+	position: relative;
+	display: inline-block;
+	width: 144px;
+	overflow: hidden;
+}
+.basic_movie_item .movie_poster_area {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 225px;
+	margin-bottom: 10px;
+	background-color: #222;
+	text-align: center;
+	cursor: pointer;
+}
+@media all and (max-width: 1004px) {
+	.basic_movie_item {
+		width:140px;
+	}
+	.basic_movie_item .movie_poster_area {
+		height: 219px;
+	}
+}
+
+.basic_movie_item .movie_poster_area:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: url("../images/gateway/inplayer/btn-thum-over.png") center center no-repeat;
+	background-size: contain;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+.movie_poster_area:hover:before {
+	z-index: 1;
+	opacity: 1;
+}
+.basic_movie_item .movie_poster_area:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: all 0.3s;
+}
+.movie_poster_area:hover:after {
+	opacity: 1;
+}
+.basic_movie_item .movie_poster_area img {
+	height: 100%;
+	max-width: 100%;
+	display: inline-block;
+}
+.basic_movie_item .movie_poster_area .movie_rating {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	line-height: 25px;
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+	border-radius: 50%;
+}
+.grade_all {
+	font-size: 10px !important;
+	background-color: rgba(8, 140, 5, 0.9);
+}
+.grade_7 {
+	background-color: rgba(35, 172, 209, 0.9);
+}
+.grade_12 {
+	background-color: rgba(74, 144, 226, 0.9);
+}
+.grade_15 {
+	background-color: rgba(245, 166, 35, 0.9);
+}
+.grade_19 {
+	background-color: rgba(208, 2, 27, 0.9);
+}
+.grade_x {
+	background-color: rgba(102, 120, 102, 0.9);
+}
+.basic_movie_item .movie_poster_area .label_playy {
+	position: absolute;
+	left: 8px;
+	bottom: 8px;
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+	background: url("../images/gateway/inplayer/label_playy.png") center center no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+}
+.basic_movie_item .movie_info:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.basic_movie_item .movie_info .tit_movie {
+	display: block;
+	margin-bottom: 3px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 15px;
+	color: #fff;
+	z-index: 1;
+	cursor: pointer;
+}
+.basic_movie_item .movie_info .tit_movie:hover {
+	text-decoration: underline;
+}
+.basic_movie_item .movie_info .release_year {
+	float: left;
+	font-size: 13px;
+	color: #999;
+}
+.basic_movie_item .movie_info .price {
+	float: right;
+	line-height: 19px; /*아이템 정렬시 문제가 됨*/
+	padding-right: 1px;
+	font-size: 15px;
+	font-weight: bold;
+	/*font-family: "Roboto-Regular";*/
+	color: #c9338b;
+}
+.basic_movie_item .movie_info .price:before {
+	content: '';
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	margin-right: 2px;
+	background: url("../images/gateway/inplayer/icon_tcash_m.png") center center no-repeat;
+	background-size: contain;
+	vertical-align: -1px;
+}
+
+
+/*Channel Item - Basic*/
+.basic_ch_item {
+	width: 144px;
+}
+.basic_ch_item .ch_img_box {
+	display: block;
+	margin-bottom: 12px;
+}
+.basic_ch_item .ch_img_box img {
+	width: 100%;
+	height: 144px;
+}
+@media all and (max-width: 1004px) {
+	.basic_ch_item {
+		width: 140px;
+	}
+	.basic_ch_item .ch_img_box img {
+		height: 140px;
+	}
+}
+.basic_ch_item .ch_info:hover span {
+	text-decoration: underline;
+}
+.basic_ch_item .ch_info span {
+	display: block;
+	font-size: 13px;
+	color: #fff;
+}
+.basic_ch_item .ch_info .ch_name {
+	display: inline-block;
+	max-width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.basic_ch_item .btn_follow {
+	width: 100%;
+}
+/*Channel Follow ButtoTab - Basic*/
+.btn_follow {
+	position: relative;
+	min-width: 126px; /*아이템형태가 아닌 경우에 필요*/
+	height: 34px;
+	padding:0 30px 0 12px;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #fff;
+	text-align: left;
+	transition: all 0.3s;
+}
+.btn_follow:after {
+	position: absolute;
+	top: -1px;
+	right: 10px;
+	line-height: 34px;
+	content: '+';
+	font-size: 24px;
+	font-weight: normal;
+}
+.btn_follow:hover {
+	color: #c9338b;
+}
+.btn_follow.on {
+	background-color: #fff;
+	color: #c9338b;
+}
+.btn_follow.on:after {
+	content: '';
+	top: 11px;
+	display: inline-block;
+	width: 13px;
+	height: 10px;
+	background: url("../images/gateway/inplayer/icon-follow-check.png") center center no-repeat;
+}
+
+
+
+/*Tab - Basic*/
+[class^="tab_menu"] {
+	margin-bottom: 40px;
+}
+[class^="tab_menu"] li {
+	display: inline-block;
+	margin-right: 30px;
+	transition: all 0.3s;
+}
+[class^="tab_menu"] li:last-child {
+	margin-right: 0;
+}
+[class^="tab_menu"] li a {
+	font-size: 15px;
+	color: #fff;
+	opacity: 0.5;
+	transition: all 0.3s;
+}
+[class^="tab_menu"] li a:before {
+	content: '';
+	display: inline-block;
+	width: 13px;
+	height: 10px;
+	margin-right: 6px;
+	background: url("../images/gateway/inplayer/icon-check-on.png") center center no-repeat;
+}
+[class^="tab_menu"] li a:hover {
+	opacity: 1;
+}
+[class^="tab_menu"] li.on a {
+	opacity: 1;
+}
+[class^="tab_content"] {
+	display: none;
+	color: #fff;
+}
+[class^="tab_content"].on {
+	display: block;
+}
+
+
+
+/*list container - Basic Style*/
+.list_container {
+	margin-bottom: 50px;
+}
+.list_container:last-of-type {
+	margin-bottom: 0;
+}
+.list_container .list_top_area {
+	margin-bottom: 16px;
+}
+.list_container .list_top_area h2 {
+	display: inline;
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
+	cursor: default;
+}
+.list_container .list_top_area h2 .sub_tit {
+	font-size: 14px;
+	color: #999;
+	margin-left: 14px;
+}
+.list_container .list_top_area.type_more_list {
+	margin-bottom: 40px;
+}
+.list_container .list_top_area.type_more_list h2 {
+	font-size: 28px;
+}
+.list_container .list_top_area.type_more_list h2 .sub_tit {
+	font-size: 15px;
+	margin-left: 16px;
+	vertical-align: middle;
+}
+.list_container .list_top_area .see_more {
+	float: right;
+	line-height: 30px;
+	font-size: 16px;
+	color: #fff;
+	transition: all 0.3s;
+}
+.list_container .list_top_area .see_more:after {
+	content: '';
+	display: inline-block;
+	width: 6px;
+	height: 13px;
+	margin-left: 8px;
+	background: url("../images/gateway/inplayer/icon-arrow.png") center center no-repeat;
+	vertical-align: top;
+	margin-top: 10px;
+}
+.list_container .list_top_area .see_more:hover {
+	text-decoration: underline;
+}
+.btn_back { /*범용으로 사용함*/
+	display: inline-block;
+	width: 18px;
+	height: 20px;
+	margin-right: 5px;
+	background: url("../images/gateway/inplayer/btn-back.png") left center no-repeat;
+	text-indent: -9999px;
+}
+
+
+/*list container - Channel Basic*/
+.ch_list_container {
+	margin-bottom: 60px;
+}
+.ch_list_container .ch_top_info {
+	margin-bottom: 22px;
+	/*font-family: "Roboto-Regular";*/
+	font-size: 22px;
+	color: #fff;
+	display: inline-block;
+}
+.ch_list_container .ch_top_info:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.ch_list_container .ch_top_info img {
+	float: left;
+	width : 34px;
+	height: 34px;
+	margin-right: 12px;
+	vertical-align: top;
+	border-radius: 50%;
+}
+.ch_list_container .ch_name:after {
+	content: '';
+	display: inline-block;
+	width: 1px;
+	height: 17px;
+	margin: 0 14px;
+	background-color: #626262;
+}
+.ch_top_info .ch_name,
+.ch_top_info .ch_num {
+	float: left;
+}
+.ch_top_info:hover .ch_name,
+.ch_top_info:hover .ch_num {
+	border-bottom: 1px solid #fff;
+}
+
+
+
+.ch_list_container .btn_follow {
+	float: right;
+}
+.ch_list_container.ch_view { /*채널 상세 리스트 ch_view */
+	margin: 0;
+}
+.ch_view .btn_back {
+	height: 34px;
+	vertical-align: top;
+}
+.ch_view_top_area {
+	height: 34px;
+	margin-bottom: 40px;
+	/*font-family: "Roboto-Regular";*/
+	font-size: 28px;
+	color: #fff;
+}
+.ch_view_top_area img {
+	width : 34px;
+	height: 34px;
+	vertical-align: top;
+	border-radius: 50%;
+	margin-right: 14px;
+}
+.ch_view_top_area .ch_name {
+	line-height: 34px;
+	vertical-align: super;
+	cursor: default;
+}
+.ch_view_top_area .ch_name:after {
+	height: 21px;
+}
+.ch_view_top_area .ch_num {
+	line-height: 34px;
+	vertical-align: top;
+	cursor: default;
+}
+
+/*list container - webtoon Basic*/
+.wbt_list_container {
+	margin-bottom: 60px;
+}
+
+
+
+/*Lists Align Styles - Video*/
+.align_video_list:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.align_video_list .basic_video_item {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 30px;
+}
+.align_video_list .basic_video_item:nth-of-type(6n) {
+	margin-right: 0;
+}
+.align_video_list.row1 .basic_video_item {
+	margin-bottom: 0;
+}
+.align_video_list.row1 .basic_video_item:nth-of-type(n+7) {
+	display: none;
+}
+.align_video_list.row2 .basic_video_item:nth-of-type(n+13) {
+	display: none;
+}
+.align_video_list.row2 .basic_video_item:nth-of-type(n+7) {
+	margin-bottom: 0;
+}
+@media all and (min-width: 1005px) and (max-width: 1200px) {
+	.align_video_list .basic_video_item:nth-of-type(6n) {
+		margin-right: 20px; /*상쇄*/
+	}
+	.align_video_list .basic_video_item:nth-of-type(5n) {
+		margin-right: 0;
+	}
+	.align_video_list.row1 .basic_video_item:nth-of-type(n+6) {
+		display: none;
+	}
+	.align_video_list.row2 .basic_video_item:nth-of-type(n+11) {
+		display: none;
+	}
+	.align_video_list.row2 .basic_video_item:nth-of-type(n+6) {
+		margin-bottom: 0;
+	}
+}
+@media all and (max-width: 1004px) {
+	.align_video_list .basic_video_item:nth-of-type(6n) {
+		margin-right: 20px; /*상쇄*/
+	}
+	.align_video_list .basic_video_item:nth-of-type(4n) {
+		margin-right: 0;
+	}
+	.align_video_list.row1 .basic_video_item:nth-of-type(n+5) {
+		display: none;
+	}
+	.align_video_list.row2 .basic_video_item:nth-of-type(n+9) {
+		display: none;
+	}
+	.align_video_list.row2 .basic_video_item:nth-of-type(n+5) {
+		margin-bottom: 0;
+	}
+}
+
+/*Lists Align Styles - webtoon*/
+.align_webtoon_list:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.align_webtoon_list .basic_webtoon_item {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.align_webtoon_list .basic_webtoon_item:nth-of-type(6n) {
+	margin-right: 0;
+}
+.align_webtoon_list.max30 .basic_webtoon_item:nth-of-type(n+25) {
+	margin-bottom: 0;
+}
+.align_webtoon_list.max30 .basic_webtoon_item:nth-of-type(n+31) {
+	display: none;
+}
+
+@media all and (min-width: 1005px) and (max-width: 1200px) {
+	.align_webtoon_list .basic_webtoon_item:nth-of-type(6n) {
+		margin-right: 20px; /*상쇄*/
+	}
+	.align_webtoon_list .basic_webtoon_item:nth-of-type(5n) {
+		margin-right: 0;
+	}
+	.align_webtoon_list.max30 .basic_webtoon_item:nth-of-type(n+26) {
+		margin-bottom: 0;
+	}
+}
+@media all and (max-width: 1004px) {
+	.align_webtoon_list .basic_webtoon_item:nth-of-type(6n) {
+		margin-right: 20px; /*상쇄*/
+	}
+	.align_webtoon_list .basic_webtoon_item:nth-of-type(4n) {
+		margin-right: 0;
+	}
+	.align_webtoon_list.max30 .basic_webtoon_item:nth-of-type(n+29) {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+
+
+/*Lists Align Styles - Movie*/
+.align_movie_list:after { /*기본: 전체 리스트 보여줌*/
+	content: '';
+	display: block;
+	clear: both;
+}
+.align_movie_list .basic_movie_item {
+	float: left;
+	margin-right: 24px;
+	margin-bottom: 40px;
+}
+.align_movie_list .basic_movie_item:nth-of-type(7n) {
+	margin-right: 0;
+}
+@media all and (min-width: 1005px) and (max-width: 1200px) {
+	.align_movie_list .basic_movie_item {
+		margin-right: calc(96px/5);
+	}
+	.align_movie_list .basic_movie_item:nth-of-type(7n) {
+		margin-right: calc(96px/5); /*상쇄*/
+	}
+	.align_movie_list .basic_movie_item:nth-of-type(6n) {
+		margin-right: 0;
+	}
+}
+@media all and (max-width: 1004px) {
+	.align_movie_list .basic_movie_item {
+		margin-right: 16px;
+	}
+	.align_movie_list .basic_movie_item:nth-of-type(7n) {
+		margin-right: 16px; /*상쇄*/
+	}
+	.align_movie_list .basic_movie_item:nth-of-type(5n) {
+		margin-right: 0;
+	}
+}
+
+/*Lists Align Styles - My Channel list*/
+.align_channel_list:after { /*기본: 전체 리스트*/
+	content: '';
+	display: block;
+	clear: both;
+}
+.align_channel_list .basic_ch_item {
+	float: left;
+	margin-right: 24px;
+	margin-bottom: 40px;
+}
+.align_channel_list .basic_ch_item:nth-of-type(7n) {
+	margin-right: 0;
+}
+@media all and (min-width: 1005px) and (max-width: 1200px) {
+	.align_channel_list .basic_ch_item {
+		margin-right: calc(96px/5);
+	}
+	.align_channel_list .basic_ch_item:nth-of-type(7n) {
+		margin-right: calc(96px/5); /*상쇄*/
+	}
+	.align_channel_list .basic_ch_item:nth-of-type(6n) {
+		margin-right: 0;
+	}
+}
+@media all and (max-width: 1004px) {
+	.align_channel_list .basic_ch_item {
+		margin-right: 16px;
+	}
+	.align_channel_list .basic_ch_item:nth-of-type(7n) {
+		margin-right: 16px; /*상쇄*/
+	}
+	.align_channel_list .basic_ch_item:nth-of-type(5n) {
+		margin-right: 0;
+	}
+}
+
+
+
+/*마이채널 - Main, Secret*/
+.my_ch_top_area {
+	margin-bottom: 50px;
+	/*font-family: "Roboto-Regular";*/
+}
+.my_ch_top_area .ch_title {
+	display: block;
+	font-size: 28px;
+	color: #fff;
+	cursor: default;
+}
+.my_ch_top_area .request,
+.my_ch_top_area .followers,
+.my_ch_top_area .following {
+	margin-right: 10px;
+	font-size: 15px;
+	color: #999;
+	cursor: default;
+}
+.my_ch_top_area .following {
+	margin-right: 5px;
+}
+.my_ch_top_area .request,
+.my_ch_top_area button.followers,
+.my_ch_top_area button.following {
+	cursor: pointer;
+}
+.my_ch_top_area .request span,
+.my_ch_top_area .followers span,
+.my_ch_top_area .following span{
+	font-weight: bold;
+	transition: all 0.2s;
+}
+.my_ch_top_area.type_secret .request:hover span,
+.my_ch_top_area.type_secret .followers:hover span,
+.my_ch_top_area.type_secret .following:hover span {
+	color: #fff;
+}
+.type_secret .ch_title:after,
+.secret_detail_top .ch_title:after {
+	/*시크릿 메인 제목 영역*/
+	content: '';
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	margin-left: 8px;
+	vertical-align: middle;
+	background: url("../images/gateway/inplayer/label_secret.png") center center no-repeat;
+	background-size: contain;
+}
+
+.secret_detail_top {
+	margin-bottom: 45px;
+	font-size: 28px;
+	color: #fff;
+}
+.secret_detail_top .btn_back {
+	vertical-align: 7px;
+}
+.secret_user_info {
+	display: inline-block;
+}
+.secret_user_info img {
+	float: left;
+	width: 60px;
+	height: 60px;
+	margin-right: 16px;
+	border-radius: 50%;
+}
+.secret_user_info .user_nick {
+	display: block;
+	font-size: 15px;
+	color: #777;
+}
+.secret_detail_bottom em {
+	display: block;
+	margin-bottom: 20px;
+	font-size: 15px;
+	color: #fff;
+}
+
+.btn_ch_setting {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	text-indent: -9999px;
+	background: url("../images/gateway/inplayer/btn-mychannel-setting-hover.png") center center no-repeat;
+	margin-top: 0;
+	vertical-align: middle;
+	opacity: 0.5;
+	transition: opacity 0.2s;
+}
+.btn_ch_setting:hover {
+	opacity: 1;
+}
+/*콘텐츠 없을시*/
+.my_ch_no_ctnt {
+	margin: 30px 0 60px;
+	font-size: 14px;
+	color: #777;
+}
+.my_ch_no_ctnt button {
+	color: #4a90e2;
+	vertical-align: baseline;
+}
+
+/*마이채널 - My Videos, Added Videos, Follow Channels*/
+.my_ch_list_title {
+	margin-bottom: 30px;
+}
+.my_ch_list_title em {
+	font-size: 28px;
+	font-weight: bold;
+	color: #fff;
+	cursor: default;
+}
+
+
+
+/*input basis*/
+.input_wrapper { /*우선적으로 채널의 인풋을 기본형으로 한다.*/
+	position: relative;
+	color: #fff;
+}
+.input_wrapper label {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+.input_wrapper input {
+	width: 100%;
+	height: 40px;
+	padding-left: 12px;
+	padding-right: 40px;
+	box-sizing: border-box;
+	font-family: inherit;
+	font-size: 15px;
+	color: #fff;
+	background-color: #2c2c2c;
+	border: none;
+	outline: none;
+}
+.input_wrapper input::placeholder {
+	color: #777;
+}
+.input_wrapper .btn_del_txt {
+	position: absolute;
+	bottom: 10px;
+	right: 16px;
+	text-indent: -9999px;
+	width: 20px;
+	height: 20px;
+	background: url("../images/gateway/inplayer/btn-delete.png") center center no-repeat;
+}
+
+.input_wrapper.type_account label button {
+	margin-left: 10px;
+	font-size: 13px;
+	color: #d0021b;
+}
+.input_wrapper.type_account label button:hover {
+	text-decoration: underline;
+}
+.input_wrapper.type_account .under_right_area { /*마이프로필 내 계정 영역*/
+	margin-top: 10px;
+	text-align: right;
+}
+.input_wrapper.type_account .under_right_area button {
+	width: 146px;
+	height: 40px;
+	border-radius: 3px;
+	background-color: #3c3c3c;
+	color: #fff;
+}
+
+
+/*Text - Error*/
+.txt_error {
+	display: none;
+	position: relative;
+	margin-top: 5px;
+	padding-left: 10px;
+	text-align: left;
+	font-size: 13px;
+	color: #ff0002;
+}
+.txt_error:before {
+	content: '*';
+	position: absolute;
+	top: 2px;
+	left: 0;
+}
+.txt_error.on {
+	display: block;
+}
+
+/*Text - permission*/
+.txt_permit {
+	display: none;
+	position: relative;
+	margin-top: 5px;
+	padding-left: 10px;
+	text-align: left;
+	font-size: 13px;
+	color: #037D02;
+}
+.txt_permit:before {
+	content: '*';
+	position: absolute;
+	top: 2px;
+	left: 0;
+}
+.txt_permit.on {
+	display: block;
+}
+
+
+/*Text - Basic*/
+.txt_basic {
+	display: none;
+	margin-top: 5px;
+	text-align: left;
+	font-size: 13px;
+	color: #777;
+}
+.txt_basic.on {
+	display: block;
+}
+
+/*메세지 영역 확보 - Basic*/
+.static_mssg_box {
+	height:20px;
+	margin-top:5px;
+}
+
+
+
+/*Textarea - Basic*/
+.textarea_wrapper { /*우선적으로 채널에 사용된 것을 기본형으로 한다.*/
+	position: relative;
+	color: #fff;
+}
+.textarea_wrapper label {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+.textarea_wrapper .bg_wrapper {
+	width: 100%;
+	height: 130px;
+	padding-top: 12px;
+	padding-left: 12px;
+	padding-right: 40px;
+	background-color: #2c2c2c;
+	box-sizing: border-box;
+}
+.textarea_wrapper .view_panel {
+	position: absolute;
+	width: 86%;
+	height: 110px;
+	overflow: hidden;
+}
+.textarea_wrapper textarea {
+	width: 318px;
+	height: 100%;
+	font-size: 15px;
+	font-family: inherit;
+	color: #fff;
+	background-color: transparent;
+	border: none;
+	resize: none;
+	outline: none;
+}
+.textarea_wrapper .btn_del_txt {
+	position: absolute;
+	bottom: 87px;
+	right: 16px;
+	text-indent: -9999px;
+	width: 20px;
+	height: 20px;
+	background: url("../images/gateway/inplayer/btn-delete.png") center center no-repeat;
+}
+
+
+
+/*Custom Selectbox - Basic*/
+.selectbox_wrapper {
+	position: relative;
+	width: 100%;
+}
+.selectbox_wrapper em {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 14px;
+	color: #fff;
+	cursor: default;
+}
+.selectbox_top {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	padding-left: 12px;
+	padding-right: 40px;
+	box-sizing: border-box;
+	background-color: #2c2c2c;
+	cursor: pointer;
+}
+.selectbox_top:after {
+	content: '';
+	position: absolute;
+	top: 17px;
+	right: 19px;
+	display: inline-block;
+	width: 14px;
+	height: 8px;
+	background: url("../images/gateway/inplayer/btn-arrow-select.png") center center no-repeat;
+}
+.selectbox_top.on:after {
+	transform: rotate(180deg);
+}
+.selectbox_top .seleted_value {
+	line-height: 40px;
+	font-size: 14px;
+	color: #fff;
+	cursor: default;
+}
+.selectbox_options {
+	display: none;
+	position: absolute;
+	left: 0;
+	width: inherit;
+	background-color: #2c2c2c;
+	border-top: 1px solid #111;
+	border-bottom: 2px solid #111;
+	z-index: 1;
+}
+.selectbox_options li {
+	line-height: 33px;
+	text-indent: 12px;
+	color: #777;
+}
+.selectbox_options li:hover {
+	cursor: pointer;
+	color: #fff;
+}
+/*Custom Selectbox - type02(white)*/
+
+
+
+
+
+
+
+
+
+/*프로필 내 생년월*/
+.selectbox_options.list_birth {
+	height: 100px;
+}
+
+/*번호 국가 설정 타입*/
+.type_ph_select .selectbox_wrapper {
+	display: inline-block;
+	width: 112px;
+}
+.type_ph_select .selectbox_wrapper+input {
+	width: 232px;
+	float: right;
+}
+.type_ph_select .selectbox_wrapper+input::placeholder {
+	color: #fff;
+}
+
+/*생년월일 입력 타입*/
+.input_wrapper.type_birth:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.input_wrapper.type_birth .selectbox_wrapper {
+	float: left;
+	display: inline-block;
+	width: 112px;
+	margin-right: 6px
+}
+.input_wrapper.type_birth input {
+	float: left;
+	width: 114px;
+}
+.input_wrapper.type_birth input::placeholder {
+	color: #fff;
+}
+
+
+/*페이지 하단 버튼영역 및 버튼*/
+.btn_area button {
+	float: left;
+}
+.btn_area button:last-child {
+	float: right; /*ie에서 text-align-last 속성이 적용되지 않아 float처리해야 함*/
+}
+[class^="btn_bg_"] {
+	width: 170px;
+	height: 46px;
+	font-size: 15px;
+	font-family: inherit;
+	color: #fff;
+	border-radius: 4px;
+}
+.btn_bg_gray {
+	background-color: #555555;
+}
+.btn_bg_magenta {
+	background-color: #c9338b;
+}
+.btn_bg_magenta:disabled {
+	background-color: #ccc;
+}
+
+
+
+/*Setting & Edit pages - Basic*/
+.edit_form_wrapper {
+	/*font-family: "Roboto-Regular";*/
+}
+.edit_form_top {
+	margin-bottom: 40px;
+}
+.edit_form_top h2 {
+	font-size: 28px;
+	font-weight: bold;
+	color: #fff;
+	cursor: default;
+}
+.edit_form_top .btn_back {
+	height: 100%;
+}
+.edit_form_container {
+	width: 350px;
+	margin: 0 auto;
+}
+.edit_form_container .input_list > li {
+	margin-bottom: 30px;
+}
+.edit_form_container .input_list > li:last-child {
+	margin-bottom: 0;
+}
+
+/*채널 수정 페이지 상단 영역*/
+.edit_form_container.type_chnn .img_area {
+	position: relative;
+	height: 170px;
+	margin-bottom: 30px;
+	text-align: center;
+	background-size: 0;
+	overflow: hidden;
+}
+.edit_form_container.type_chnn .img_area:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: inherit;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur(2px) brightness(0.4);
+}
+.edit_form_container.type_chnn .img_area img {
+	position: absolute;
+	top: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+/*콘텐츠 수정 페이지 상단 영역*/
+.edit_form_container.type_ctnt .img_area {
+	position: relative;
+	height: 197px;
+	margin-bottom: 30px;
+	text-align: center;
+	background-color: #222;
+}
+.edit_form_container.type_ctnt .img_area img {
+	height: 100%;
+	max-width: 100%;
+}
+.edit_form_container.type_ctnt .img_area input[type="file"] {
+	display: none;
+}
+.edit_form_container.type_ctnt .img_area input[type="file"] + label {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	background: url("../images/gateway/inplayer/btn_thumb_setting.png") center center no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+
+/*My Pfofile*/
+.edit_form_container.type_profile h2 {
+	margin-bottom: 20px;
+	text-align: center;
+	color: #fff;
+}
+.edit_form_container.type_profile .img_area {
+	position: relative;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.edit_form_container.type_profile .img_area img {
+	display: block;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	margin: 0 auto 10px;
+}
+.type_profile .img_area .img_upload_box {
+	position: absolute;
+	top: 56px;
+	left: 190px;
+	width: 36px;
+	height: 36px;
+}
+.type_profile .img_area .img_upload_box input {
+	display: none;
+}
+.type_profile .img_area .img_upload_box label {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url("../images/gateway/inplayer/myprofile-btn-editprofile.png") center center no-repeat;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+.type_profile .img_area .btn_del_img {
+	font-size: 13px;
+	color: #777;
+}
+.type_profile .img_area .btn_del_img:hover {
+	text-decoration: underline;
+}
+.profile_bottom_area {
+	margin-top: 30px;
+	text-align: center;
+}
+.profile_bottom_area a {
+	display: block;
+	color: #777;
+	font-size: 13px;
+}
+.profile_bottom_area a:hover {
+	text-decoration: underline;
+}
+
+
+/*웹툰 상세*/
+.wbt_detail_toparea {
+	margin-bottom: 10px;
+}
+.tit_wbt {
+	/*font-family: "Roboto-Regular";*/
+	font-size: 28px;
+	color: #fff;
+}
+
+[class^="label_wbt_"] {
+	display: inline-block;
+	padding: 0 8px;
+	margin-left: 13px;
+	font-size: 12px;
+	line-height: 21px;
+	border-radius: 12px;
+	vertical-align: 3px;
+}
+.label_wbt_serial {
+	border: 1px solid #c9338b;
+	color: #c9338b;
+}
+.label_wbt_concluded {
+	border: 1px solid #888;
+	color: #888;
+}
+.wbt_detail_info {
+	margin-bottom: 30px;
+}
+.wbt_detail_info:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.wbt_detail_info .thumbnail_area {
+	position: relative;
+	float: left;
+	width: 204px;
+	height: 204px;
+	margin-right: 30px;
+}
+.wbt_detail_info .thumbnail_area img {
+	width: 100%;
+	height: 100%;
+}
+.wbt_detail_info .thumbnail_area .webtoon_rating,
+.wbt_detail_info .thumbnail_area .upload_label {
+	top: 10px;
+	right: 10px;
+}
+.wbt_detail_info .thumbnail_area .upload_label {
+	left: 10px;
+}
+.wbt_detail_info .tit_wbt {
+	display: block;
+	font-size: 16px;
+}
+.wbt_detail_info .user_nick {
+	color: #777;
+	font-size: 13px;
+}
+.wbt_detail_info .wbt_desc {
+	margin: 10px 0 18px;
+	color: #777;
+	white-space: pre-wrap;
+	font-size: 13px;
+}
+.wbt_detail_info .tag_wrapper {
+	margin-bottom: 19px;
+}
+.wbt_detail_info .tag_wrapper span {
+	display: inline-block;
+	padding: 0 12px;
+	margin-right: 4px;
+	border: 1px solid #d0d0d0;
+	line-height: 29px;
+	color: #d0d0d0;
+	font-size: 13px;
+}
+.wbt_detail_info .tag_wrapper span:before {
+	content: '#';
+}
+.btn_see_ep01 {
+	padding: 0 20px;
+	color: #fff;
+	border-radius: 4px;
+	background-color: #c9338b;
+	line-height: 40px;
+}
+
+
+
+
+.wbt_episode_container .wbt_ep_top {
+	display: block;
+	margin-bottom: 15px;
+	font-size: 13px;
+	color: #fff;
+}
+
+
+.episode_wrapper li {
+	padding: 20px 0;
+	padding-right: 29px;
+	border-top: 1px solid #454545;
+}
+.episode_wrapper li:last-child {
+	border-bottom: 1px solid #454545;
+}
+.episode_wrapper li:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.episode_wrapper li .ep_thumb_area {
+	position: relative;
+	float: left;
+	display: inline-block;
+	width: 204px;
+	height: 80px;
+	margin-right: 30px;
+}
+.episode_wrapper li .ep_thumb_area img {
+	width: 100%;
+	height: 100%;
+}
+.episode_wrapper li .ep_thumb_area .webtoon_rating,
+.episode_wrapper li .ep_thumb_area .upload_label {
+	top: 6px;
+	right: 6px;
+}
+.episode_wrapper li .ep_thumb_area .upload_label {
+	left: 6px;
+}
+
+.episode_wrapper li .ep_title {
+	display: inline-block; /*제목의 길이 만큼만 링크 걸리게 하기 위함*/
+	margin-top: 12px;
+	color: #fff;
+	font-size: 16px;
+}
+.episode_wrapper li .uploaded_date {
+	display: block;
+	font-size: 12px;
+	color: #777;
+}
+
+[class^="ep_label_"] {
+	float: right;
+	line-height: 32px;
+	margin-top: -31px;
+	padding: 0 15px;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #fff;
+	cursor: default;
+}
+.ep_label_magenta {
+	border-color: #c9338b;
+	color: #c9338b;
+	font-weight: bold;
+}
+
+
+
+
+/*My Page*/
+.my_page_wrapper {
+	width: 390px;
+	margin: 0 auto;
+}
+.my_page_wrapper h2 {
+	margin-bottom: 40px;
+	font-size: 28px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+}
+.my_page_wrapper .sub_container {
+	margin-bottom: 10px;
+	padding: 26px 30px;
+	box-sizing: border-box;
+	background-color: #222;
+}
+.my_page_wrapper .sub_container h3 {
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: #fff;
+}
+.sub_container .profile_area .img_area {
+	float: left;
+	width: 90px;
+	height: 90px;
+	margin-right: 20px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+.sub_container .profile_area .img_area img {
+	width :100%;
+	min-height: 90px;
+}
+.sub_container .profile_name {
+	display: block;
+	padding-top: 13px;
+	margin-bottom: 7px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	word-break: break-all;
+}
+.sub_container .creation_date {
+	color: #777;
+	font-size: 13px;
+}
+.sub_container .tcash_area strong {
+	line-height: 39px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+}
+.sub_container .tcash_area .icon_Tcash {
+	float: right;
+	line-height: 39px;
+	font-size: 26px;
+	color: #c9338b;
+}
+.sub_container .tcash_area .icon_Tcash:before {
+	content: '';
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	margin-right: 4px;
+	background: url(../images/gateway/inplayer/icon_tcash.png) center center no-repeat;
+	vertical-align: -4px;
+}
+.sub_container .tcash_area + div {
+	text-align: right;
+}
+.sub_container .tcash_area + div a {
+	font-size: 13px;
+	color: #777;
+	text-decoration: underline;
+	transition: all 0.3s;
+}
+.sub_container .tcash_area + div a:hover {
+	color: #aaa;
+}
+
+.sub_container .playy_area strong {
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.sub_container .right_area {
+	position: relative;
+	float: right;
+}
+.sub_container .right_area .btn_bg_magenta {
+	width: auto;
+	height: 36px;
+	padding: 0 17px;
+	font-size: 13px;
+}
+.sub_container .right_area .onemonth_term,
+.sub_container .right_area .regular_term {
+	color: #777;
+	font-size: 13px;
+}
+.sub_container .right_area .regular_term {
+	vertical-align: top;
+	padding-right: 84px;
+}
+.btn_cancel_regular {
+	position: absolute;
+	top: 5px;
+	right: 0;
+	line-height: 32px;
+	padding: 0 12px;
+	border-radius: 3px;
+	border: 1px solid #777;
+	font-size: 13px;
+	color: #fff;
+	transition: all 0.3s;
+}
+.btn_cancel_regular:hover {
+	border-color: #aaa;
+}
+.sub_container .playy_area .under_description {
+	margin-top: 42px;
+	padding-top: 20px;
+	border-top: 1px solid #333;
+}
+
+
+
+

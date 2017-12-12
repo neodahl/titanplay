@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Movies Seemore - TiTAN Play</title>
+	<!-- custom scrollbar css -->
+	<link rel="stylesheet" href="../resources/css/jquery.mCustomScrollbar.min.css">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_common.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_inplayer.css">
+	<!-- jQuery -->
+	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+
+<div class="inplayer_wrapper hide_scrollbar" data-mcs-theme="minimal-dark">
+	<!-- [Start] Header area -->
+	<header class="inplayer_header_wrapper">
+		<div class="inplayer_header_container clearfix">
+			<ul class="left_list clearfix">
+				<li class="on">
+					<a href="inplayer.html">Home</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_main.html">Channel</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_mcn.html">MCN</a>
+				</li>
+				<li>
+					<a href="inplayer_webtoon_main.html">Webtoon</a>
+				</li>
+				<li>
+					<a href="inplayer_secret_main.html">Secret</a>
+				</li>
+			</ul>
+			<div class="rigt_item_wrapper">
+				<ul class="clearfix">
+					<li>
+						<div class="search_box">
+							<label class="blind">검색어 입력</label>
+							<input type="search" class="input_search" title="검색">
+							<button class="btn_del_txt">delete</button>
+						</div>
+					</li>
+					<li>
+						<button type="button" class="btn_upload" title="업로드">upload</button>
+					</li>
+					<!-- [Start] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_folder" title="파일 열기">folder</button>
+					</li>
+					<!-- [End] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_setting" title="설정">setting</button>
+					</li>
+					<li>
+						<button type="button" class="btn_info" title="플레이어 정보">information</button>
+					</li>
+					<li>
+						<!-- <button type="button" class="btn_sign_in" data-call-pop="signInPopup">Sign in</button> -->
+
+						<!-- [Start] 로그인시 -->
+						<span class="btn_user">
+							<img src="../resources/images/gateway/smaple_user_img.jpg">
+						</span>
+						<div class="user_pop">
+							<ul>
+								<li>
+									<a href="inplayer_myPage.html">My Page</a>
+								</li>
+								<li>
+									<a href="inplayer_mychannel.html">My Channel</a>
+								</li>
+								<li>
+									<a href="#signOut">Sign Out</a>
+								</li>
+							</ul>
+						</div>
+						<!-- [End] 로그인시 -->
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- [End] Header area -->
+
+	<!-- [Start] Main container -->
+	<div class="inplayer_main_container">
+		<!-- [Start] See More - Video -->
+		<div class="list_container">
+			<div class="list_top_area type_more_list">
+				<a href="javascript:history.back()" class="btn_back">back to page</a>
+				<h2>
+					New Movies<span class="sub_tit">월정액으로 무제한 영화를 즐겨보세요!</span>
+				</h2>
+			</div>
+			<div class="align_movie_list">
+				<!-- [Start] 영화 아이템 기본형 -->
+				<div class="basic_movie_item">
+					<a href="#none" class="movie_poster_area">
+						<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+						<span class="movie_rating grade_all">ALL</span>
+					</a>
+					<div class="movie_info">
+						<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+						<span class="release_year">2017</span>
+						<span class="price">10,000</span>
+					</div>
+				</div>
+				<!-- [End] 영화 아이템 기본형 -->
+
+				<div class="basic_movie_item">
+					<a href="#none" class="movie_poster_area">
+						<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+						<span class="movie_rating grade_all">ALL</span>
+					</a>
+					<div class="movie_info">
+						<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+						<span class="release_year">2017</span>
+						<span class="price">10,000</span>
+					</div>
+				</div>
+				<div class="basic_movie_item">
+					<a href="#none" class="movie_poster_area">
+						<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+						<span class="movie_rating grade_all">ALL</span>
+					</a>
+					<div class="movie_info">
+						<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+						<span class="release_year">2017</span>
+						<span class="price">10,000</span>
+					</div>
+				</div>
+				<div class="basic_movie_item">
+					<a href="#none" class="movie_poster_area">
+						<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+						<span class="movie_rating grade_all">ALL</span>
+					</a>
+					<div class="movie_info">
+						<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+						<span class="release_year">2017</span>
+						<span class="price">10,000</span>
+					</div>
+				</div>
+				<div class="basic_movie_item">
+					<a href="#none" class="movie_poster_area">
+						<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+						<span class="movie_rating grade_all">ALL</span>
+					</a>
+					<div class="movie_info">
+						<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+						<span class="release_year">2017</span>
+						<span class="price">10,000</span>
+					</div>
+				</div>
+				<div class="basic_movie_item">
+					<a href="#none" class="movie_poster_area">
+						<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+						<span class="movie_rating grade_all">ALL</span>
+					</a>
+					<div class="movie_info">
+						<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+						<span class="release_year">2017</span>
+						<span class="price">10,000</span>
+					</div>
+				</div>
+				<div class="basic_movie_item">
+					<a href="#none" class="movie_poster_area">
+						<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+						<span class="movie_rating grade_all">ALL</span>
+					</a>
+					<div class="movie_info">
+						<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+						<span class="release_year">2017</span>
+						<span class="price">10,000</span>
+					</div>
+				</div>
+				<div class="basic_movie_item">
+					<a href="#none" class="movie_poster_area">
+						<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+						<span class="movie_rating grade_all">ALL</span>
+					</a>
+					<div class="movie_info">
+						<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+						<span class="release_year">2017</span>
+						<span class="price">10,000</span>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<!-- [End] See More -Videos-->
+
+	</div>
+	<!-- [End] Main container -->
+</div>
+
+
+
+
+<!-- custom scroll bar js -->
+<script type="text/javascript" src="../resources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+
+
+
+
+<!-- 공통 js -->
+<script type="text/javascript" src="../resources/js/common_pub.js"></script>
+</body>
+</html>

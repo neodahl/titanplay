@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>AddVideos MyChannel - TiTAN Play</title>
+	<!-- custom scrollbar css -->
+	<link rel="stylesheet" href="../resources/css/jquery.mCustomScrollbar.min.css">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_common.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_inplayer.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_popup.css">
+	<!-- jQuery -->
+	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+
+<div class="inplayer_wrapper hide_scrollbar" data-mcs-theme="minimal-dark">
+	<!-- [Start] Header area -->
+	<header class="inplayer_header_wrapper">
+		<div class="inplayer_header_container clearfix">
+			<ul class="left_list clearfix">
+				<li class="on">
+					<a href="inplayer.html">Home</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_main.html">Channel</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_mcn.html">MCN</a>
+				</li>
+				<li>
+					<a href="inplayer_webtoon_main.html">Webtoon</a>
+				</li>
+				<li>
+					<a href="inplayer_secret_main.html">Secret</a>
+				</li>
+			</ul>
+			<div class="rigt_item_wrapper">
+				<ul class="clearfix">
+					<li>
+						<div class="search_box">
+							<label class="blind">검색어 입력</label>
+							<input type="search" class="input_search" title="검색">
+							<button class="btn_del_txt">delete</button>
+						</div>
+					</li>
+					<li>
+						<button type="button" class="btn_upload" title="업로드">upload</button>
+					</li>
+					<!-- [Start] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_folder" title="파일 열기">folder</button>
+					</li>
+					<!-- [End] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_setting" title="설정">setting</button>
+					</li>
+					<li>
+						<button type="button" class="btn_info" title="플레이어 정보">information</button>
+					</li>
+					<li>
+						<!-- <button type="button" class="btn_sign_in" data-call-pop="signInPopup">Sign in</button> -->
+
+						<!-- [Start] 로그인시 -->
+						<span class="btn_user">
+							<img src="../resources/images/gateway/smaple_user_img.jpg">
+						</span>
+						<div class="user_pop">
+							<ul>
+								<li>
+									<a href="inplayer_myPage.html">My Page</a>
+								</li>
+								<li>
+									<a href="inplayer_mychannel.html">My Channel</a>
+								</li>
+								<li>
+									<a href="#signOut">Sign Out</a>
+								</li>
+							</ul>
+						</div>
+						<!-- [End] 로그인시 -->
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- [End] Header area -->
+
+	<!-- [Start] Main container -->
+	<div class="inplayer_main_container">
+		<div class="my_ch_top_area">
+			<em class="ch_title">Jade’s Channel Come on Yo! (Ch.103823)</em>
+			<span class="followers">Followed <span>12,030</span></span>
+			<a href="inplayer_mychannel_setttings.html" class="btn_ch_setting" title="채널 설정페이지로 이동">channel setting</a>
+		</div>
+
+		<div class="my_ch_list_title">
+			<a href="javascript:history.back()" class="btn_back">back to previous page</a>
+			<em>Add Videos</em>
+		</div>
+
+		<div class="tab_panel_ch">
+			<ul class="tab_menu_ch">
+				<li class="on">
+					<a href="#Latest">Latest</a>
+				</li>
+				<li>
+					<a href="#Popular">Popular</a>
+				</li>
+			</ul>
+			<div class="tab_container_ch">
+				<!-- [Start] Latest -->
+				<div class="tab_content_ch on">
+					<div class="align_video_list">
+						<!-- [Start] 동영상 아이템 기본형 -->
+						<div class="basic_video_item">
+							<a href="#none" class="video_thumbnail_area">
+								<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+								<span class="playback_time">01:58:12</span>
+							</a>
+							<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게">1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+							<div class="video_info">
+								<span class="hit_count">13235</span>
+								<span class="upload_date">2017.01.04</span>
+								<button type="button" class="btn_delete" data-call-pop="pop_delete_ctnt" title="삭제">delete</button>
+							</div>
+						</div>
+						<!-- [End] 동영상 아이템 기본형 -->
+
+						<div class="basic_video_item Privated">
+							<a href="#none" class="video_thumbnail_area">
+								<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+								<span class="playback_time">01:58:12</span>
+							</a>
+							<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게">1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+							<div class="video_info">
+								<span class="hit_count">13235</span>
+								<span class="upload_date">2017.01.04</span>
+								<button type="button" class="btn_delete" data-call-pop="pop_delete_ctnt" title="삭제">delete</button>
+							</div>
+						</div>
+						<div class="basic_video_item Deleted">
+							<a href="#none" class="video_thumbnail_area">
+								<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+								<span class="playback_time">01:58:12</span>
+							</a>
+							<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게">1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+							<div class="video_info">
+								<span class="hit_count">13235</span>
+								<span class="upload_date">2017.01.04</span>
+								<button type="button" class="btn_delete" data-call-pop="pop_delete_ctnt" title="삭제">delete</button>
+							</div>
+						</div>
+
+						<div class="basic_video_item">
+							<a href="#none" class="video_thumbnail_area">
+								<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+								<span class="playback_time">01:58:12</span>
+							</a>
+							<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게">1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+							<div class="video_info">
+								<span class="hit_count">13235</span>
+								<span class="upload_date">2017.01.04</span>
+								<button type="button" class="btn_delete" data-call-pop="pop_delete_ctnt" title="삭제">delete</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- [End] Latest -->
+
+				<!-- [Start] Popular -->
+				<div class="tab_content_ch">
+					<div class="align_video_list">
+						<!-- [Start] 동영상 아이템 기본형 -->
+						<div class="basic_video_item">
+							<a href="#none" class="video_thumbnail_area">
+								<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+								<span class="playback_time">01:58:12</span>
+							</a>
+							<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게">1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+							<div class="video_info">
+								<span class="hit_count">13235</span>
+								<span class="upload_date">2017.01.04</span>
+								<button type="button" class="btn_delete" data-call-pop="pop_delete_ctnt" title="삭제">delete</button>
+							</div>
+						</div>
+						<!-- [End] 동영상 아이템 기본형 -->
+
+						<div class="basic_video_item Deleted">
+							<a href="#none" class="video_thumbnail_area">
+								<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+								<span class="playback_time">01:58:12</span>
+							</a>
+							<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게">1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+							<div class="video_info">
+								<span class="hit_count">13235</span>
+								<span class="upload_date">2017.01.04</span>
+								<button type="button" class="btn_delete" data-call-pop="pop_delete_ctnt" title="삭제">delete</button>
+							</div>
+						</div>
+						<div class="basic_video_item Privated">
+							<a href="#none" class="video_thumbnail_area">
+								<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+								<span class="playback_time">01:58:12</span>
+							</a>
+							<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게">1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+							<div class="video_info">
+								<span class="hit_count">13235</span>
+								<span class="upload_date">2017.01.04</span>
+								<button type="button" class="btn_delete" data-call-pop="pop_delete_ctnt" title="삭제">delete</button>
+							</div>
+						</div>
+
+						<div class="basic_video_item">
+							<a href="#none" class="video_thumbnail_area">
+								<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+								<span class="playback_time">01:58:12</span>
+							</a>
+							<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게">1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+							<div class="video_info">
+								<span class="hit_count">13235</span>
+								<span class="upload_date">2017.01.04</span>
+								<button type="button" class="btn_delete" data-call-pop="pop_delete_ctnt" title="삭제">delete</button>
+							</div>
+						</div>
+						<div class="basic_video_item">
+							<a href="#none" class="video_thumbnail_area">
+								<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+								<span class="playback_time">01:58:12</span>
+							</a>
+							<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게">1함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+							<div class="video_info">
+								<span class="hit_count">13235</span>
+								<span class="upload_date">2017.01.04</span>
+								<button type="button" class="btn_delete" data-call-pop="pop_delete_ctnt" title="삭제">delete</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- [End] Popular -->
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+	<!-- [End] Main container -->
+</div>
+
+
+
+
+
+<!-- [Start] Popup - 삭제 -->
+<div class="pop_dim pop_delete_ctnt">
+	<div class="pop_container">
+		<button type="button" class="btn_close_pop" data-close-pop="close">close popup</button>
+		<i class="ico_caution">caution</i>
+		<p class="txt_alert">Are you sure you want to delete<br>this content?</p>
+		<div class="btn_area">
+			<button type="button" class="btn_bg_gray" data-close-pop="close">Cancel</button>
+			<button type="button" class="btn_bg_magenta">OK</button>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - 삭제 -->
+
+
+
+
+<!-- custom scroll bar js -->
+<script type="text/javascript" src="../resources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+<!-- 공통 js -->
+<script type="text/javascript" src="../resources/js/common_pub.js"></script>
+</body>
+</html>

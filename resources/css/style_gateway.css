@@ -1,0 +1,874 @@
+@charset "utf-8";
+
+/****************************************/
+/*  Name: Titan Play PC ver.
+/*  Version: 1.01 (171130)
+/*  Author: TitanPlatform
+/*  Description : TiTAN Play - Gateway Page
+/****************************************/
+
+
+/*Layout*/
+.tp_wrapper {
+	font-family: "NotoSans-Regular";
+	position: relative;
+	/*padding-top: 210px;*/
+	background-color: #000;
+	min-width: 1320px; /*슬라이더의 버튼 사이즈 까지 고려된 너비값*/
+}
+.tp_main {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/*Header - Main Header, Line Header*/
+.tp_header_wrapper {
+	top: 0;
+	width: 100%;
+	height: 600px;
+	background: url("../images/gateway/gateway_pc/img_gate_top.png") center center no-repeat;
+	background-size: cover;
+}
+
+/*Main Header*/
+.tp_main_header {
+	position: relative;
+	text-align: center;
+	width: 1200px;
+	margin: 0 auto;
+}
+.tp_main_header h1 {
+	position: absolute;
+	top: 38px;
+	left: 0;
+}
+.tp_home {
+	display: inline-block;
+	width: 140px;
+	height: 32px;
+	background: url("../images/gateway/gateway_pc/img_logo.png") center center no-repeat;
+	text-indent: -9999px;
+}
+.tp_main_header .tit_tp_header {
+	display: block;
+	padding-top: 190px;
+	margin-bottom: 24px;
+	font-size: 46px;
+	color: #fff;
+	text-align: center;
+}
+.tp_main_header .tit_tp_header + div {
+	margin-bottom: 60px;
+}
+.btn_why_tp {
+	font-family: "NotoSans-Light";
+	font-size: 16px;
+	color: #fff;
+	text-decoration: underline;
+	transition: all 0.1s;
+}
+.btn_why_tp:hover {
+	color: #aaa;
+}
+.btn_app_dwld {
+	width: 150px;
+	line-height: 56px;
+	background-color: #c9338b;
+	font-size: 16px;
+	color: #fff;
+	border-radius: 6px;
+	transition: all 0.1s;
+}
+.btn_app_dwld:hover {
+	background-color: #B22678;
+}
+
+
+
+
+
+/*Line Header*/
+.tp_line_header {
+	background-color: rgba(0, 0, 0, 0.85);
+	width: 100%;
+	position: fixed;
+	top: -100px;
+	z-index: -1;
+	transition: all 0.2s;
+}
+.tp_line_header.on {
+	top: 0;
+	z-index: 50;
+}
+.tp_line_header .container {
+	position: relative;
+	width: 1200px;
+	height: 86px;
+	margin: 0 auto;
+}
+.tp_line_header .tp_home {
+	margin-top: 27px;
+}
+.tp_line_header .right_items {
+	position: absolute;
+	right: 0;
+	top: 22px;
+}
+.tp_line_header .btn_why_tp {
+	font-size: 14px;
+}
+.tp_line_header .btn_app_dwld {
+	width: 100px;
+	line-height: 40px;
+	margin-left: 34px;
+	font-size: 12px;
+	border-radius: 4px;
+}
+
+
+
+/*슬라이더 영역*/
+.slider_wrapper {
+	padding-bottom: 90px;
+}
+.slider_wrapper .slider_container:last-of-type {
+	margin-bottom: 0;
+}
+.slider_container {
+	position: relative;
+	margin-bottom: 60px;
+}
+.tit_slider {
+	margin-bottom: 20px;
+	font-size: 24px;
+	color: #fff;
+}
+
+.slide_index {
+	position: absolute;
+	top: 12px;
+	right: 0;
+	font-size: 15px;
+	color: #999;
+}
+.slide_index .current_index {
+	color: #fff;
+}
+
+.slider_basic_wrap {
+	/*slickslider 최초 로드시 아이템들의 정렬이 풀리는 문제가 있어 추가!*/
+	white-space: nowrap;
+	font-size: 0;
+}
+.slider_basic_wrap div.slide_item {
+	/*slickslider 최초 로드시 아이템들의 정렬이 풀리는 문제가 있어 추가!*/
+	display: inline-block;
+	height: auto;
+}
+/*slick-slider customizing*/
+.slick-slider .slick-prev,
+.slick-slider .slick-next {
+	opacity: 0;
+	width: 56px;
+	height: 56px;
+	transition: all 0.3s;
+}
+.slick-slider .slick-prev {
+	left: -56px;
+}
+.slick-slider .slick-next {
+	right: -56px;
+}
+.slick-slider:hover .slick-prev,
+.slick-slider:hover .slick-next {
+	opacity: 1;
+}
+.slick-prev:before,
+.slick-next:before {
+	content: '' !important;
+	display: inline-block;
+	width: 14px;
+	height: 26px;
+	opacity: 0.4;
+	transition: all 0.3s;
+}
+.slick-prev:before {
+	background: url("../images/gateway/btn_l_arrow_on.png") center center no-repeat;
+	background-size: contain;
+}
+.slick-next:before {
+	background: url("../images/gateway/btn_r_arrow_on.png") center center no-repeat;
+	background-size: contain;
+}
+
+/*슬라이더 아이템 간격*/
+.slider_basic_wrap .tp_movie_item {
+	margin-right: 18px;
+}
+.slider_basic_wrap .tp_channel_item {
+	margin-right: 18px;
+}
+
+
+
+
+
+/*유료의 경우 티캐시 아이콘 - 사용처: 동영상, 웹툰에피소드*/
+.ico_Tcash:before {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+	background: url("../images/gateway/inplayer/icon_tcash_m.png") center center no-repeat;
+	background-size: contain;
+	vertical-align: -3px;
+}
+
+
+
+/*Video Item - Basic*/
+.tp_video_item {
+	position: relative;
+	display: inline-block;
+	width: 185px;
+}
+.tp_video_item .video_thumbnail_area {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 105px;
+	margin-bottom: 10px;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+.tp_video_item .video_thumbnail_area:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5) url("../images/gateway/inplayer/btn-thum-over.png") center center no-repeat;
+	opacity: 0;
+	transition: opacity 0.3s;
+	z-index: 1;
+}
+.video_thumbnail_area:hover:before {
+	opacity: 1;
+}
+
+.tp_video_item .video_thumbnail_area img {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
+}
+.tp_video_item .tit_video {
+	display: block;
+	margin-bottom: 8px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 15px;
+	color: #fff;
+	z-index: 1;
+	cursor: pointer;
+}
+.tp_video_item .tit_video:hover {
+	text-decoration: underline;
+}
+.tp_video_item .video_info {
+	font-size: 13px;
+	color: #999;
+}
+.tp_video_item .video_info .user_nick {
+	display: block;
+	margin-bottom: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+/*List style - Basic*/
+.tp_list_container {
+	margin-bottom: 60px;
+}
+.tp_list_container h2 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	color: #fff;
+}
+
+
+/*Lists Align Styles - Video*/
+.align_video_list:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.align_video_list .tp_video_item {
+	float: left;
+	margin-right: 18px;
+	margin-bottom: 27px;
+}
+.align_video_list .tp_video_item:nth-of-type(6n) {
+	margin-right: 0;
+}
+.align_video_list.row2 .tp_video_item:nth-of-type(n+13) {
+	display: none;
+}
+.align_video_list.row2 .tp_video_item:nth-of-type(n+7) {
+	margin-bottom: 0;
+}
+
+
+
+
+/*영화 아이템 기본형*/
+.tp_movie_item {
+	position: relative;
+	display: block;
+	width: 185px;
+	height: 267px;
+}
+.tp_movie_item:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, rgba(188, 188, 188, 0) 27%, rgba(0, 0, 0, 0.2) 100%);;
+}
+.tp_movie_item img {
+	width: 100%;
+	height: 100%;
+}
+.tp_movie_item .tit_movie {
+	position: absolute;
+	bottom: 10px;
+	left: 12px;
+	width: 90%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 16px;
+	color: #fff;
+	z-index: 1;
+}
+.tp_movie_item:hover .tit_movie {
+	text-decoration: underline;
+}
+
+/*채널 아이템 기본형*/
+.tp_channel_item {
+	position: relative;
+	display: block;
+	width: 185px;
+	height: 185px;
+	text-align: center;
+	overflow: hidden;
+	background-size: 0;
+}
+.tp_channel_item:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-image: inherit;
+	background-repeat: no-repeat;
+	background-size: 120%;
+	background-position: center center;
+	filter: blur(2px) brightness(0.4);
+}
+.tp_channel_item .ch_info_container {
+	position: absolute;
+	top: 22px;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+.tp_channel_item .ch_info_container img {
+	width: 90px;
+	height: 90px;
+	margin: 0 auto 8px;
+	border-radius: 50%;
+}
+.tp_channel_item .ch_info_container .tit_channel {
+	display: block;
+	font-size: 16px;
+	color: #fff;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.tp_channel_item .ch_info_container .user_nick {
+	display: block;
+	font-size: 12px;
+	color: #fff;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.tp_channel_item:hover .tit_channel,
+.tp_channel_item:hover .user_nick {
+	text-decoration: underline;
+}
+
+
+/*Marketing area*/
+.marketing_area {
+	background-color: #222;
+	padding: 70px 0;
+}
+.marketing_container {
+	width: 1200px;
+	margin: 0 auto;
+}
+.marketing_container h2 {
+	text-align: center;
+	color: #E8E8E8;
+	font-size: 32px;
+	margin-bottom: 60px;
+}
+.tp_tech_info {
+	text-align: center;
+}
+.tp_tech_info li {
+	display: inline-block;
+	width: 485px;
+	margin-bottom: 40px;
+	text-align: left;
+}
+.tp_tech_info li:nth-of-type(odd) {
+	margin-right: 114px;
+}
+.tp_tech_info li:nth-last-child(-n+2) {
+	margin-bottom: 0;
+}
+.tp_tech_info li img {
+	float: left;
+	margin-right: 25px;
+	width: 130px;
+	height: 130px;
+}
+.tp_tech_info li em {
+	display: block;
+	margin: 26px 0 10px;
+	font-size: 20px;
+	color: #E8E8E8;
+}
+.tp_tech_info li p {
+	font-size: 14px;
+	color: #959595;
+}
+
+/*Guide install*/
+.install_guide_area {
+	padding: 60px 0 50px;
+}
+.install_guide_area h2 {
+	margin-bottom: 60px;
+	font-size: 32px;
+	color: #fff;
+	text-align: center;
+}
+.install_type_list {
+	text-align: center;
+	font-size: 0;
+}
+.install_type_list li {
+	display: inline-block;
+	margin-right: 70px;
+}
+.install_type_list li:last-of-type {
+	margin-right: 0;
+}
+.install_type_list li img {
+	max-height: 68px;
+	margin-bottom: 40px;
+}
+.install_type_list li a {
+	display: block;
+	width: 150px;
+	height: 50px;
+	font-size: 0;
+}
+.install_type_list li a.banner_appstore {
+	background: url("../images/gateway/install_banner_appstore.png") center center no-repeat;
+	background-size: contain;
+}
+.install_type_list li a.banner_googleplay {
+	background: url("../images/gateway/install_banner_googleplay.png") center center no-repeat;
+	background-size: contain;
+}
+.install_type_list li a.banner_windows {
+	background: url("../images/gateway/install_banner_windows.png") center center no-repeat;
+	background-size: contain;
+}
+.install_type_list li a.banner_macos {
+	background: url("../images/gateway/install_banner_macos.png") center center no-repeat;
+	background-size: contain;
+}
+.install_type_list li a.banner_titancore {
+	background: url("../images/gateway/install_banner_titancore.png") center center no-repeat;
+	background-size: contain;
+}
+
+/*Footer*/
+.tp_footer {
+	padding: 40px 0 70px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #777;
+	text-align: center;
+}
+.company_info {
+	width: 860px;
+	margin: 0 auto;
+}
+.company_info ul li {
+	display: inline-block;
+}
+.company_info ul li:after {
+	content: '';
+	display: inline-block;
+	width: 1px;
+	height: 11px;
+	margin: 4px 7px 0;
+	background-color: #444;
+	vertical-align: top;
+}
+.company_info ul li:last-of-type:after{
+	display: none;
+}
+.company_info ul li a {
+	color: inherit;
+}
+
+
+
+
+
+/*이벤트 배너 - 171204*/
+.event_banner {
+	display: block;
+	margin: 80px 0;
+	height: 70px;
+}
+.event_banner img {
+	width: 100%;
+	height: 100%;
+}
+
+
+/* TP Description Slider - reset*/
+/*.tp_descption_slider_wrapper .slick-list {
+	overflow: visible;
+}*/
+.tp_descption_slider_wrapper .slick-slider .slick-prev,
+.tp_descption_slider_wrapper .slick-slider .slick-next {
+	opacity: 1;
+	z-index: 5;
+	width: auto;
+	height: auto;
+}
+.tp_descption_slider_wrapper .slick-slider .slick-prev {
+	left: 0;
+}
+.tp_descption_slider_wrapper .slick-slider .slick-next {
+	right: 0;
+}
+.tp_descption_slider_wrapper .slick-prev:before,
+.tp_descption_slider_wrapper .slick-next:before {
+	width: 60px;
+	height: 60px;
+}
+.tp_descption_slider_wrapper .slick-prev:before {
+	background: url("../images/gateway/gateway_pc/btn_arrow_left.png") center center no-repeat;
+	background-size: contain;
+}
+.tp_descption_slider_wrapper .slick-next:before {
+	background: url("../images/gateway/gateway_pc/btn_arrow_right.png") center center no-repeat;
+	background-size: contain;
+}
+
+.tp_descption_slider_wrapper .slick-prev.slick-disabled:before,
+.tp_descption_slider_wrapper .slick-next.slick-disabled:before {
+	display: none;
+}
+
+
+.tp_descption_slider_wrapper .slick-dotted.slick-slider {
+	margin-bottom: 0;
+}
+.tp_descption_slider_wrapper .slick-dots {
+	width: auto;
+	left: 110px;
+	bottom: 200px;
+}
+.tp_descption_slider_wrapper .slick-dots li,
+.tp_descption_slider_wrapper .slick-dots li button,
+.tp_descption_slider_wrapper .slick-dots li button:before {
+	width: auto;
+	height: auto;
+}
+
+/*TP Description Slider - indicator*/
+.tp_descption_slider_wrapper .slick-dots li button {
+	padding: 0;
+}
+.tp_descption_slider_wrapper .slick-dots li button:before {
+	content:'';
+	position: static;
+	display: block;
+	width: 75px;
+	height: 55px;
+	opacity: 1;
+}
+.tp_descption_slider_wrapper .slick-dots li:first-child button:before {
+	background: url("../images/gateway/gateway_pc/spr_tp_indicator.png") no-repeat;
+	background-position: 2px 6px;
+}
+.tp_descption_slider_wrapper .slick-dots li:first-child.slick-active button:before,
+.tp_descption_slider_wrapper .slick-dots li:first-child:hover button:before {
+	background-position: 2px -83px;
+}
+
+.tp_descption_slider_wrapper .slick-dots li:nth-child(2) button:before {
+	background: url("../images/gateway/gateway_pc/spr_tp_indicator.png") no-repeat;
+	background-position: -75px 6px;
+}
+.tp_descption_slider_wrapper .slick-dots li:nth-child(2).slick-active button:before,
+.tp_descption_slider_wrapper .slick-dots li:nth-child(2):hover button:before {
+	background-position: -75px -83px;
+}
+
+.tp_descption_slider_wrapper .slick-dots li:nth-child(3) button:before {
+	background: url("../images/gateway/gateway_pc/spr_tp_indicator.png") no-repeat;
+	background-position: -150px 6px;
+}
+.tp_descption_slider_wrapper .slick-dots li:nth-child(3).slick-active button:before,
+.tp_descption_slider_wrapper .slick-dots li:nth-child(3):hover button:before {
+	background-position: -150px -83px;
+}
+
+.tp_descption_slider_wrapper .slick-dots li:nth-child(4) button:before {
+	background: url("../images/gateway/gateway_pc/spr_tp_indicator.png") no-repeat;
+	background-position: -227px 6px;
+}
+.tp_descption_slider_wrapper .slick-dots li:nth-child(4).slick-active button:before,
+.tp_descption_slider_wrapper .slick-dots li:nth-child(4):hover button:before {
+	background-position: -227px -83px;
+}
+
+
+
+
+
+
+
+
+
+/* TP Description Slider */
+.tp_descption_slider_wrapper {
+	background-color: #ebebeb;
+}
+.tp_descption_slider {
+	margin: 0 auto;
+	/*width: 1903px;*/
+	width: 1200px;
+	white-space: nowrap;
+}
+.tp_descption_slider li {
+	display: inline-block;
+	height: 730px; /*jsp반영시 높이값 부여해야 함*/
+}
+.description_item {
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+	height: 730px;
+	padding-left: 120px;
+	box-sizing: border-box;
+}
+.description_item .left_txt_area {
+	width: 500px;
+	word-wrap: normal;
+}
+
+.description_item h2 {
+	padding-top: 210px;
+	margin-bottom: 20px;
+	font-size: 44px;
+}
+.description_item p {
+	font-size: 15px;
+	line-height: 1.7;
+}
+
+
+
+.right_img_area {
+	position: absolute;
+	right: 53px;
+	top: 96px;
+}
+.description_item.n04 .right_img_area {
+	right: 0px;
+	top: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================== Pop Up ====================*/
+
+/*popup basic*/
+.pop_dim {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 100;
+}
+.pop_container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 350px;
+	transform: translate(-50%, -50%);
+	padding: 30px 30px 40px;
+	background-color: #fff;
+	box-sizing: border-box;
+	text-align: center;
+	font-family: 'Roboto-Regular';
+}
+.pop_container h3 {
+	line-height: 1;
+	margin-bottom: 30px;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: left;
+	cursor: default;
+}
+.btn_close_pop {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	background: url("../images/gateway/inplayer/btn-popup-close.png") center center no-repeat;
+	background-size: contain;
+}
+.btn_area {
+	text-align: center;
+	margin-top: 40px;
+}
+
+
+/*common style*/
+.ico_caution { /*주의 아이콘*/
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 15px;
+	text-indent: -9999px;
+	background: url("../images/gateway/inplayer/ic-popup-info.png") center center no-repeat;
+	background-size: contain;
+}
+
+
+
+/*팝업 하단영역 버튼*/
+.pop_container .btn_area button {
+	float: none; /*팝업이 아닌 수정 페이지에서는 float이 적용되어 있다.*/
+	margin-right: 8px;
+}
+.pop_container .btn_area button:last-child {
+	margin-right: 0;
+}
+.pop_container [class^="btn_bg_"] {
+	width: auto; /*상쇄*/
+	min-width: 100px;
+	padding: 0 20px;
+	height: 40px;
+	font-size: 14px;
+	color: #fff;
+	border-radius: 4px;
+}
+.pop_container .btn_bg_gray {
+	background-color: #888888;
+}
+.pop_container .btn_bg_magenta {
+	background-color: #c9338b;
+}
+
+
+/*why_tp_player*/
+.why_tp_player .pop_container {
+	width: 636px;
+	padding: 50px 60px;
+}
+.why_tp_player h2 {
+	margin-bottom: 40px;
+}
+.why_tp_player p {
+	text-align: left;
+	font-size: 15px;
+}
+.why_tp_player .btn_app_dwld {
+	line-height: inherit;
+}
+.f_gray {
+	color: #999 !important;
+}
+
+
+
+
+
+
+
+
+
+
+

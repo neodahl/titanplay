@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Main - TiTAN Play</title>
+	<!-- slider css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/slick-theme.css">
+	<!-- custom scrollbar css -->
+	<link rel="stylesheet" href="../resources/css/jquery.mCustomScrollbar.min.css">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_common.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_inplayer.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_popup.css">
+	<!-- jQuery -->
+	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
+	<!-- slider js -->
+	<script type="text/javascript" src="../resources/js/slick.min.js"></script>
+</head>
+<body class="dropzone">
+
+
+<div class="inplayer_wrapper hide_scrollbar" data-mcs-theme="minimal-dark">
+	<!-- [Start] Header area -->
+	<header class="inplayer_header_wrapper">
+		<div class="inplayer_header_container clearfix">
+			<ul class="left_list clearfix">
+				<li class="on">
+					<a href="inplayer.html">Home</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_main.html">Channel</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_mcn.html">MCN</a>
+				</li>
+				<li>
+					<a href="inplayer_webtoon_main.html">Webtoon</a>
+				</li>
+				<li>
+					<a href="inplayer_secret_main.html">Secret</a>
+				</li>
+			</ul>
+			<div class="rigt_item_wrapper">
+				<ul class="clearfix">
+					<li>
+						<div class="search_box">
+							<label class="blind">검색어 입력</label>
+							<input type="search" class="input_search" title="검색">
+							<button class="btn_del_txt">delete</button>
+						</div>
+					</li>
+					<li>
+						<button type="button" class="btn_upload" title="업로드">upload</button>
+					</li>
+					<!-- [Start] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_folder" title="파일 열기">folder</button>
+					</li>
+					<!-- [End] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_setting" title="설정">setting</button>
+					</li>
+					<li>
+						<button type="button" class="btn_info" title="정보" data-call-pop="tianPlayInfo">information</button>
+					</li>
+					<li>
+						<button type="button" class="btn_sign_in" data-call-pop="signInPopup">Sign in</button>
+
+						<!-- [Start] 로그인시 -->
+						<!-- <span class="btn_user">
+							<img src="../resources/images/gateway/smaple_user_img.jpg">
+						</span>
+						<div class="user_pop">
+							<ul>
+								<li>
+									<a href="inplayer_myPage.html">My Page</a>
+								</li>
+								<li>
+									<a href="inplayer_mychannel.html">My Channel</a>
+								</li>
+								<li>
+									<a href="#signOut">Sign Out</a>
+								</li>
+							</ul>
+						</div> -->
+						<!-- [End] 로그인시 -->
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- [End] Header area -->
+
+	<!-- [Start] Main container -->
+	<div class="inplayer_main_container">
+
+		<!-- [Start] Poppular Videos -->
+		<div class="list_container">
+			<div class="list_top_area">
+				<h2>Poppular Videos</h2>
+				<a href="inplayer_seemore_video.html" class="see_more">See More</a>
+			</div>
+			<div class="align_video_list row2">
+				<!-- [Start] 동영상 아이템 기본형 -->
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video" title="1함&quot;부로 애틋하게&quot; 함부로sadfsafsdafdassfd">1함"부로 애틋하게" 함부로sadfsafsdafdassfd</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<!-- [End] 동영상 아이템 기본형 -->
+
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_pop_user_img.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video" title="1함"부로 애틋하게" 함부로sadfsafsdafdassfd">1함"부로 애틋하게" 함부로sadfsafsdafdassfd</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [End] Poppular Videos -->
+
+		<!-- [Start] Recently Videos -->
+		<div class="list_container">
+			<div class="list_top_area">
+				<h2>Recently Videos</h2>
+				<a href="inplayer_seemore_video.html" class="see_more">See More</a>
+			</div>
+			<div class="align_video_list row2">
+				<!-- [Start] 동영상 아이템 기본형 -->
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<!-- [End] 동영상 아이템 기본형 -->
+
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+				<div class="basic_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+						<span class="playback_time">01:58:12</span>
+					</a>
+					<a href="#none" class="tit_video">함부로 애틋하게 함부로 애틋하게 함부로 애틋하게</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+						<span class="hit_count">13235</span>
+						<span class="upload_date">2017.01.04</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- [End] Recently Videos -->
+
+		<!-- [Start] New Movies -->
+		<div class="list_container ">
+			<div class="list_top_area">
+				<h2>New Movies<span class="sub_tit">월정액으로 무제한 영화를 즐겨보세요!</span></h2>
+				<a href="inplayer_seemore_movie.html" class="see_more">See More</a>
+			</div>
+			<div class="slider_basic_wrap common_movie_slider">
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+							<span class="label_playy">playy</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+							<span class="price">10,000</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">2 Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+							<span class="price">10,000</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_12">12</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">3 Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+							<span class="price">10,000</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_15">15</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">4 Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_19">19</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">5 Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">6 Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">7 Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">8 Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+			</div>
+		</div>
+		<!-- [End] New Movies -->
+
+		<!-- [Start] Popular Movies -->
+		<div class="list_container ">
+			<div class="list_top_area">
+				<h2>Popular Movies</h2>
+				<a href="inplayer_seemore_movie.html" class="see_more">See More</a>
+			</div>
+			<div class="slider_basic_wrap common_movie_slider">
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_12">12</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_15">15</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_19">19</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+			</div>
+		</div>
+		<!-- [End] Popular Movies -->
+
+		<!-- [Start] Free Movies -->
+		<div class="list_container ">
+			<div class="list_top_area">
+				<h2>Free Movies</h2>
+				<a href="inplayer_seemore_movie.html" class="see_more">See More</a>
+			</div>
+			<div class="slider_basic_wrap common_movie_slider">
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_12">12</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_15">15</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_19">19</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+			</div>
+		</div>
+		<!-- [End] Free Movies -->
+
+		<!-- [Start] Drama Movies -->
+		<div class="list_container ">
+			<div class="list_top_area">
+				<h2>Drama Movies</h2>
+				<a href="inplayer_seemore_movie.html" class="see_more">See More</a>
+			</div>
+			<div class="slider_basic_wrap common_movie_slider">
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_12">12</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_15">15</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_19">19</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+			</div>
+		</div>
+		<!-- [End] Drama Movies -->
+
+		<!-- [Start] Comedy Movies -->
+		<div class="list_container ">
+			<div class="list_top_area">
+				<h2>Comedy Movies</h2>
+				<a href="inplayer_seemore_movie.html" class="see_more">See More</a>
+			</div>
+			<div class="slider_basic_wrap common_movie_slider">
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_12">12</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_15">15</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_19">19</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+			</div>
+		</div>
+		<!-- [End] Comedy Movies -->
+
+		<!-- [Start] Action Movies -->
+		<div class="list_container ">
+			<div class="list_top_area">
+				<h2>Action Movies</h2>
+				<a href="inplayer_seemore_movie.html" class="see_more">See More</a>
+			</div>
+			<div class="slider_basic_wrap common_movie_slider">
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_12">12</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_15">15</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_19">19</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+			</div>
+		</div>
+		<!-- [End] Action Movies -->
+
+		<!-- [Start] Kids Movies -->
+		<div class="list_container ">
+			<div class="list_top_area">
+				<h2>Kids Movies</h2>
+				<a href="inplayer_seemore_movie.html" class="see_more">See More</a>
+			</div>
+			<div class="slider_basic_wrap common_movie_slider">
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_12">12</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_15">15</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_19">19</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+				<div class="slide_item">
+					<!-- [Start] 영화 아이템 기본형 -->
+					<div class="basic_movie_item">
+						<a href="#none" class="movie_poster_area">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+							<span class="movie_rating grade_all">ALL</span>
+						</a>
+						<div class="movie_info">
+							<a href="#none" class="tit_movie">Spider Man Homecoming</a>
+							<span class="release_year">2017</span>
+						</div>
+					</div>
+					<!-- [End] 영화 아이템 기본형 -->
+				</div>
+			</div>
+		</div>
+		<!-- [End] Kids Movies -->
+
+	</div>
+	<!-- [End] Main container -->
+
+	<button type="button" class="goto_top">go to top</button>
+
+</div>
+
+
+
+
+
+<!-- [Start] Popup - Sign in -->
+<div class="pop_dim" id="signInPopup">
+	<div class="pop_container sign_in_container">
+		<button type="button" class="btn_close_pop" data-close-pop="close">close popup</button>
+		<em class="tit_sign_in">Sign In</em>
+		<div class="input_box email">
+			<label for="email">email</label>
+			<input type="email" placeholder="Email" id="email">
+			<p class="errormsg txt_error on">email error message</p>
+		</div>
+		<div class="input_box pswd">
+			<label for="password">password</label>
+			<input type="password" placeholder="Password" id="password">
+			<p class="errormsg txt_error on">password error message</p>
+		</div>
+		<button class="btn_sign_in">Sign In</button>
+		<div class="under_container clearfix">
+			<button type="button" class="btn_sign_up" data-call-pop="signUpPopup">Sign Up</button>
+			<a href="#none" class="find_pswd" data-call-pop="resetPswdPop">Forgot password?</a>
+		</div>
+		<button type="button" class="btn_fb_login">Log in with Facebook</button>
+		<small>TiTAN U.S Coporation all rights reserved</small>
+	</div>
+</div>
+<!-- [End] Popup - Sign in -->
+
+
+<!-- [Start] Popup - Sign Up -->
+<div class="pop_dim signUpPopup">
+	<div class="pop_container">
+		<h3>Sign Up</h3>
+		<button type="button" class="btn_close_pop" data-close-pop="close_pop">close popup</button>
+		<ul class="list_pop_input">
+			<li>
+				<div class="input_wrapper">
+					<label for="email_address">Email Address</label>
+					<input type="text" id="email_address">
+				</div>
+				<!-- [Start] 이메일 미입력시 나올 문구 on 클래스 추가시 보여짐-->
+				<p class="txt_basic on">This email is your username for sign in. We will send an email for verification. Please respond to verify email.</p>
+				<!-- [End] 이메일 미입력시 나올 문구 on 클래스 추가시 보여짐-->
+				<p class="txt_error">This email address is already in use.</p>
+				<p class="txt_permit">This email is available for use.</p>
+			</li>
+			<li>
+				<div class="input_wrapper">
+					<label for="signin_pswd">Password</label>
+					<input type="password" id="signin_pswd">
+				</div>
+				<!-- [Start] 비밀번호 미입력시 나올 문구 on 클래스 추가시 보여짐-->
+				<p class="txt_basic">Password must contain at least 1 lower and numeric case character. And the password should be at least 6 and 30 characters or less. </p>
+				<!-- [End] 비밀번호 미입력시 나올 문구 on 클래스 추가시 보여짐-->
+				<p class="txt_error">Please check password rules.<br>Password must contain at least 1upper, lower and numeric case character.</p>
+			</li>
+			<li>
+				<div class="input_wrapper">
+					<label for="signin_confirm_pswd">Confirm Password</label>
+					<input type="password" id="signin_confirm_pswd">
+					<p class="txt_error">Type password again.</p>
+				</div>
+				<div class="agree_check">
+					<input type="checkbox" id="check_age">
+					<label for="check_age"><span></span>I'm over 13</label>
+				</div>
+			</li>
+		</ul>
+		<div class="lower_area">
+			<button type="button" class="btn_sign_in">SIGN UP</button>
+			<span>OR</span>
+			<button type="button" class="btn_fb_login">Sign up with Facebook</button>
+		</div>
+		<p>
+			By creating an account, you agree to our<br>
+			<a href="#none" data-call-child-pop="TermsofService">Terms of Service</a> and
+			<a href="#none" data-call-child-pop="privacyPolicy">Privacy Policy</a>.
+		</p>
+	</div>
+</div>
+<!-- [End] Popup - Sign Up -->
+
+<!-- [Start] Popup - Password Reset -->
+<div class="pop_dim resetPswdPop">
+	<div class="pop_container">
+		<h3>Reset Password</h3>
+		<button type="button" class="btn_close_pop" data-close-pop="close_pop">close popup</button>
+		<div class="input_wrapper">
+			<label for="email_address">Email Address</label>
+			<input type="text" id="email_address">
+			<button type="button" class="btn_del_txt">delete all</button>
+		</div>
+		<div class="static_mssg_box">
+			<p class="txt_error on">This email address is already in use.</p>
+		</div>
+		<!-- <p class="txt_desc">Please enter your account email.</p> -->
+		<div class="btn_area">
+			<button type="button" class="btn_bg_magenta">Email new password</button>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - Password Reset -->
+
+
+<!-- [Start] Popup - Password reset NextStep -->
+<div class="pop_dim resetPswdPopNext">
+	<div class="pop_container">
+		<h3>Reset Password</h3>
+		<button type="button" class="btn_close_pop" data-close-pop="close_pop">close popup</button>
+		<div class="user_check_area">
+			<span>Email Address</span>
+			<em>heyfromjonathan@gmail.com</em>
+		</div>
+		<strong class="txt_bold">Please check your inbox to Reset Password.</strong>
+		<p class="txt_desc">The link will be expired after 2 hours.</p>
+		<div class="btn_area">
+			<button type="button" class="btn_bg_magenta" data-call-pop="signInPopup">sign In</button>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - Password reset NextStep -->
+
+<!-- [Start] Popup - Verifying Email Check & Resend -->
+<div class="pop_dim check_verifying_email">
+	<div class="pop_container">
+		<h3>Verifying Email</h3>
+		<button type="button" class="btn_close_pop" data-close-pop="close_pop">close popup</button>
+		<div class="user_check_area">
+			<span>Email Address</span>
+			<em>heyfromjonathan@gmail.com</em>
+		</div>
+		<strong class="txt_bold">Please check your inbox to verify your account.</strong>
+		<p class="txt_desc">Unverified account will be discarded after 7 days.</p>
+
+		<div class="right_bottom_area">
+			<p>If you did not receive an Email,<br>please click here to <button type="button">Resend</button></p>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - Verifying Email Check & Resend -->
+
+<!-- [Start] Popup - Email verifying
+171012 signInPopup에서 복구함. 왜 지웠었는지 모르겟음
+-->
+<div class="pop_dim resendEmailMessage">
+	<div class="pop_container">
+		<div class="resent_email_Message">
+			<span>We've resent email for verification.</span>
+		</div>
+		<button type="button" class="resent_email_confirm" data-close-pop="resendEmailMessage" data-call-pop="check_verifying_email">확인</button>
+	</div>
+</div>
+<!-- [End] Popup - Email verifying -->
+
+
+
+
+
+<!-- [Start] Popup - Terms of Service -->
+<div class="pop_dim TermsofService">
+	<div class="pop_container">
+		<h3>Terms of Service</h3>
+		<button type="button" class="btn_close_pop" data-close-pop="close_pop">close popup</button>
+		<div class="terms_wrapper hide_scrollbar" data-mcs-theme="minimal-dark">
+			<p>
+				약관 내용은 너무 길어서 생략한다. 텍스트는 jsp를 기준으로 하고, white-space: pre-wrap에 유의한다.
+				privacyPolicy는 구조가 같기에 생략했다.
+			</p>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - Terms of Service -->
+
+<!-- [Start] Popup - TiTAN Play Info -->
+<div class="pop_dim tianPlayInfo">
+	<div class="pop_container">
+		<h3>TiTAN Play Info</h3>
+		<button type="button" class="btn_close_pop" data-close-pop="close_pop">close popup</button>
+
+		<div class="tab_panel_tpInfo">
+
+			<ul class="tab_menu_tpInfo clearfix">
+				<li class="on">
+					<a href="#helpDesk">Help Desk</a>
+				</li>
+				<li>
+					<a href="#legalNotice">Legal Notice</a>
+				</li>
+				<li>
+					<a href="#Version">Version</a>
+				</li>
+			</ul>
+
+			<div class="tab_container_tpInfo">
+
+				<!-- [Start] Help Desk -->
+				<div class="tab_content_tpInfo on">
+
+					<div class="selectbox_wrapper">
+						<div class="selectbox_top">
+							<span class="seleted_value">Signing up &amp; Account</span>
+						</div>
+						<ul class="selectbox_options">
+							<li value="option01">Signing up &amp; Account</li>
+							<li value="option02">Guide for Using TiTAN Play</li>
+							<li value="option03">Copyright</li>
+						</ul>
+					</div>
+
+					<!-- [Start] Signing up & Account -->
+					<ul class="accd_container_info" data-mcs-theme="minimal-dark" style="display:block;">
+						<li class="accd_item_info">
+							<em>How can I create an account?</em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>You can simply sign up using an email address.</li>
+								<li>Personal information such a s gender and age is required to provide personalized contents and to analyze preferences.</li>
+								<li>After signing up, confirmation is required via email address provided. After verification of the email address you will have access as a member.</li>
+							</ul>
+						</li>
+						<li class="accd_item_info">
+							<em>Verification Email not received.</em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>Log in using email address registered on TP App and request for verification email again.</li>
+								<li>Or please check your spam list or junk mail list. Unfortunately, The mail might be blocked by email service provider.</li>
+							</ul>
+						</li>
+						<li class="accd_item_info">
+							<em>Eligibility to make an account?</em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>We do not keep personal information of 13 years old or less.</li>
+								<li>Therefore you must be older than 13 years of age. In order to verify we request for Date of Birth during registeration.</li>
+								<li>We provide service to a user who do not wish create an account and nor want to provide any personal information however these users won’t be able to upload contents or post a comments furthermore any services which requires consent from sign up process will not be provided</li>
+							</ul>
+						</li>
+						<li class="accd_item_info">
+							<em>What are the benefit of having an account?</em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>When you sign up, you have access to create your own personalized profile/channel. You also can upload your private contents to be shared with other users. Soon we will personal content sales transactions function as it is currently in progress to be serviced.</li>
+								<li>You can also enjoy our content without creating an account however age restricted contents and pay per content can’t be used.</li>
+							</ul>
+						</li>
+						<li class="accd_item_info">
+							<em>How do I delete my account?</em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>Unsatisfied with our service? Please reconsider deleting the account, if you send us an email with your difficulties we will try our best to resolve them.</li>
+								<li>If you wish to delete your account please follow Profile > Profile Change > Account setting > Close Account.</li>
+								<li>Be sure to read over the terms and condition for deleting the account. We will not be able to restore your personal data.</li>
+							</ul>
+						</li>
+						<li class="accd_item_info">
+							<em>What happens to my personal information?</em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>Once you delete the account, profile and purchase record will be deleted permanently.</li>
+								<li>Content copyrights if solely with the creator hence upon deleting your account all relevant contents will be delete from our data base as well. (however, due to protect users who have purchased contents, the content may remain at our data base until expires)</li>
+								<li>Once account is deleted, you will not be able to re-join with same email address for 60 days.</li>
+							</ul>
+						</li>
+						<li class="accd_item_info">
+							<em>Can I rejoin after deleting my account?</em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>Once account is deleted, you will not be able to re-join with same email address for 60 days</li>
+							</ul>
+						</li>
+						<li class="accd_item_info">
+							<em>What happens if I delete my profile?</em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>Profile channel, and contents in the channel are grouped structure.</li>
+								<li>Therefore, once profile is deleted, contents relevant to the profile will be deleted as well.<br>(however, due to protect users who have purchased contents, the content may remain at our data base until expires)</li>
+								<li>Comments made under the deleted profile will remain in the data base, only the profile will be deleted. If you wish to delete the comments made as well, they must be deleted individually before profile is deleted.</li>
+							</ul>
+						</li>
+					</ul>
+					<!-- [End] Signing up & Account -->
+
+					<!-- [Start] Guide for Using TiTAN Play -->
+					<ul class="accd_container_info" data-mcs-theme="minimal-dark">
+						<li class="accd_item_info">
+							<em>What kind of content can be uploaded on TiTAN Play?</em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>
+									Below list of content can not be uploaded.
+									<ul class="desc_type01">
+										<li>When you do not have proper use of license of the content</li>
+										<li>Contents that harm other users or invade privacy</li>
+										<li>Illegal or dangerous contents</li>
+										<li>Child pornography and any other form of pornography</li>
+										<li>Contents which promotes hatred or violence</li>
+										<li>Advertising purposed contents (except purpose of sharing an original advertisement)</li>
+									</ul>
+								</li>
+								<li>If you post unpermitted contents as such, your account will be permanently banned.</li>
+								<li>TiTAN Play operates internal monitoring staff however reporting such contents is recommended.</li>
+							</ul>
+						</li>
+						<li class="accd_item_info">
+							<em>How do you operate the Channel </em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>its very simple.</li>
+								<li>Create Profile (When you have created an account. Profile will be generated following with creation of your own channel.)</li>
+								<li>Create setting for your channel</li>
+								<li>Upload content on the channel</li>
+							</ul>
+						</li>
+						<li class="accd_item_info">
+							<em>Can I subscribe to Channels I like?</em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>Yes Of course.</li>
+								<li>Create an account first and log in. Choose to follow in the channels you like</li>
+								<li>You can check updates of following channel in the feed menu.</li>
+								<li>Follow variety of channels. You can also manage your channel as a creator. If you operate many channels, people will follow your channels.</li>
+							</ul>
+						</li>
+						<li class="accd_item_info">
+							<em>I would like to make sales on TiTAN Play</em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>Unfortunately, at the moment TP does not allow sales transactions. Soon to be provided. If you operate your channel as a creator and receive many following users, it will help to sell your contents on the later stage.</li>
+								<li>If you are content supply business entity, please contact us at www.titanplaform.us<br>You will be connected with our designated personnel</li>
+							</ul>
+						</li>
+					</ul>
+					<!-- [End] Guide for Using TiTAN Play -->
+
+					<!-- [Start] Copyright -->
+					<ul class="accd_container_info" data-mcs-theme="minimal-dark">
+						<li class="accd_item_info">
+							<em>My profile have been attacked.</em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>If other users have invaded your privacy you can report it to us.</li>
+								<li>In Content Page, you can find Report button to be report the issue.</li>
+								<li>Our monitoring team will take appropriate measure to resolve the issue</li>
+								<li>We will try our best keep clean service environment.</li>
+							</ul>
+						</li>
+						<li class="accd_item_info">
+							<em>Can someone take my content?</em>
+							<ul class="desc_type01 accd_view_area_info">
+								<li>At the moment we do not offer download function ( to be offered)</li>
+								<li>Furthermore with our TCI (TCI, TiTAN Platform Content Identifier) content protection. Even when your content is illegally downloader.</li>
+								<li>It will be protected from illegal modification.</li>
+								<li>We offer the best content protection in the market.</li>
+							</ul>
+						</li>
+					</ul>
+					<!-- [End] Copyright -->
+
+
+				</div>
+
+
+				<!-- [End] Help Desk -->
+
+				<!-- [Start] Legal Notice -->
+				<div class="tab_content_tpInfo">
+
+					<div class="selectbox_wrapper">
+						<div class="selectbox_top">
+							<span class="seleted_value">Terms of use</span>
+						</div>
+						<ul class="selectbox_options">
+							<li value="option01">Terms of use</li>
+							<li value="option02">Privacy Policy</li>
+						</ul>
+					</div>
+
+					<!-- [Start] Term of Use -->
+					<ul class="accd_container_info" data-mcs-theme="minimal-dark" style="display:block;">
+						<li class="accd_item_info">
+							<em>1. Introduction</em>
+							<div class="accd_view_area_info">
+								<p>
+									TiTAN Play Website Standard Terms And Conditions (these “Terms” or these “Website Standard Terms And Conditions”) contained herein on this webpage, shall govern your use of this website, including all pages within this website (collectively referred to herein below as this “Website”). These Terms apply in full force and effect to your use of this Website and by using this Website, you expressly accept all terms and conditions contained herein in full. You must not use this Website, if you have any objection to any of these Website Standard Terms And Conditions.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>2. Intellectual Property Rights.</em>
+							<div class="accd_view_area_info">
+								<p>
+									Other than content you own, which you may have opted to include on this Website, under these Terms, TiTAN US and/or its licensors own all rights to the intellectual property and material contained in this Website, and all such rights are reserved. You are granted a limited license only, subject to the restrictions provided in these Terms, for purposes of viewing the material contained on this Website,
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>3. Restrictions</em>
+							<div class="accd_view_area_info">
+								<p>
+									You are expressly and emphatically restricted from all of the following:<br>
+
+									1. publishing any Website material in any media;<br>
+									2. selling, sublicensing and/or otherwise commercializing any Website material;<br>
+									3. publicly performing and/or showing any Website material;<br>
+									4. using this Website in any way that is, or may be, damaging to this Website;<br>
+									5. using this Website in any way that impacts user access to this Website;<br>
+									6. using this Website contrary to applicable laws and regulations, or in a way that causes, or may cause, harm to the Website, or to any person or business entity;<br>
+									7. engaging in any data mining, data harvesting, data extracting or any other similar activity in relation to this Website, or while using this Website;<br>
+									8. using this Website to engage in any advertising or marketing;<br>
+									<br>
+									Certain areas of this Website are restricted from access by you and TiTAN US may further restrict access by you to any areas of this Website, at any time, in its sole and absolute discretion.  Any user ID and password you may have for this Website are confidential and you must maintain confidentiality of such information.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>4. Your Content.</em>
+							<div class="accd_view_area_info">
+								<p>
+									In these Website Standard Terms And Conditions, “Your Content” shall mean any audio, video, text, images or other material you choose to display on this Website. With respect to Your Content, by displaying it, you grant TiTAN US a non-exclusive, worldwide, irrevocable, royalty-free, sublicensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.<br><br>
+									Your Content must be your own and must not be infringing on any third party’s rights. TiTAN US reserves the right to remove any of Your Content from this Website at any time, and for any reason, without notice.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>5. No warranties.</em>
+							<div class="accd_view_area_info">
+								<p>
+									This Website is provided “as is,” with all faults, and TiTAN US makes no express or implied representations or warranties, of any kind related to this Website or the materials contained on this Website. Additionally, nothing contained on this Website shall be construed as providing consult or advice to you.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>6. Limitation of liability.</em>
+							<div class="accd_view_area_info">
+								<p>
+									In no event shall TiTAN US, nor any of its officers, directors and employees, be liable to you for anything arising out of or in any way connected with your use of this Website, whether such liability is under contract, tort or otherwise, and TITAN US, including its officers, directors and employees shall not be liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>7. Indemnification</em>
+							<div class="accd_view_area_info">
+								<p>
+									You hereby indemnify to the fullest extent TiTAN US from and against any and all liabilities, costs, demands, causes of action, damages and expenses (including reasonable attorney’s fees) arising out of or in any way related to your breach of any of the provisions of these Terms.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>8. Severability</em>
+							<div class="accd_view_area_info">
+								<p>
+									If any provision of these Terms is found to be unenforceable or invalid under any applicable law, such unenforceability or invalidity shall not render these Terms unenforceable or invalid as a whole, and such provisions shall be deleted without affecting the remaining provisions herein.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>9.	Variation of Terms.</em>
+							<div class="accd_view_area_info">
+								<p>
+									TiTAN US is permitted to revise these Terms at any time as it sees fit, and by using this Website you are expected to review such Terms on a regular basis to ensure you understand all terms and conditions governing use of this Website.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>10. Assignment</em>
+							<div class="accd_view_area_info">
+								<p>
+									TiTAN US shall be permitted to assign, transfer, and subcontract its rights and/or obligations under these Terms without any notification or consent required. However, .you shall not be permitted to assign, transfer, or subcontract any of your rights and/or obligations under these Terms.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>11. Entire Agreement.</em>
+							<div class="accd_view_area_info">
+								<p>
+									These Terms, including any legal notices and disclaimers contained on this Website, constitute the entire agreement between TiTAN US and you in relation to your use of this Website, and supersede all prior agreements and understandings with respect to the same.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>12. Governing Law &amp; Jurisdiction.</em>
+							<div class="accd_view_area_info">
+								<p>
+									These Terms will be governed by and construed in accordance with the laws of the State of Califronia, and you submit to the non-exclusive jurisdiction of the state and federal courts located in California for the resolution of any disputes.
+								</p>
+							</div>
+						</li>
+					</ul>
+					<!-- [End] Term of Use -->
+
+					<!-- [Start] Privacy Policy -->
+					<ul class="accd_container_info" data-mcs-theme="minimal-dark">
+						<li class="accd_item_info">
+							<em>1. Information We Collect</em>
+							<div class="accd_view_area_info">
+								<p>
+									Our Service: We may collect personally identifiable information about you, such as your full name, phone number and email address, when you register for an account. If you choose to purchase a product from us, we or our third-party payment processors will collect your payment information. We also collect data through our partners (customers) who use the TiTAN US Service (including by embedding our code on their websites) on their websites or mobile applications. When you use the TiTAN US Service or if you visit such websites or mobile applications, we may receive certain information about you as described below. We do not send any promotional emails; however, we may send you service related emails related to your account. If you no longer wish to receive these emails, you may opt out of them by canceling your account.<br><br>
+									Co-branding: Some of our partner pages may have the look and feel of being on TiTAN Play, however some information collected on our partner pages may not be covered under this Privacy Policy. Account and billing information collected on our partners’ pages are subject to their respective privacy policies.<br><br>
+									Cookies And Tracking Technologies: Technologies such as: cookies, beacons, tags and scripts are used by TiTAN US and our partners (such as advertising, marketing and analytics), affiliates or analytics or service providers. These technologies may be used in analyzing trends, administering the Sites, tracking users’ movements around the Sites and to gather demographic information about our user base as a whole. We may receive reports based on the use of these technologies by such companies on an individual as well as aggregated basis. Our partners may also use such technologies to deliver advertisements to you as described below. While we respect the privacy of our users, we are not able to respond to Do Not Track signals set by your browser at this time.<br><br>
+									We use cookies to remember users’ settings as well as for authentication and analytics. Users can control the use of cookies at the individual browser level. If you reject cookies, you may still use our Sites, but your ability to use some features or areas of our Sites may be limited.<br><br>
+									You may opt-out of Cookies using the preference manager in web browser settings.<br><br>
+									Log File Information: Log file information is automatically reported by your browser or mobile application each time you access our Sites. For example, when you access our Sites, our servers automatically record certain information that your web browser sends whenever you visit any website. These server logs may include information such as your web request, Internet Protocol ("IP") address, browser type, referring / exit pages and URLs, number of clicks, domain names, landing pages, pages viewed and other such information. We do not link this automatically-collected data to personally identifiable information.<br><br>
+									Flash LSOs: We use Local Storage Objects (LSOs) such as HTML5 and Flash to store content information and preferences. We partner with third parties to provide certain features on our site or to display advertising based upon your browsing activity. Various browsers may offer their own management tools for removing HTML5 LSOs.<br><br>
+									Information Related To Data Collected For Our Customers: TiTAN US acknowledges that you have the right to access your personal information. TiTAN US collects information under the direction of its customers, and has no direct relationship with the individuals whose data it may process. We may transfer personal information to companies that help us provide our service. Access And Retention Of Data Controlled By Our Customers: An individual who seeks access, or who seeks to correct, amend or delete inaccurate data should direct his query to an TiTAN US customer (the data controller). If requested to remove data, we will respond within a reasonable timeframe.<br><br>
+									We will retain personal data we process on behalf of our customers for as long as needed to provide our services. TiTAN US will retain this personal information as necessary to comply with our legal obligations, resolve disputes and enforce our agreements.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>2. How We Use Your Information</em>
+							<div class="accd_view_area_info">
+								<p>
+									We use the information that we collect to operate and maintain our Sites and the TiTAN Play Service, send you marketing communications, respond to your questions and concerns and to help our partners improve their online offerings.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>3. How We Share Your Information</em>
+							<div class="accd_view_area_info">
+								<p>
+									Personally Identifiable Information: We may store personal information in locations outside the direct control of TiTAN US (for instance, on servers or databases co-located with hosting providers). Any personally identifiable information you elect to make publicly available on our Sites, such as posting comments on our blog page, will be available to others. If you remove information that you have made public on our Sites, copies may remain viewable in cached and archived pages of our Sites, or if other users have copied or saved that information. Our blog is managed by a third party application that may require you to register to post a comment. <br><br>
+									Non-Personally Identifiable Information: We may share non-personally identifiable information (such as anonymous usage data, referring/exit pages and URLs, platform types, number of clicks, etc.) with interested third parties to help them understand the usage patterns for certain TiTAN Play Services and those of our partners. Our partners also have the option to publish the A/B testing results for their websites on the TiTAN Play Service. Such results consist solely of non-personally identifiable information. If you choose to publish such results on the TiTAN Play Service, you understand and agree that this information, along with any personally identifiable information you choose to make available in connection with such results, will be made publicly available. By publishing your results on the TiTAN Play Service or Site, you agree that you have obtained all necessary consents to make such information public and that doing so will not violate any laws. If you remove information that you have made public on the TiTAN Play Service or Site, copies may remain viewable in cached and archived pages of the TiTAN Play Service or Site, or if other users have copied or saved that information. Non-personally identifiable information may be stored indefinitely.<br><br>
+									Instances Where We Are Required To Share Your Information: TiTAN Play will disclose your information where required to do so by law, if subject to subpoena or other legal proceeding or if we reasonably believe that such action is necessary to (a) comply with the law and the reasonable requests of law enforcement; (b) to enforce our Terms or to protect the security or integrity of our Service; and/or (c) to exercise or protect the rights, property, or personal safety of TiTAN US, our users or others.<br><br>
+									What Happens In The Event Of A Change Of Control: We may buy or sell/divest/transfer the company (including any shares in the company), or any combination of its products, services, assets and/or businesses. Your information such as customer names and email addresses, and other User information related to the TiTAN Play Service may be among the items sold or otherwise transferred in these types of transactions. We may also sell, assign or otherwise transfer such information in the course of corporate divestitures, mergers, acquisitions, bankruptcies, dissolutions, reorganizations, liquidations, similar transactions or proceedings involving all or a portion of the company. You will be notified via email and/or a prominent notice on our Site of any change in ownership or uses of your personal information, as well as any choices you may have regarding your personal information.<br><br>
+									Behavioral Targeting / Re-Targeting: We partner with third parties to display advertising on our Sites and manage our advertising on other sites. Our third party partners may use technologies such as cookies to gather information about your activities on this Site and other sites in order to provide you advertising based upon your browsing activities and interests. The only way to completely “opt out” of the collection of any information through cookies or other tracking technology is to actively manage the settings on your browser or mobile device. Please refer to your browser’s or mobile device’s technical information for instructions on how to delete and disable cookies, and other tracking/recording tools (to learn more about cookies, clear gifs/web beacons and related technologies, you may wish to visit http://www.allaboutcookies.org and/or the Network Advertising Initiative’s online resources, at http://www.networkadvertising.org. If you access the TiTAN Play Service or Sites on your mobile device, you may not be able to control tracking technologies through the settings. You may also opt-out of Google marketing products by clicking below. Please note this does not opt you out of being served ads. You will continue to receive generic ads.<br><br>
+
+									Opt out of TiTAN Play remarketing<br>
+									TiTAN Play’s remarketing opt-out tool uses cookies and will only opt out the specific computer you are on.<br>
+									Opt out<br><br>
+									The Privacy Policy does not apply to, and we cannot control the activities of, third-party ad servers and ad networks. Please contact or consult the respective privacy policies of such ad servers or ad networks for more information.<br><br>
+									Testimonials: We display personal testimonials of satisfied customers on our Site in addition to other endorsements. With your consent we may post your testimonial along with your name. If you wish to update or delete your testimonial, you can contact us at TiTANPlay@Titanplatform.us
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>4. Storage and Processing</em>
+							<div class="accd_view_area_info">
+								<p>
+									Your information collected through the TiTAN Play Service may be stored and processed in the U.S. or any other country in which TiTAN Play or its subsidiaries, affiliates or service providers maintain facilities. TiTAN Play may transfer information that we collect about you, including personal information, to affiliated entities, or to other third parties across borders and from your country or jurisdiction to other countries or jurisdictions around the world. If you are located in the European Union or other regions with laws governing data collection and use that may differ from U.S. law, please note that we may transfer information, including personal information, to a country and jurisdiction that does not have the same data protection laws as your jurisdiction, and you consent to the: (1) transfer of information to the U.S. or any other country in which TiTAN US or its parent, subsidiaries, affiliates or service providers maintain facilities; and (2) the use and disclosure of information about you as described in this Privacy Policy.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>5. How We Protect Your Information</em>
+							<div class="accd_view_area_info">
+								<p>
+									TiTAN US is concerned with protecting your privacy and data, but we cannot ensure or warrant the security of any information you transmit to TiTAN Play or guarantee that your information on the TiTAN Play Service may not be accessed, disclosed, altered or destroyed by breach of any of our industry standard physical, technical or managerial safeguards. When you enter sensitive information (such as log in credentials) on our registration or order forms, we encrypt that information using secure socket layer technology (SSL). No method of transmission over the Internet or method of electronic storage, is 100% secure, however. Therefore, we cannot guarantee its absolute security. If you have any questions about security on our Site, you can contact us at TiTANPlay@titanplatform.us<br><br>
+									We use an outside help platform, and a credit card processing company to bill you if you purchase services. These companies do not retain, share, store or use personally identifiable information for any other purposes.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>6. U.S. Privacy Shield</em>
+							<div class="accd_view_area_info">
+								<p>
+									TiTAN US participates in and has certified its compliance with the U.S. Privacy Shield Framework. TiTAN US is committed to subjecting all personal data received from member countries, in reliance on the Privacy Shield Framework, to the Framework’s applicable Principles. To learn more about the Privacy Shield Framework, visit the U.S. Department of Commerce’s Privacy Shield List.<br><br>
+									TiTAN US is responsible for the processing of personal data it receives under the Privacy Shield and subsequently transfers to a third party acting as an agent on its behalf. We comply with the Privacy Shield Principles for all onward transfers of personal data from the US including the onward transfer liability provisions.<br><br>
+									With respect to personal data received or transferred pursuant to the Privacy Shield Framework, TITAN US is subject to the investigatory and enforcement powers of the U.S. Federal Trade Commission. In certain situations, TiTAN US may be required to disclose personal data in response to lawful requests by public authorities, including to meet national security or law enforcement requirements.<br><br>
+									If you have an unresolved privacy or data use concern that we have not addressed satisfactorily, please contact our U.S. office at TiTANPlay@titanplatform.us<br><br>
+									Under certain conditions, more fully described on the Privacy Shield website, you may be entitled to invoke binding arbitration when other dispute resolution procedures have been exhausted.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>7. Swiss Safe Harbor</em>
+							<div class="accd_view_area_info">
+								<p>
+									TiTAN US complies with the U.S. - Swiss Safe Harbor framework as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal data. TiTAN US has certified that it adheres to the Safe Harbor Privacy Principles of notice, choice, onward transfer, security, data integrity, access and enforcement. To learn more about the Safe Harbor program. Please visit http://www.export.gov/safeharbor/.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>8. Compromise of Personal Information</em>
+							<div class="accd_view_area_info">
+								<p>
+									In the event that personal information is compromised as a breach of security, TiTAN US will promptly notify our customers in compliance with applicable law.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>9. Your Choices About Your Information</em>
+							<div class="accd_view_area_info">
+								<p>
+									You can review, correct, update or delete inaccuracies to the information about you that TiTAN US keeps on file by logging into your account. Alternately, you can contact us directly at TiTANPlay@titanplatform.us. We will respond to your request to access within 30 days.<br><br>
+									We will retain your information for as long as your account is active or as needed to provide you services. We will retain and use your information as necessary to comply with our legal obligations, resolve disputes and enforce our agreements.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>10. Children’s Privacy</em>
+							<div class="accd_view_area_info">
+								<p>
+									Protecting the privacy of young children is especially important. For that reason, TiTAN US does not knowingly collect or solicit personal information from anyone under the age of 13. In the event that we learn that we have collected personal information from a child under age 13, we will delete that information as quickly as possible. If you believe that we might have any information from or about a child under 13, please contact us at TiTANPlay@titanplatform.us.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>11. Notification Procedures</em>
+							<div class="accd_view_area_info">
+								<p>
+									It is our policy to provide notifications, whether such notifications are required by law or are for marketing or other business related purposes, to you via email, written or hard copy notice, or through conspicuous posting of such notice on the Service, as determined by TiTAN US in its sole discretion. We reserve the right to determine the form and means of providing notifications to you, provided that you may opt out of certain means of notification as described in this Privacy Policy.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>12. Links to Other Web Sites</em>
+							<div class="accd_view_area_info">
+								<p>
+									We are not responsible for the practices employed by websites or services linked to or from the TiTAN Play Service or Sites, including the information or content contained therein. Please remember that when you use a link to go from the TiTAN Play Service or Sites to another website or service, our Privacy Policy does not apply to third-party websites or services. Your browsing and interaction on any third-party website or service, including those that have a link or advertisement on our website, are subject to that third party’s own rules and policies.<br><br>
+									Social Media Features: Our Site includes social media features. These features may collect your IP address and which page you are visiting on our Site, and may set a cookie to enable the feature to function properly. Social media features are either hosted by a third party or hosted directly on our Site. Your interactions with these features are governed by the privacy policy of the organization providing it.
+								</p>
+							</div>
+						</li>
+						<li class="accd_item_info">
+							<em>13. Changes to Our Privacy Policy</em>
+							<div class="accd_view_area_info">
+								<p>
+									If we change our privacy policies and procedures materially, we will post those changes on the TiTAN Play Service to keep you aware of what information we collect, how we use it and under what circumstances we may disclose it. Changes to this Privacy Policy are effective when they are posted on this page. When we change the policy in a material manner we will let you know via email and/or a prominent notice on our Site, prior to the change becoming effective and update the ‘effective date’ at the top of this page.
+								</p>
+							</div>
+						</li>
+					</ul>
+					<!-- [End] Privacy Policy -->
+
+				</div>
+				<!-- [End] Legal Notice -->
+
+				<!-- [Start] Version -->
+				<div class="tab_content_tpInfo">
+					<div class="version_info">
+						<img src="../resources/images/gateway/inplayer/ic_player.png" alt="player icon">
+						<span class="current_ver">Current Version<span>1.05</span></span>
+						<span class="updated_date">Updated Date <span>2017.07.31</span></span>
+						<span class="tp_right">TiTAN U.S. Corporation all rights reserved.</span>
+					</div>
+				</div>
+				<!-- [End] Version -->
+			</div>
+		</div>
+
+
+	</div>
+</div>
+<!-- [End] Popup - TiTAN Play Info -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom scroll bar js -->
+<script type="text/javascript" src="../resources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+	/*custom scroll bar - 기존코드. x 스크롤에 대한 문제 때문에 주석처리함 */
+	// $(window).on('load',function(){
+	// 	$('.hide_scrollbar').mCustomScrollbar({
+	// 		axis: 'yx',
+	// 		callbacks:{
+	// 			whileScrolling:function(){
+	// 				var pct=this.mcs.topPct;
+	// 				if(pct>=50){
+	// 					console.log(" sfsdfs");
+	// 				}
+	// 			}
+	// 		}
+
+	// 	});
+	// });
+
+	/*슬라이더 관련 스크립트*/
+	// Slider -  movie common style
+	$(document).ready(function(){
+		$('.common_movie_slider').slick({
+			slidesToShow: 7,
+			slidesToScroll: 7,
+			variableWidth: true,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 6,
+						slidesToScroll: 6
+					}
+				},
+				{
+					breakpoint: 1004,
+					settings: {
+						slidesToShow: 5,
+						slidesToScroll: 5
+					}
+				}
+			]
+		});
+	})
+
+
+</script>
+
+
+
+<script type="text/javascript">
+	/*해당 부분은 infinity scroll을 위해 공통 js 전에 불러도 상관이 없다
+	document.ready 도 중복으로 사용되면 작동하지 않는다.*/
+	/*
+	$('.hide_scrollbar').mCustomScrollbar({
+		callbacks: {
+			onScroll:function() {
+				var presentY = parseInt( $('#mCSB_1_container')[0].offsetTop ) * -1;
+				var windowInner = window.innerHeight;
+				var containerHeight = parseInt( $('#mCSB_1_container')[0].offsetHeight );
+				var calcValue = (presentY + windowInner)/containerHeight;
+				if( calcValue >= 0.9) {
+					console.log("스크롤이 90%이상 입니다.");
+				}
+			}
+		}
+	});
+	*/
+</script>
+
+<!-- 공통 js -->
+<script type="text/javascript" src="../resources/js/common_pub.js"></script>
+</body>
+</html>

@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>타이탄 플레이</title>
+	<link rel="shortcut icon" href="../resources/images/gateway/favicon.ico">
+	<!-- slider css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/slick-theme.css">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_common.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_gateway.css">
+	<!-- jQuery -->
+	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
+	<!-- slider js -->
+	<script type="text/javascript" src="../resources/js/slick.min.js"></script>
+</head>
+<body>
+
+<div class="tp_wrapper">
+	<!-- [Start] Header area -->
+	<header class="tp_header_wrapper">
+
+		<!-- [Start] Main Header -->
+		<div class="tp_main_header">
+			<h1>
+				<span class="tp_home">TiTAN Play</span>
+			</h1>
+			<em class="tit_tp_header">콘텐츠 오픈마켓 플랫폼!</em>
+			<div>
+				<button type="button" class="btn_why_tp" data-call-pop="why_tp_player">왜 플레이어를 다운받아야 하나요?</button>
+			</div>
+			<button type="button" class="btn_app_dwld">다운로드</button>
+		</div>
+		<!-- [End] Main Header -->
+
+		<!-- [Start] Line Header -->
+		<div class="tp_line_header">
+			<div class="container">
+				<span class="tp_home">TiTAN Play</span>
+				<div class="right_items">
+					<button type="button" class="btn_why_tp" data-call-pop="why_tp_player">왜 플레이어를 다운받아야 하나요?</button>
+					<button type="button" class="btn_app_dwld">다운로드</button>
+				</div>
+			</div>
+		</div>
+		<!-- [End] Line Header -->
+
+	</header>
+	<!-- [End] Header area -->
+
+	<!-- [Start] TP Description Slider -->
+	<div class="tp_descption_slider_wrapper">
+		<ul class="tp_descption_slider">
+			<li>
+				<div class="description_item">
+
+					<div class="left_txt_area">
+						<h2>크리에이터</h2>
+						<p>
+							직접 만든 콘텐츠를 자유롭게 업로드하고 공유할 수 있습니다.<br>
+							인기 크리에이터가 되는 방법은 어렵지 않습니다.<br>
+							지금 TiTAN Play에서 시작해 보세요.<br>
+						</p>
+					</div>
+
+					<div class="right_img_area">
+						<img src="../resources/images/gateway/gateway_pc/img_gate_01.png">
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="description_item">
+					<div class="left_txt_area">
+						<h2>시크릿 콘텐츠</h2>
+						<p>
+							TiTAN Play에 게시된 콘텐츠는 타이탄 플랫폼의 보안 기술로<br>
+							콘텐츠가 불법으로 복사, 배포되는 것을 방지해줍니다.<br>
+							시크릿 기능을 사용하면, 내가 원하는 사용자에게만 콘텐츠를<br>
+							공유할 수 있습니다.
+						</p>
+					</div>
+					<div class="right_img_area">
+						<img src="../resources/images/gateway/gateway_pc/img_gate_02.png">
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="description_item">
+					<div class="left_txt_area">
+						<h2>수익</h2>
+						<p>
+							캐쉬를 통한 콘텐츠의 판매와 구매가 가능합니다.<br>
+							내가 만든 콘텐츠에 가격을 설정하여 판매를 할 수 있으며,<br>
+							판매한 콘텐츠 수익을 다시 캐쉬로 전환하거나 현금으로 <br>
+							받을 수 있는 정산 시스템이 갖추어져 있습니다.
+						</p>
+					</div>
+					<div class="right_img_area">
+						<img src="../resources/images/gateway/gateway_pc/img_gate_03.png">
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="description_item n04">
+					<div class="left_txt_area">
+						<h2>다양한 디바이스 지원</h2>
+						<p>
+							TiTAN Play의 콘텐츠는 TV, 모바일, PC에서 감상할 수 있습니다.<br>
+							지루한 이동시간에는 어제 놓친 방송이나 크리에이터 영상을,<br>
+							집에서는 PC와 TV로 영화, 방송 콘텐츠를 즐겨보세요.
+						</p>
+					</div>
+					<div class="right_img_area">
+						<img src="../resources/images/gateway/gateway_pc/img_gate_04.png">
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- [End] TP Description Slider -->
+
+
+
+	<!-- [Start] Main area -->
+	<div class="tp_main">
+
+		<!-- [Start] Event Banner  -->
+		<a href="#event" class="event_banner">
+			<img src="../resources/images/gateway/event/PC_main_banner.jpg" alt="새로워진 타이탄 플레이 즐기고 푸짐한 경품도 받아가세요!">
+		</a>
+		<!-- [End] Event Banner  -->
+
+
+
+		<!-- [Start] 인기 동영상 -->
+		<div class="tp_list_container">
+			<h2>인기 동영상</h2>
+			<div class="align_video_list row2">
+				<!-- [Start] 동영상 아이템 기본형 -->
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video ico_Tcash" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<!-- [End] 동영상 아이템 기본형 -->
+
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- [End] 인기 동영상 -->
+
+		<!-- [Start] 최신 동영상 -->
+		<div class="tp_list_container">
+			<h2>최신 동영상</h2>
+			<div class="align_video_list row2">
+				<!-- [Start] 동영상 아이템 기본형 -->
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<!-- [End] 동영상 아이템 기본형 -->
+
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="tp_video_item">
+					<a href="#none" class="video_thumbnail_area">
+						<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+					</a>
+					<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+					<div class="video_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- [End] 최신 동영상 -->
+
+
+		<div class="slider_wrapper">
+
+			<!-- [Start] 인기 영화 -->
+			<div class="slider_container">
+				<h2 class="tit_slider">
+					인기 영화
+				</h2>
+				<div class="slider_basic_wrap pop_movie_slider">
+					<div class="slide_item">
+						<!-- [Start] 영화 아이템 -->
+						<a href="#none" class="tp_movie_item">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="스파이더맨 홈커밍 포스터">
+							<em class="tit_movie">스파이더맨 홈커밍1스파이더맨 홈커밍</em>
+						</a>
+						<!-- [End] 영화 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 영화 아이템 -->
+						<a href="#none" class="tp_movie_item">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="스파이더맨 홈커밍 포스터">
+							<em class="tit_movie">스파이더맨 홈커밍2</em>
+						</a>
+						<!-- [End] 영화 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 영화 아이템 -->
+						<a href="#none" class="tp_movie_item">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="스파이더맨 홈커밍 포스터">
+							<em class="tit_movie">스파이더맨 홈커밍3</em>
+						</a>
+						<!-- [End] 영화 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 영화 아이템 -->
+						<a href="#none" class="tp_movie_item">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="스파이더맨 홈커밍 포스터">
+							<em class="tit_movie">스파이더맨 홈커밍4</em>
+						</a>
+						<!-- [End] 영화 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 영화 아이템 -->
+						<a href="#none" class="tp_movie_item">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="스파이더맨 홈커밍 포스터">
+							<em class="tit_movie">스파이더맨 홈커밍5</em>
+						</a>
+						<!-- [End] 영화 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 영화 아이템 -->
+						<a href="#none" class="tp_movie_item">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="스파이더맨 홈커밍 포스터">
+							<em class="tit_movie">스파이더맨 홈커밍6</em>
+						</a>
+						<!-- [End] 영화 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 영화 아이템 -->
+						<a href="#none" class="tp_movie_item">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="스파이더맨 홈커밍 포스터">
+							<em class="tit_movie">스파이더맨 홈커밍7</em>
+						</a>
+						<!-- [End] 영화 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 영화 아이템 -->
+						<a href="#none" class="tp_movie_item">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="스파이더맨 홈커밍 포스터">
+							<em class="tit_movie">스파이더맨 홈커밍8</em>
+						</a>
+						<!-- [End] 영화 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 영화 아이템 -->
+						<a href="#none" class="tp_movie_item">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="스파이더맨 홈커밍 포스터">
+							<em class="tit_movie">스파이더맨 홈커밍9</em>
+						</a>
+						<!-- [End] 영화 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 영화 아이템 -->
+						<a href="#none" class="tp_movie_item">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="스파이더맨 홈커밍 포스터">
+							<em class="tit_movie">스파이더맨 홈커밍10</em>
+						</a>
+						<!-- [End] 영화 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 영화 아이템 -->
+						<a href="#none" class="tp_movie_item">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="스파이더맨 홈커밍 포스터">
+							<em class="tit_movie">스파이더맨 홈커밍11</em>
+						</a>
+						<!-- [End] 영화 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 영화 아이템 -->
+						<a href="#none" class="tp_movie_item">
+							<img src="../resources/images/gateway/sample_movie.jpg" alt="스파이더맨 홈커밍 포스터">
+							<em class="tit_movie">스파이더맨 홈커밍12</em>
+						</a>
+						<!-- [End] 영화 아이템 -->
+					</div>
+				</div>
+				<span class="slide_index"></span>
+			</div>
+			<!-- [End] 인기 영화 -->
+
+
+			<!-- [Start] 인기 채널 -->
+			<div class="slider_container">
+				<h2 class="tit_slider">
+					인기 채널
+				</h2>
+				<div class="slider_basic_wrap pop_channel_slider">
+					<div class="slide_item">
+						<!-- [Start] 채널 아이템 -->
+						<a href="#none" class="tp_channel_item"  style="background-image: url('../resources/images/gateway/sample_channel_img.png')">
+							<div class="ch_info_container">
+								<img src="../resources/images/gateway/sample_channel_img.png" alt="프로필 이미지">
+								<span class="tit_channel">눈을 뜨다 채널</span>
+								<span class="user_nick">사용자 별명</span>
+							</div>
+						</a>
+						<!-- [End] 채널 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 채널 아이템 -->
+						<a href="#none" class="tp_channel_item"  style="background-image: url('../resources/images/gateway/sample_channel_img.png')">
+							<div class="ch_info_container">
+								<img src="../resources/images/gateway/sample_channel_img.png" alt="프로필 이미지">
+								<span class="tit_channel">눈을 뜨다 채널</span>
+								<span class="user_nick">사용자 별명</span>
+							</div>
+						</a>
+						<!-- [End] 채널 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 채널 아이템 -->
+						<a href="#none" class="tp_channel_item"  style="background-image: url('../resources/images/gateway/sample_channel_img.png')">
+							<div class="ch_info_container">
+								<img src="../resources/images/gateway/sample_channel_img.png" alt="프로필 이미지">
+								<span class="tit_channel">눈을 뜨다 채널</span>
+								<span class="user_nick">사용자 별명</span>
+							</div>
+						</a>
+						<!-- [End] 채널 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 채널 아이템 -->
+						<a href="#none" class="tp_channel_item"  style="background-image: url('../resources/images/gateway/sample_channel_img.png')">
+							<div class="ch_info_container">
+								<img src="../resources/images/gateway/sample_channel_img.png" alt="프로필 이미지">
+								<span class="tit_channel">눈을 뜨다 채널</span>
+								<span class="user_nick">사용자 별명</span>
+							</div>
+						</a>
+						<!-- [End] 채널 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 채널 아이템 -->
+						<a href="#none" class="tp_channel_item"  style="background-image: url('../resources/images/gateway/sample_channel_img.png')">
+							<div class="ch_info_container">
+								<img src="../resources/images/gateway/sample_channel_img.png" alt="프로필 이미지">
+								<span class="tit_channel">눈을 뜨다 채널</span>
+								<span class="user_nick">사용자 별명</span>
+							</div>
+						</a>
+						<!-- [End] 채널 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 채널 아이템 -->
+						<a href="#none" class="tp_channel_item"  style="background-image: url('../resources/images/gateway/sample_channel_img.png')">
+							<div class="ch_info_container">
+								<img src="../resources/images/gateway/sample_channel_img.png" alt="프로필 이미지">
+								<span class="tit_channel">눈을 뜨다 채널</span>
+								<span class="user_nick">사용자 별명</span>
+							</div>
+						</a>
+						<!-- [End] 채널 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 채널 아이템 -->
+						<a href="#none" class="tp_channel_item"  style="background-image: url('../resources/images/gateway/sample_channel_img.png')">
+							<div class="ch_info_container">
+								<img src="../resources/images/gateway/sample_channel_img.png" alt="프로필 이미지">
+								<span class="tit_channel">눈을 뜨다 채널</span>
+								<span class="user_nick">사용자 별명</span>
+							</div>
+						</a>
+						<!-- [End] 채널 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 채널 아이템 -->
+						<a href="#none" class="tp_channel_item"  style="background-image: url('../resources/images/gateway/sample_channel_img.png')">
+							<div class="ch_info_container">
+								<img src="../resources/images/gateway/sample_channel_img.png" alt="프로필 이미지">
+								<span class="tit_channel">눈을 뜨다 채널</span>
+								<span class="user_nick">사용자 별명</span>
+							</div>
+						</a>
+						<!-- [End] 채널 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 채널 아이템 -->
+						<a href="#none" class="tp_channel_item"  style="background-image: url('../resources/images/gateway/sample_channel_img.png')">
+							<div class="ch_info_container">
+								<img src="../resources/images/gateway/sample_channel_img.png" alt="프로필 이미지">
+								<span class="tit_channel">눈을 뜨다 채널</span>
+								<span class="user_nick">사용자 별명</span>
+							</div>
+						</a>
+						<!-- [End] 채널 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 채널 아이템 -->
+						<a href="#none" class="tp_channel_item"  style="background-image: url('../resources/images/gateway/sample_channel_img.png')">
+							<div class="ch_info_container">
+								<img src="../resources/images/gateway/sample_channel_img.png" alt="프로필 이미지">
+								<span class="tit_channel">눈을 뜨다 채널</span>
+								<span class="user_nick">사용자 별명</span>
+							</div>
+						</a>
+						<!-- [End] 채널 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 채널 아이템 -->
+						<a href="#none" class="tp_channel_item"  style="background-image: url('../resources/images/gateway/sample_channel_img.png')">
+							<div class="ch_info_container">
+								<img src="../resources/images/gateway/sample_channel_img.png" alt="프로필 이미지">
+								<span class="tit_channel">눈을 뜨다 채널</span>
+								<span class="user_nick">사용자 별명</span>
+							</div>
+						</a>
+						<!-- [End] 채널 아이템 -->
+					</div>
+					<div class="slide_item">
+						<!-- [Start] 채널 아이템 -->
+						<a href="#none" class="tp_channel_item"  style="background-image: url('../resources/images/gateway/sample_channel_img.png')">
+							<div class="ch_info_container">
+								<img src="../resources/images/gateway/sample_channel_img.png" alt="프로필 이미지">
+								<span class="tit_channel">눈을 뜨다 채널</span>
+								<span class="user_nick">사용자 별명</span>
+							</div>
+						</a>
+						<!-- [End] 채널 아이템 -->
+					</div>
+				</div>
+				<span class="slide_index"></span>
+			</div>
+			<!-- [End] 인기 채널 -->
+		</div>
+	</div>
+	<!-- [Start] Main area -->
+	<!-- [Start] marketing area -->
+	<div class="marketing_area">
+		<div class="marketing_container">
+			<h2>컨텐츠 권리 보호의 시작,<br>타이탄 플레이어&amp;뷰어와 함께하세요.</h2>
+
+			<ul class="tp_tech_info">
+				<li>
+					<img src="../resources/images/gateway/marketing_img01.png">
+					<em>특허기술 TCI</em>
+					<p>‘TCI식별코드’가 삽입된 콘텐츠는 TCI 포맷으로<br>변경되어 타이탄 플레이어/뷰어로만 감상할 수 있습니다.</p>
+				</li>
+				<li>
+					<img src="../resources/images/gateway/marketing_img02.png">
+					<em>다양한 디바이스 호환</em>
+					<p>PC, Mobile, TV 와 호환되어 다양한 기기에서<br>타이탄 플레이어를 이용할 수 있습니다.</p>
+				</li>
+				<li>
+					<img src="../resources/images/gateway/marketing_img03.png">
+					<em>시크릿 모드</em>
+					<p>시크릿 모드에서 아무도 모르게 영상을 공유하고<br>감상해보세요.</p>
+				</li>
+				<li>
+					<img src="../resources/images/gateway/marketing_img04.png">
+					<em>최고의 품질</em>
+					<p>4K, VR 등의 다양한 최고 품질의 컨텐츠로<br>영화와 영상을 즐기세요.</p>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+	<!-- [End] marketing area -->
+
+	<!-- [Start] install guide area -->
+	<div class="install_guide_area">
+		<h2>지금 다운로드 하세요!</h2>
+		<ul class="install_type_list">
+			<li>
+				<img src="../resources/images/gateway/icon_phone.png" alt="moblie">
+				<a href="#none" class="banner_appstore">Download on the App Store</a>
+			</li>
+			<li>
+				<img src="../resources/images/gateway/icon_phone.png" alt="moblie">
+				<a href="#none" class="banner_googleplay">Get it on Google play</a>
+			</li>
+			<li>
+				<img src="../resources/images/gateway/icon_pc.png" alt="pc">
+				<a href="#none" class="banner_windows">Download on the Windows</a>
+			</li>
+			<li>
+				<img src="../resources/images/gateway/icon_pc.png" alt="pc">
+				<a href="#none" class="banner_macos">Download on the macOS</a>
+			</li>
+			<li>
+				<img src="../resources/images/gateway/icon_tv.png" alt="tv">
+				<a href="#none" class="banner_titancore">Download on the titan core</a>
+			</li>
+		</ul>
+	</div>
+	<!-- [End] install guide area -->
+
+	<!-- [Start] Footer area-->
+	<footer class="tp_footer">
+		<h2 class="blind">Titan play footer</h2>
+		<div class="company_info">
+			<ul class="clearfix">
+				<li>사업자등록번호 : 131-86-32834</li>
+				<li>통신판매업신고번호 : 제 2016-서울강남-00587호</li>
+				<li>대표이사 : 윤재영</li>
+				<li class="delete_after">주소 : 서울시 강남구 테헤란로 146, 현익빌딩 7층</li>
+				<li>고객센터 : TEL <a href="tel:15440016">1544-0016</a></li>
+				<li>이메일 문의 : <a href="mailto:help@titanplatform.net">help@titanplatform.net</a></li>
+			</ul>
+			<p>Copyright &copy; 2017 TiTAN Platform Corp.</p>
+		</div>
+	</footer>
+	<!-- [End] Footer area-->
+</div>
+
+
+
+
+
+<!-- [Start] Popup - preparing -->
+<div class="pop_dim pop_preparing">
+	<div class="pop_container">
+		<button type="button" class="btn_close_pop" data-close-pop="close">close popup</button>
+		<i class="ico_caution">caution</i>
+		<p class="txt_alert">준비중입니다<br>Coming Soon!</p>
+		<div class="btn_area">
+			<button type="button" class="btn_bg_magenta">OK</button>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - preparing -->
+
+<!-- [Start] Popup - player download -->
+<div class="pop_dim test1">
+	<div class="pop_container">
+		<button type="button" class="btn_close_pop" data-close-pop="close">close popup</button>
+		<i class="ico_caution">caution</i>
+		<p class="txt_alert">TiTAN Play 전용 프로그램의<br>다운로드를 진행하시겠습니까?</p>
+		<div class="btn_area">
+			<button type="button" class="btn_bg_gray" data-close-pop="close">취소</button>
+			<button type="button" class="btn_bg_magenta">확인</button>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - player download -->
+
+
+<!-- [Start] Popup - player download guide -->
+<div class="pop_dim test2">
+	<div class="pop_container">
+		<button type="button" class="btn_close_pop" data-close-pop="close">close popup</button>
+		<i class="ico_caution">caution</i>
+		<p class="txt_alert">콘텐츠를 재생하기 위해<br>TiTAN Play 전용 프로그램을 설치해야 합니다.<br>다운로드를 진행하시겠습니까?</p>
+		<div class="btn_area">
+			<button type="button" class="btn_bg_gray" data-close-pop="close">취소</button>
+			<button type="button" class="btn_bg_magenta">확인</button>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - player download guide -->
+
+
+<!-- [Start] Popup - why titan player -->
+<div class="pop_dim why_tp_player">
+	<div class="pop_container">
+		<button type="button" class="btn_close_pop" data-close-pop="close">close popup</button>
+
+		<h2>왜 플레이어를 다운로드 받아야 하나요?</h2>
+
+		<p>
+			TiTAN Play는 플랫폼에 업로드된 콘텐츠의 불법 복제 및 배포를 막기 위하여 디지털 콘텐츠 권리보호 특허 기술인 TCI를 적용하였고, 더욱 편리한 서비스를 위해 TCI 재생을 위한 플레이어를 출시하였습니다.<br><br>
+			더 나아가 다른 미디어파일도 재생 가능한 범용 플레이어로 확장하였으며,영화, 방송, 인기 크리에이터의 콘텐츠는 물론 시크릿 (콘텐츠 비밀 공유 서비스) 기능을 통해 놀랍도록 재미있고 편리한 기능을 이 앱에서 이용 할 수 있습니다.<br><br>
+			자, 이제 TiTAN Play를 무료로 다운로드 받으셔서 편리하게 이용해 보시겠습니까?<br><br>
+			<span class="f_gray">Mac 전용 플레이어는 준비중입니다.</span>
+		</p>
+		<div class="btn_area">
+			<button type="button" class="btn_bg_gray" data-close-pop="close">취소</button>
+			<button type="button" class="btn_bg_magenta btn_app_dwld">다운로드</button>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - why titan player -->
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*슬라이더 - 인기 영화*/
+		$('.pop_movie_slider').on('init afterChange', function(event, slick){
+			var slidesToScroll = slick.options.slidesToScroll,
+				currentSlide = slick.currentSlide,
+				slideCount = slick.slideCount;
+
+			var current_index = (currentSlide / slidesToScroll) + 1;
+			var total_slides = Math.ceil(slideCount / slidesToScroll);
+
+			$('.pop_movie_slider + .slide_index').html('<span class="current_index">' + current_index + '</span>/' + total_slides);
+		});
+		$('.pop_movie_slider').slick({
+			slidesToShow: 6,
+			slidesToScroll: 6,
+			variableWidth: true
+		});
+
+
+		/*슬라이더 - 인기 채널*/
+		$('.pop_channel_slider').on('init afterChange', function(event, slick){
+			var slidesToScroll = slick.options.slidesToScroll,
+				currentSlide = slick.currentSlide,
+				slideCount = slick.slideCount;
+
+			var current_index = (currentSlide / slidesToScroll) + 1;
+			var total_slides = Math.ceil(slideCount / slidesToScroll);
+
+			$('.pop_channel_slider + .slide_index').html('<span class="current_index">' + current_index + '</span>/' + total_slides);
+		});
+		$('.pop_channel_slider').slick({
+			slidesToShow: 6,
+			slidesToScroll: 6,
+			variableWidth: true
+		});
+
+
+
+
+		/*팝업 - 공통*/
+		// 팝업을 호출할 엘리먼트에 data-call-pop 속성을 추가하고 해당 속성값과 동일한 값을 불러올 팝업의 최상단(div.pop_dim)에 추가한다.
+		//팝업 호출
+		$('[data-call-pop]').on('click', function(){
+			var data_name = $(this).data('callPop');
+			var popup_class_name = '.' +data_name; // class로 호출할 경우
+			var popup_id_name = '#' +data_name; // id로 호출할 경우
+
+			// $('.pop_dim').hide();
+			$(popup_class_name).show();
+			$(popup_id_name).show();
+			});
+		// 팝업 닫기 - 팝업을 닫을 엘리면트에 data-close-pop 속성을 추가해준다.
+		$('[data-close-pop]').on('click', function(){
+			$(this).parents('.pop_dim').hide();
+		});
+
+
+
+		/*Line Header Fixing*/
+		$(window).scroll(function(){
+			var fixed_position = $('.tp_header_wrapper').height();
+			var line_header_height = $('.tp_line_header ').height();
+			if( $(window).scrollTop() > fixed_position - line_header_height ){
+				$('.tp_line_header').addClass('on');
+			} else {
+				$('.tp_line_header').removeClass('on');
+			}
+		})
+
+
+
+		/* Marketing Slider */
+		$('.tp_descption_slider').slick({
+			dots: true,
+			infinite: false,
+			fade: true,
+			// autoplay: true,
+			// autoplaySpeed: 2000,
+			slidesToShow: 1,
+			slidesToScroll: 1
+		});
+
+
+
+	})
+</script>
+
+
+
+</body>
+</html>

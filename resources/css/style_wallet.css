@@ -1,0 +1,737 @@
+@charset "utf-8";
+
+
+/****************************************/
+/*  Name: Titan Play PC ver.
+/*  Version: 1.01 (171130)
+/*  Author: TitanPlatform
+/*  Description : In Player Wallet Style
+/****************************************/
+
+/*
+media query
+@media all and (min-width: 1005px) and (max-width: 1200px) {}
+@media all and (max-width: 1004px) {}
+*/
+
+
+
+.wallet_top_area {
+	margin-bottom: 16px;
+	font-family: "Roboto-regular";
+	color: #fff;
+}
+.wallet_top_area h2 {
+	margin-bottom: 20px;
+	font-size: 28px;
+	cursor: default;
+}
+.wallet_top_area h2 .btn_back {
+	vertical-align: -12px;
+}
+.wallet_top_area .display_area {
+	background-color: #000;
+}
+.wallet_top_area .display_area h3 {
+	float: left;
+	margin-left: 40px;
+	line-height: 70px;
+	cursor: default;
+}
+.wallet_top_area .display_area .right_area {
+	float: right;
+	margin-right: 40px;
+}
+.wallet_top_area .display_area .right_area em {
+	line-height: 70px;
+	font-size: 26px;
+	color: #c9338b;
+	cursor: default;
+}
+
+/*T-cash refill button*/
+.btn_refill {
+	display: inline-block;
+	margin-left: 16px;
+	padding: 0 9px;
+	line-height: 26px;
+	border-radius: 13px;
+	font-size: 12px;
+	color: #fff;
+	background-color: #c9338b;
+	vertical-align: text-bottom;
+}
+
+
+/*T-cash - basic*/
+i.icon_Tcash { /*월렛 페이지 상단을 기준으로 작업됨*/
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	margin-right: 4px;
+	background: url("../images/gateway/inplayer/icon_tcash.png") center center no-repeat;
+	text-indent: -9999px;
+	vertical-align: text-bottom;
+}
+
+
+/*월렛 상위 탭메뉴*/
+.tab_menu_wallet {
+	height: 52px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #333;
+}
+.tab_menu_wallet li {
+	margin-right: 50px;
+}
+.tab_menu_wallet li a {
+	display: inline-block;
+	opacity: 1; /*상쇄*/
+	line-height: 51px;
+	color: #777;
+}
+.tab_menu_wallet li a:before {
+	display: none;
+}
+.tab_menu_wallet li.on {
+	border-bottom: 2px solid #c9338b;
+}
+.tab_menu_wallet li a:hover,
+.tab_menu_wallet li.on a {
+	color: #c9338b;
+}
+
+
+/*월렛 하위 탭메뉴*/
+.tab_menu_TcashHistory,
+.tab_menu_Exchange {
+	margin-bottom: 20px;
+}
+.tab_menu_TcashHistory li,
+.tab_menu_Exchange li {
+	float: left;
+	margin-right: 0;
+	border: 1px solid #333;
+	border-left: none;
+	transition: background-color 0.2s;
+}
+.tab_menu_TcashHistory li:first-child,
+.tab_menu_Exchange li:first-child {
+	border-left: 1px solid #333;
+}
+.tab_menu_TcashHistory li a:before,
+.tab_menu_Exchange li a:before {
+	display: none;
+}
+.tab_menu_TcashHistory li a,
+.tab_menu_Exchange li a {
+	display: inline-block;
+	width: 98px;
+	line-height: 38px;
+	text-align: center;
+	font-size: 14px;
+	color: #777;
+	opacity: 1; /*상쇄*/
+	transition: color 0.3s;
+}
+.tab_menu_TcashHistory li.on,
+.tab_menu_Exchange li.on {
+	background-color: #c9338b;
+	border: none;
+}
+.tab_menu_TcashHistory li:hover a,
+.tab_menu_Exchange li:hover a {
+	color: #fff;
+}
+.tab_menu_TcashHistory li.on a,
+.tab_menu_Exchange li.on a {
+	line-height: 40px;
+	width: 100px;
+	color: #fff;
+}
+
+/*T-cash History 기간 selectbox*/
+.history_table_wrapper {
+	position: relative;
+}
+.history_table_wrapper .selectbox_wrapper {
+	position: absolute;
+	top: -60px;
+	right: 0;
+	width: 130px;
+}
+.history_table_wrapper .selectbox_top .seleted_value {
+	color: #777;
+}
+
+
+
+/*history table basic - T-Cash 테이블을 기본형으로 함으로 함.*/
+table.history_table {
+	width: 100%;
+	border-collapse: collapse;
+}
+table.history_table thead tr {
+	border-top: 1px solid #454545;
+	border-bottom: 1px solid #454545;
+}
+table.history_table tbody {
+	border-bottom: 1px solid #333;
+}
+table.history_table tbody tr {
+	border-bottom: 1px solid #222;
+}
+table.history_table tbody tr:last-child {
+	border-bottom: none;
+}
+table.history_table tbody tr td:first-child {
+	text-align: center;
+}
+table.history_table thead tr th:nth-child(3),
+table.history_table tbody tr td:nth-child(3) {
+	/*padding-right: 5%;*/
+	text-align: right;
+}
+table.history_table thead tr th:last-child,
+table.history_table tbody tr td:last-child {
+	text-align: center;
+}
+table.history_table th,
+table.history_table td {
+	padding: 0 5px;
+	box-sizing: border-box;
+}
+table.history_table thead tr th {
+	height: 52px;
+	font-size: 14px;
+	color: #fff;
+}
+table.history_table tbody tr td {
+	height: 46px;
+	font-size: 13px;
+	color: #d3d3d3;
+}
+table.history_table .no_history td {
+	height: 220px !important;
+	text-align: center !important;
+}
+.cash_minus {
+	color: #777 !important;
+}
+table.history_table tfoot tr:first-child td {
+	padding-top: 14px;
+}
+.under_description {
+	text-align: right;
+	font-size: 13px;
+	color: #777;
+}
+
+
+/*table pagination*/
+.pagination {
+	margin-top: 10px;
+	height: 21px;
+	text-align: center;
+}
+.pagination a {
+	display: inline-block;
+	height: 21px;
+	width: 12px;
+	margin: 0 11px;
+	font-size: 13px;
+	color: #777;
+	vertical-align: top;
+	text-align: center;
+}
+.pagination a.on {
+	color: #d3d3d3;
+	border-bottom: 1px solid #d3d3d3;
+}
+.pagination a:hover {
+	color: #d3d3d3;
+}
+.pagination .prev_page,
+.pagination .next_page {
+	opacity: 0.5;
+	text-indent: -9999px;
+}
+.pagination .prev_page:hover,
+.pagination .next_page:hover {
+	opacity: 1;
+}
+.pagination .prev_page {
+	background: url("../images/gateway/inplayer/btn-board-arrow-l-dim.png") center 5px no-repeat;
+}
+.pagination .next_page {
+	background: url("../images/gateway/inplayer/btn-board-arrow-r-dim.png") center 5px no-repeat;
+}
+
+
+
+/*Wallet - Sales History*/
+.sales_top_area {
+	margin-bottom: 20px;
+	height: 40px;
+}
+.sales_top_area .total_count {
+	color: #777;
+	font-size: 14px;
+	vertical-align: -17px;
+}
+.sales_top_area .total_count span {
+	margin-left: 5px;
+	color: #fff;
+}
+.sales_top_area .selectbox_wrapper {
+	top: 0;
+}
+.history_table.type_sales tbody tr td:last-child {
+	color: #777;
+}
+.t_cash {
+	color: #c9338b !important;
+}
+.t_cash:before {
+	content: '';
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	margin-right: 5px;
+	background: url("../images/gateway/inplayer/icon_wallet_tcash_magenta.png") center center no-repeat;
+	vertical-align: -2px;
+}
+.history_table .btn_cancel_purchase {
+	line-height: 22px;
+	/*margin-left: 20px;*/
+	padding: 0 7px;
+	font-size: 11px;
+	color: #fff;
+	border: 1px solid #555;
+	border-radius: 3px;
+}
+.history_table .btn_cancel_purchase:hover {
+	border-color: #777;
+}
+
+
+
+
+/*Wallet - Exchange*/
+.request_panel {
+	font-family: "Roboto-regular";
+	background-color: #000;
+	padding: 25px 40px;
+}
+.request_panel > div > em {
+	font-size: 14px;
+}
+.request_panel > div strong {
+	float: right;
+	font-size: 15px;
+	font-family: "NotoSans-Regular";
+	color: #777;
+}
+.request_panel .total_sales {
+	margin-bottom: 8px;
+}
+.request_panel .total_sales .ico_Tcash:before {
+	background: url("../images/gateway/inplayer/icon_wallet_tcash_gray.png") center center no-repeat;
+}
+.request_panel .exchangable li span {
+	font-size: 13px;
+	color: #777;
+}
+.request_panel .exchangable li span:before {
+	content: '';
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	margin-right: 4px;
+	background-color: #777;
+	border-radius: 50%;
+	vertical-align: 2px;
+}
+.request_panel .exchangable li .ico_Tcash {
+	color: #c9338b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.request_under_area > em {
+	display: block;
+	margin-bottom: 30px;
+	font-size: 15px;
+	color: #fff;
+}
+
+/*radio button - select refund*/
+.select_refund {
+	margin-bottom: 20px;
+}
+.select_refund input[type="radio"] {
+	display: none;
+}
+.select_refund input[type="radio"] + label {
+	margin-right: 40px;
+	font-size: 14px;
+	color: #777;
+	cursor: pointer;
+	transition: all 0.1s linear;
+}
+.select_refund input[type="radio"] + label span:empty {
+	display: inline-block;
+	position: relative;
+	width: 18px;
+	height: 18px;
+	margin-right: 8px;
+	text-align: center;
+	vertical-align: bottom;
+	background: url("../images/gateway/inplayer/btn_radio_off.png") center center no-repeat;
+	transition: all 0.1s linear;
+}
+.select_refund input[type="radio"]:checked + label span:empty {
+	background: url("../images/gateway/inplayer/btn_radio_on.png") center center no-repeat;
+}
+.select_refund input[type="radio"]:checked + label {
+	color: #c9338b;
+}
+
+
+
+
+
+
+
+
+
+
+
+.request_under_area .input_wrapper {
+	display: inline-block;
+	width: 270px;
+	margin-bottom: 8px;
+}
+.request_under_area .input_wrapper label {
+	font-size: 0;
+}
+.request_under_area .input_wrapper input {
+	padding-left: 12px;
+}
+.tit_check_info {
+	display: block;
+	margin:40px 0 10px;
+	font-size: 14px;
+	color: #d8d8d8;
+}
+.info_list li {
+	position: relative;
+	padding-left: 10px;
+	color: #777;
+	font-size: 13px;
+}
+.info_list li:before {
+	content: '';
+	position: absolute;
+	top: 9px;
+	left: 0;
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	background-color: #777;
+	border-radius: 50%;
+}
+.info_list li:last-child {
+	padding-left: 0;
+	margin-top: 20px;
+}
+.info_list li:last-child:before {
+	display: none;
+}
+
+
+.exchange_check {
+	margin-top: 40px;
+}
+.exchange_check input[type="checkbox"] {
+	display: none;
+}
+.exchange_check input[type="checkbox"] + label {
+	position: relative;
+	display: block;
+	padding-left: 26px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	transition: all 0.2s linear;
+	color: #d8d8d8;
+}
+.exchange_check input[type="checkbox"] + label span:empty {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	vertical-align: top;
+	cursor: pointer;
+	transition: background 0.2s linear;
+	background: url("../images/gateway/inplayer/btn-checkbox-null.png") center center no-repeat;
+}
+.exchange_check input[type="checkbox"]:checked + label {
+	color: #c9338b;
+}
+.exchange_check input[type="checkbox"]:checked + label span:empty {
+	background: url("../images/gateway/inplayer/removeprofile-checkbox-btn-check.png") center center no-repeat;
+}
+.request_under_area {
+	margin-top: 45px;
+}
+.request_under_area .btn_area button {
+	float: none;
+	width: auto;
+	padding: 0 30px;
+	font-family: "NotoSans-Regular";
+}
+
+
+.history_table.type_exchange tbody tr td:last-child {
+	color: #777;
+}
+.history_table.type_exchange .done {
+	color: #c9338b;
+}
+
+
+
+
+
+/*결제페이지*/
+.payment_wrapper {
+	background-color: #151515;
+}
+.payment_container {
+	width: 764px;
+	margin: 0 auto;
+	padding-top: 24px;
+}
+.payment_container .wallet_top_area {
+	margin-bottom: 26px;
+}
+.payment_container .wallet_top_area .btn_back {
+	vertical-align: -11px;
+}
+
+.select_tcash_wrapper {
+	margin-bottom: 29px;
+}
+.select_tcash_wrapper h3 {
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #fff;
+}
+.select_tcash_list li {
+	padding: 14px 40px;
+	border-top: 1px solid #333;
+}
+.select_tcash_list li:last-child {
+	border-bottom: 1px solid #333;
+}
+
+/*radio button - tcash item*/
+.select_tcash_list input[type="radio"] {
+	display: none;
+}
+.select_tcash_list input[type="radio"] + label {
+	display: block;
+	font-size: 13px;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.1s linear;
+}
+.select_tcash_list input[type="radio"] + label span:empty {
+	display: inline-block;
+	position: relative;
+	width: 18px;
+	height: 18px;
+	margin-right: 20px;
+	text-align: center;
+	vertical-align: bottom;
+	background: url("../images/gateway/inplayer/btn_radio_off.png") center center no-repeat;
+	transition: all 0.1s linear;
+}
+.select_tcash_list input[type="radio"]:checked + label span:empty {
+	background: url("../images/gateway/inplayer/btn_radio_on.png") center center no-repeat;
+}
+.select_tcash_list input[type="radio"]:checked + label {
+	color: #c9338b;
+}
+.select_tcash_list input[type="radio"] + label strong:before {
+	content: '';
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	margin-right: 5px;
+	vertical-align: -2px;
+	background: url("../images/gateway/inplayer/icon_wallet_tcash_white.png") center center no-repeat;
+	transition: all 0.1s linear;
+}
+.select_tcash_list input[type="radio"]:checked + label strong:before {
+	background: url("../images/gateway/inplayer/icon_wallet_tcash_magenta.png") center center no-repeat;
+}
+.select_tcash_list input[type="radio"] + label em {
+	float: right;
+}
+
+
+.payment_method h3 {
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: #fff;
+}
+
+/*radio button - payment*/
+.payment_method input[type="radio"] {
+	display: none;
+}
+.payment_method input[type="radio"] + label {
+	float: left;
+	display: inline-block;
+	width: 170px;
+	height: 60px;
+	line-height: 58px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #777;
+	border: 1px solid #333;
+	text-align: center;
+	box-sizing: border-box;
+}
+.payment_method input[type="radio"]:checked + label {
+	border: 1px solid #fff;
+	background-color: #fff;
+	color: #c9338b;
+}
+.payment_method input[type="radio"] + label span:before {
+	content: '';
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.payment_method input[type="radio"] + label.card {
+	border-right: 1px solid #fff;
+}
+.payment_method input[type="radio"] + label.card span:before {
+	width: 24px;
+	height: 18px;
+	vertical-align: -3px;
+	background: url("../images/gateway/inplayer/wallet_sprite01.png") no-repeat;
+	background-position: 0px -73px;
+}
+.payment_method input[type="radio"]:checked + label.card span:before {
+	background-position: 0px -5px;
+}
+
+.payment_method input[type="radio"] + label.phone {
+	border-left: none;
+}
+.payment_method input[type="radio"] + label.phone span:before {
+	width: 17px;
+	height: 28px;
+	vertical-align: -9px;
+	background: url("../images/gateway/inplayer/wallet_sprite01.png") no-repeat;
+	background-position: -74px -68px;
+}
+.payment_method input[type="radio"]:checked + label.phone span:before {
+	background-position: -74px 0px;
+}
+
+.payment_container .btn_area {
+	width: 350px;
+	margin: 50px auto 0;
+}
+
+
+
+.payment_result_area {
+	margin-top: 60px;
+	text-align: center;
+	color: #fff;
+}
+.payment_result_area.fail {
+	margin-top: 100px;
+}
+.payment_result_area img {
+	display: block;
+	margin: 0 auto 10px;
+}
+.payment_result_area em {
+	font-size: 16px;
+}
+.payment_result_area p {
+	font-size: 13px;
+}
+.payment_result_area.fail p {
+	margin-top: 20px;
+}
+.payment_result_area .charged_cash {
+	display: block;
+	margin-top: 17px;
+	font-size: 16px;
+	color: #c9338b;
+}
+.payment_result_area .charged_cash span {
+	margin-left: 5px;
+}
+.payment_result_area .charged_cash span:before {
+	vertical-align: -3px;
+}
+.payment_result_area .charged_cash i {
+	font-size: 22px;
+	vertical-align: -3px;
+}
+.payment_result_area + .btn_area {
+	width: auto;
+	margin-top: 40px;
+}
+.payment_result_area + .btn_area a {
+	float: none;
+	display: inline-block;
+	width: 195px;
+	line-height: 46px;
+}
+.payment_result_area + .btn_area a:first-child {
+	margin-right: 7px;
+}
+
+
+footer {
+	margin-top: 60px;
+	margin-bottom: 40px;
+}
+footer span {
+	color: #777;
+	font-size: 13px;
+}
+footer span:after {
+	content: '';
+	display: inline-block;
+	width: 1px;
+	height: 11px;
+	margin-left: 7px;
+	margin-right: 5px;
+	background-color: #333;
+}
+
+

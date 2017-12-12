@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Webtoon Main - TiTAN Play</title>
+	<!-- slider css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/slick-theme.css">
+	<!-- custom scrollbar css -->
+	<link rel="stylesheet" href="../resources/css/jquery.mCustomScrollbar.min.css">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_common.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_inplayer.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_popup.css">
+	<!-- jQuery -->
+	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
+	<!-- slider js -->
+	<script type="text/javascript" src="../resources/js/slick.min.js"></script>
+</head>
+<body>
+
+
+<div class="inplayer_wrapper hide_scrollbar" data-mcs-theme="minimal-dark">
+	<!-- [Start] Header area -->
+	<header class="inplayer_header_wrapper">
+		<div class="inplayer_header_container clearfix">
+			<ul class="left_list clearfix">
+				<li>
+					<a href="inplayer.html">Home</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_main.html">Channel</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_mcn.html">MCN</a>
+				</li>
+				<li class="on">
+					<a href="inplayer_webtoon_main.html">Webtoon</a>
+				</li>
+				<li>
+					<a href="inplayer_secret_main.html">Secret</a>
+				</li>
+			</ul>
+			<div class="rigt_item_wrapper">
+				<ul class="clearfix">
+					<li>
+						<div class="search_box">
+							<label class="blind">검색어 입력</label>
+							<input type="search" class="input_search" title="검색">
+							<button class="btn_del_txt">delete</button>
+						</div>
+					</li>
+					<li>
+						<button type="button" class="btn_upload" title="업로드">upload</button>
+					</li>
+					<!-- [Start] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_folder" title="파일 열기">folder</button>
+					</li>
+					<!-- [End] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_setting" title="설정">setting</button>
+					</li>
+					<li>
+						<button type="button" class="btn_info" title="정보" data-call-pop="tianPlayInfo">information</button>
+					</li>
+					<li>
+						<button type="button" class="btn_sign_in" data-call-pop="signInPopup">Sign in</button>
+
+						<!-- [Start] 로그인시 -->
+						<!-- <span class="btn_user">
+							<img src="../resources/images/gateway/smaple_user_img.jpg">
+						</span>
+						<div class="user_pop">
+							<ul>
+								<li>
+									<a href="inplayer_myPage.html">My Page</a>
+								</li>
+								<li>
+									<a href="inplayer_mychannel.html">My Channel</a>
+								</li>
+								<li>
+									<a href="#signOut">Sign Out</a>
+								</li>
+							</ul>
+						</div> -->
+						<!-- [End] 로그인시 -->
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- [End] Header area -->
+
+	<!-- [Start] Main container -->
+	<div class="inplayer_main_container">
+		<!-- [Start] Webtoon Top30 -->
+		<div class="list_container">
+			<div class="list_top_area">
+				<h2>Top 30</h2>
+			</div>
+			<div class="align_webtoon_list max30">
+				<!-- [Start] 웹툰 아이템 기본형 -->
+				<div class="basic_webtoon_item">
+					<a href="inplayer_webtoon_view.html" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+						<span class="webtoon_rating grade_19">19</span>
+						<span class="upload_label">UP</span>
+					</a>
+					<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<!-- [End] 웹툰 아이템 기본형 -->
+
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+						<span class="webtoon_rating grade_19">19</span>
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">2웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+						<span class="upload_label">UP</span>
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">3웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">4웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">5웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">6웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">7웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">8웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">9웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">10웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">11웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">12웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">13웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">14웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">15웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">16웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">17웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">18웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">19웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">20웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">21웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">22웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">23웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">24웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">25웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">26웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">27웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">28웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">29웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+				<div class="basic_webtoon_item">
+					<a href="#none" class="webtoon_thumbnail_area">
+						<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+					</a>
+					<a href="#none" class="tit_webtoon" title="웹툰제목">30웹툰제목</a>
+					<div class="webtoon_info">
+						<span class="user_nick">Nickname</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- [End] Webtoon Top30 -->
+
+		<!-- [Start] Webtoon - Comedy -->
+		<div class="list_container wbt_list_container">
+			<div class="list_top_area">
+				<h2>Comedy</h2>
+				<a href="inplayer_seemore_webtoon.html" class="see_more">See More</a>
+			</div>
+			<div class="slider_basic_wrap common_webtoon_slider">
+				<div class="slide_item">
+					<!-- [Start] 웹툰 아이템 기본형 -->
+					<div class="basic_webtoon_item">
+						<a href="inplayer_webtoon_view.html" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+					<!-- [End] 웹툰 아이템 기본형 -->
+				</div>
+
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- [End] Webtoon - Comedy -->
+
+		<!-- [Start] Webtoon - Action -->
+		<div class="list_container wbt_list_container">
+			<div class="list_top_area">
+				<h2>Action</h2>
+				<a href="inplayer_seemore_webtoon.html" class="see_more">See More</a>
+			</div>
+			<div class="slider_basic_wrap common_webtoon_slider">
+				<div class="slide_item">
+					<!-- [Start] 웹툰 아이템 기본형 -->
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+					<!-- [End] 웹툰 아이템 기본형 -->
+				</div>
+
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- [End] Webtoon - Action -->
+
+		<!-- [Start] Webtoon - Drama -->
+		<div class="list_container wbt_list_container">
+			<div class="list_top_area">
+				<h2>Drama</h2>
+				<a href="inplayer_seemore_webtoon.html" class="see_more">See More</a>
+			</div>
+			<div class="slider_basic_wrap common_webtoon_slider">
+				<div class="slide_item">
+					<!-- [Start] 웹툰 아이템 기본형 -->
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+					<!-- [End] 웹툰 아이템 기본형 -->
+				</div>
+
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide_item">
+					<div class="basic_webtoon_item">
+						<a href="#none" class="webtoon_thumbnail_area">
+							<img src="../resources/images/gateway/sample_webtoon.png" alt="웹툰 썸네일">
+							<span class="webtoon_rating grade_19">19</span>
+							<span class="upload_label">UP</span>
+						</a>
+						<a href="#none" class="tit_webtoon" title="1웹툰제목">1웹툰제목</a>
+						<div class="webtoon_info">
+							<span class="user_nick">Nickname</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- [End] Webtoon - Drama -->
+
+
+	</div>
+	<!-- [End] Main container -->
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- custom scroll bar js -->
+<script type="text/javascript" src="../resources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+
+	/*슬라이더 관련 스크립트*/
+	// Slider -  webtoon common style
+	$(document).ready(function(){
+		$('.common_webtoon_slider').slick({
+			slidesToShow: 6,
+			slidesToScroll: 6,
+			variableWidth: true,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 5,
+						slidesToScroll: 5
+					}
+				},
+				{
+					breakpoint: 1004,
+					settings: {
+						slidesToShow: 4,
+						slidesToScroll: 4
+					}
+				}
+			]
+		});
+	})
+
+
+</script>
+
+
+
+
+<!-- 공통 js -->
+<script type="text/javascript" src="../resources/js/common_pub.js"></script>
+</body>
+</html>

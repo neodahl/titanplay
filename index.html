@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>TiTAN Play 작업 리스트</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/style_common.css">
+	<style type="text/css">
+		main {
+			width: 80vw;
+			margin: 0 auto;
+			padding: 40px;
+		}
+		main > ul {
+			margin-top: 20px;
+			padding: 40px 30px;
+			background-color: #ececec;
+		}
+		main > ul li {
+			margin-bottom: 20px;
+		}
+		main > ul > li:before {
+			content: '▶';
+			margin-right: 4px;
+		}
+		main > ul li a {
+			font-size: 20px;
+			color: #000;
+			font-weight: bold;
+		}
+		main > ul li a:hover {
+			text-decoration: underline;
+		}
+		main > ul li p {
+			color: #777;
+			padding-left: 15px;
+		}
+		li ul {
+			padding: 15px;
+		}
+		li ul li {
+			margin-bottom: 5px;
+		}
+		li ul li:before {
+			content: '▷';
+			margin-right: 4px;
+		}
+		li ul li a {
+			font-size: 16px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<main>
+		<h1>TiTAN Play 작업 리스트</h1>
+
+		<ul>
+			<li>
+				<a href="html/gateway_mo.html" target="_blank" title="새탭으로 페이지 이동">Gateway Page - Mobile</a>
+				<p>gateway의 역할은 사용자가 앱을 다운 받을 수 있도록 유도함에 있다.</p>
+			</li>
+			<li>
+				<a href="html/gateway_pc.html" target="_blank" title="새탭으로 페이지 이동">Gateway Page - PC</a>
+				<p>gateway의 역할은 사용자가 플레이어를 다운 받을 수 있도록 유도함에 있다.</p>
+			</li>
+			<li>
+				<a href="html/inplayer.html" target="_blank" title="새탭으로 페이지 이동">Player 화면</a>
+				<p>
+					플레이어 화면 내 상호 링크를 통해 페이지 이동이 가능함. 로그인 및 회원 가입 팝업은 메인 페이지에만 적용하였음<br>
+					가변형.
+				</p>
+				<ul>
+					<li>
+						<a href="html/inplayer_channel_main.html" target="_blank" title="새탭으로 페이지 이동">채널 메인</a>
+					</li>
+					<li>
+						<a href="html/inplayer_channel_mcn.html" target="_blank" title="새탭으로 페이지 이동">MCN 채널 메인</a>
+					</li>
+					<li>
+						<a href="html/inplayer_webtoon_main.html" target="_blank" title="새탭으로 페이지 이동">웹툰 메인</a>
+					</li>
+					<li>
+						<a href="html/inplayer_secret_main.html" target="_blank" title="새탭으로 페이지 이동">시크릿 페이지</a>
+					</li>
+					<li>
+						<a href="html/inplayer_edit_myAccount.html" target="_blank" title="새탭으로 페이지 이동">프로필 수정페이지</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</main>
+
+</body>
+</html>

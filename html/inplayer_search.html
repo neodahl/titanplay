@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Search - TiTAN Play</title>
+	<!-- custom scrollbar css -->
+	<link rel="stylesheet" href="../resources/css/jquery.mCustomScrollbar.min.css">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_common.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_inplayer.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_popup.css">
+	<!-- jQuery -->
+	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+
+<div class="inplayer_wrapper hide_scrollbar" data-mcs-theme="minimal-dark">
+	<!-- [Start] Header area -->
+	<header class="inplayer_header_wrapper">
+		<div class="inplayer_header_container clearfix">
+			<ul class="left_list clearfix">
+				<li class="on">
+					<a href="inplayer.html">Home</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_main.html">Channel</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_mcn.html">MCN</a>
+				</li>
+				<li>
+					<a href="inplayer_webtoon_main.html">Webtoon</a>
+				</li>
+				<li>
+					<a href="inplayer_secret_main.html">Secret</a>
+				</li>
+			</ul>
+			<div class="rigt_item_wrapper">
+				<ul class="clearfix">
+					<li>
+						<div class="search_box">
+							<label class="blind">검색어 입력</label>
+							<input type="search" class="input_search" title="검색">
+							<button class="btn_del_txt">delete</button>
+						</div>
+					</li>
+					<li>
+						<button type="button" class="btn_upload" title="업로드">upload</button>
+					</li>
+					<!-- [Start] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_folder" title="파일 열기">folder</button>
+					</li>
+					<!-- [End] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_setting" title="설정">setting</button>
+					</li>
+					<li>
+						<button type="button" class="btn_info" title="플레이어 정보">information</button>
+					</li>
+					<li>
+						<!-- <button type="button" class="btn_sign_in" data-call-pop="signInPopup">Sign in</button> -->
+
+						<!-- [Start] 로그인시 -->
+						<span class="btn_user">
+							<img src="../resources/images/gateway/smaple_user_img.jpg">
+						</span>
+						<div class="user_pop">
+							<ul>
+								<li>
+									<a href="inplayer_myPage.html">My Page</a>
+								</li>
+								<li>
+									<a href="inplayer_mychannel.html">My Channel</a>
+								</li>
+								<li>
+									<a href="#signOut">Sign Out</a>
+								</li>
+							</ul>
+						</div>
+						<!-- [End] 로그인시 -->
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- [End] Header area -->
+
+	<!-- [Start] Main container -->
+	<div class="inplayer_main_container">
+
+		<div class="tab_panel_search">
+			<ul class="tab_menu_search">
+				<li class="on">
+					<a href="#searchAll">All (<span>60</span>)</a>
+				</li>
+				<li>
+					<a href="#searchVideo">Video (<span>10</span>)</a>
+				</li>
+				<li>
+					<a href="#searchMovie">Movie (<span>24</span>)</a>
+				</li>
+				<li>
+					<a href="#searchChannel">Channel (<span>16</span>)</a>
+				</li>
+			</ul>
+			<div class="tab_container_search">
+				<!-- [Start] 검색 - 전체 -->
+				<div class="tab_content_search on">
+					<!-- [Start] List Container - Video -->
+					<div class="list_container">
+						<div class="list_top_area">
+							<h2>Video (10)</h2>
+						</div>
+						<div class="align_video_list">
+							<!-- [Start] 동영상 아이템 기본형 -->
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<!-- [End] 동영상 아이템 기본형 -->
+
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- [End] List Container - Video -->
+
+					<!-- [Start] List Container - Movie -->
+					<div class="list_container ">
+						<div class="list_top_area">
+							<h2>Movie (24)</h2>
+						</div>
+						<div class="align_movie_list">
+							<!-- [Start] 영화 아이템 기본형 -->
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<!-- [End] 영화 아이템 기본형 -->
+
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- [End] List Container - Movie -->
+
+					<!-- [Start] List Container - Channel -->
+					<div class="list_container ">
+						<div class="list_top_area">
+							<h2>Channel (16)</h2>
+						</div>
+						<div class="align_channel_list">
+							<!-- [Start] 채널 아이템 기본형 -->
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<!-- [End] 채널 아이템 기본형 -->
+
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- [End] List Container - Channel -->
+				</div>
+				<!-- [End] 검색 - 전체 -->
+				<!-- [Start] 검색 - Video -->
+				<div class="tab_content_search">
+					<!-- [Start] List Container - Video -->
+					<div class="list_container">
+						<div class="list_top_area">
+							<h2>Video (10)</h2>
+						</div>
+						<div class="align_video_list">
+							<!-- [Start] 동영상 아이템 기본형 -->
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<!-- [End] 동영상 아이템 기본형 -->
+
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+							<div class="basic_video_item">
+								<a href="#none" class="video_thumbnail_area">
+									<img src="../resources/images/gateway/sample_video.jpg" alt="동영상 썸네일">
+									<span class="playback_time">01:58:12</span>
+								</a>
+								<a href="#none" class="tit_video" title="1함부로 애틋하게 함부로">1함부로 애틋하게 함부로</a>
+								<div class="video_info">
+									<span class="user_nick">Nickname</span>
+									<span class="hit_count">13235</span>
+									<span class="upload_date">2017.01.04</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- [End] List Container - Video -->
+
+				</div>
+				<!-- [End] 검색 - Video -->
+				<!-- [Start] 검색 - Movie -->
+				<div class="tab_content_search">
+					<!-- [Start] List Container - Movie -->
+					<div class="list_container ">
+						<div class="list_top_area">
+							<h2>Movie (24)</h2>
+						</div>
+						<div class="align_movie_list">
+							<!-- [Start] 영화 아이템 기본형 -->
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<!-- [End] 영화 아이템 기본형 -->
+
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+							<div class="basic_movie_item">
+								<a href="#none" class="movie_poster_area">
+									<img src="../resources/images/gateway/sample_movie.jpg" alt="포스터 제목">
+									<span class="movie_rating grade_all">ALL</span>
+								</a>
+								<div class="movie_info">
+									<a href="#none" class="tit_movie">1 Spider Man Homecoming</a>
+									<span class="release_year">2017</span>
+									<span class="price">10,000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- [End] List Container - Movie -->
+
+				</div>
+				<!-- [End] 검색 - Movie -->
+				<!-- [Start] 검색 - Channel -->
+				<div class="tab_content_search">
+					<!-- [Start] List Container - Channel -->
+					<div class="list_container ">
+						<div class="list_top_area">
+							<h2>Channel (16)</h2>
+						</div>
+						<div class="align_channel_list">
+							<!-- [Start] 채널 아이템 기본형 -->
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<!-- [End] 채널 아이템 기본형 -->
+
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+							<div class="basic_ch_item">
+								<a href="inplayer_channel_view.html" class="ch_img_box">
+									<img src="../resources/images/gateway/sample_channel_img.png">
+								</a>
+								<a href="inplayer_channel_view.html" class="ch_info">
+									<span class="ch_name">1NeoDahl's Channel</span>
+									<span class="ch_num">(Ch.82-120648)</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- [End] List Container - Channel -->
+
+				</div>
+				<!-- [End] 검색 - Channel -->
+
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+	<!-- [End] Main container -->
+</div>
+
+
+
+
+
+
+
+
+<!-- custom scroll bar js -->
+<script type="text/javascript" src="../resources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+
+
+
+
+
+
+
+<!-- 공통 js -->
+<script type="text/javascript" src="../resources/js/common_pub.js"></script>
+</body>
+</html>

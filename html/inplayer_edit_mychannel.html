@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Channel Edit - TiTAN Play</title>
+	<!-- custom scrollbar css -->
+	<link rel="stylesheet" href="../resources/css/jquery.mCustomScrollbar.min.css">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_common.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_inplayer.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_popup.css">
+	<!-- jQuery -->
+	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+
+<div class="inplayer_wrapper hide_scrollbar" data-mcs-theme="minimal-dark">
+	<!-- [Start] Header area -->
+	<header class="inplayer_header_wrapper">
+		<div class="inplayer_header_container clearfix">
+			<ul class="left_list clearfix">
+				<li class="on">
+					<a href="inplayer.html">Home</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_main.html">Channel</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_mcn.html">MCN</a>
+				</li>
+				<li>
+					<a href="inplayer_webtoon_main.html">Webtoon</a>
+				</li>
+				<li>
+					<a href="inplayer_secret_main.html">Secret</a>
+				</li>
+			</ul>
+			<div class="rigt_item_wrapper">
+				<ul class="clearfix">
+					<li>
+						<div class="search_box">
+							<label class="blind">검색어 입력</label>
+							<input type="search" class="input_search" title="검색">
+							<button class="btn_del_txt">delete</button>
+						</div>
+					</li>
+					<li>
+						<button type="button" class="btn_upload" title="업로드">upload</button>
+					</li>
+					<!-- [Start] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_folder" title="파일 열기">folder</button>
+					</li>
+					<!-- [End] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_setting" title="설정">setting</button>
+					</li>
+					<li>
+						<button type="button" class="btn_info" title="플레이어 정보">information</button>
+					</li>
+					<li>
+						<!-- <button type="button" class="btn_sign_in" data-call-pop="signInPopup">Sign in</button> -->
+
+						<!-- [Start] 로그인시 -->
+						<span class="btn_user">
+							<img src="../resources/images/gateway/smaple_user_img.jpg">
+						</span>
+						<div class="user_pop">
+							<ul>
+								<li>
+									<a href="inplayer_myPage.html">My Page</a>
+								</li>
+								<li>
+									<a href="inplayer_mychannel.html">My Channel</a>
+								</li>
+								<li>
+									<a href="#signOut">Sign Out</a>
+								</li>
+							</ul>
+						</div>
+						<!-- [End] 로그인시 -->
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- [End] Header area -->
+
+	<!-- [Start] Main container -->
+	<div class="inplayer_main_container">
+		<div class="edit_form_wrapper">
+			<div class="edit_form_top">
+				<h2>
+					<a href="javascript:history.back()" class="btn_back">back to page</a>Channel Settings
+				</h2>
+			</div>
+			<div class="edit_form_container type_chnn">
+				<div class="img_area" style="background-image:url('../resources/images/gateway/smaple_user_img.jpg')">
+					<img src="../resources/images/gateway/smaple_user_img.jpg">
+				</div>
+				<ul class="input_list">
+					<li>
+						<div class="input_wrapper">
+							<label for="ch_name">CHANNEL NAME</label>
+							<input type="text" id="ch_name" value="Jade's Channel Come on Yo!" placeholder="채널명을 입력해 주세요.">
+							<button type="button" class="btn_del_txt">delete all</button>
+						</div>
+						<p class="txt_error on">Channel name is required.</p>
+					</li>
+					<li>
+						<div class="input_wrapper">
+							<label for="ch_tags">TAG (<span>0/150</span>, Up to 10)</label>
+							<input type="text" id="ch_tags" placeholder="#tag">
+							<button type="button" class="btn_del_txt">delete all</button>
+						</div>
+					</li>
+					<li>
+						<div class="textarea_wrapper">
+							<label for="ch_desc">INTRODUCE <span>(50/2000)</span></label>
+							<div class="bg_wrapper">
+								<div class="view_panel">
+									<textarea id="ch_desc" placeholder="내용을 입력해 주세요.">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+								</div>
+							</div>
+							<button type="button" class="btn_del_txt">delete all</button>
+						</div>
+					</li>
+				</ul>
+				<div class="btn_area clearfix">
+					<button type="button" class="btn_bg_gray" data-call-pop="pop_not_save">Cancel</button>
+					<button type="button" class="btn_bg_magenta" data-call-pop="pop_save">Save</button>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+	<!-- [End] Main container -->
+</div>
+
+
+
+
+<!--
+*** 팝업 작업 사항***
+- 팝업은 최상단 div.pop_dim 에 클래스 또는 id를 추가하여 display 시킨다.
+ -->
+
+
+<!-- [Start] Popup - 수정내용 저장 안할 시 -->
+<div class="pop_dim pop_not_save">
+	<div class="pop_container">
+		<button type="button" class="btn_close_pop" data-close-pop="close_pop">close popup</button>
+		<i class="ico_caution">caution</i>
+		<p class="txt_alert">Would you like to leave on this page?<br>The entered information is not saved.</p>
+		<div class="btn_area">
+			<button type="button" class="btn_bg_gray" data-close-pop="close_pop">Cancel</button>
+			<button type="button" class="btn_bg_magenta">OK</button>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - 수정내용 저장 안할 시 -->
+
+<!-- [Start] Popup - 수정내용 저장시 -->
+<div class="pop_dim pop_save">
+	<div class="pop_container">
+		<button type="button" class="btn_close_pop" data-close-pop="close_pop">close popup</button>
+		<i class="ico_caution">caution</i>
+		<p class="txt_alert">Do you want to save the changes?</p>
+		<div class="btn_area">
+			<button type="button" class="btn_bg_gray" data-close-pop="close_pop">Cancel</button>
+			<button type="button" class="btn_bg_magenta">OK</button>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - 수정내용 저장시 -->
+
+
+<!-- custom scroll bar js -->
+<script type="text/javascript" src="../resources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+
+<!-- 공통 js -->
+<script type="text/javascript" src="../resources/js/common_pub.js"></script>
+</body>
+</html>

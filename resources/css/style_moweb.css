@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+/****************************************/
+/*  Name: Titan Play Mobile Web ver.
+/*  Version: 1.0
+/*  Author: TitanPlatform 운영개발팀
+/*  Description :
+/****************************************/
+
+
+html {
+	/*font-size: 10px ;*/
+	font-size: 62.5%;
+}
+.tp_wrapper {
+	padding-top: 7rem;
+	background-color: #000;
+}
+
+
+/*App Install Guide area*/
+.app_install_banner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 7rem;
+	padding: 1.3rem;
+	box-sizing: border-box;
+	background-color: #fff;
+	z-index: 10;
+}
+.app_install_banner .left_area {
+	float: left;
+	min-width: 14rem;
+}
+.app_install_banner .left_area img {
+	float: left;
+	width: 4.5rem;
+	height: 4.5rem;
+	margin-right: 1.5rem;
+	font-size: 1.1rem;
+}
+.app_install_banner .left_area em {
+	display: block;
+	color: #333;
+}
+.app_install_banner .left_area span {
+	display: block;
+	color: #999;
+}
+.app_install_banner .right_area {
+	float: right;
+}
+.app_install_banner .right_area a {
+	display: inline-block;
+	line-height: 4.5rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	letter-spacing: -0.03rem;
+	color: #C9338B;
+}
+.app_install_banner .right_area a:first-of-type {
+	margin-right: 15px;
+}
+
+
+/*Main Visual area*/
+.main_visual {
+	position: relative;
+	height: 28.5rem;
+	background: url("../images/gateway/mo_web/mask@3x.png") center center no-repeat;
+	background-size: cover;
+}
+.main_visual:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.main_visual .txt_container {
+	position: absolute;
+	top: 3.5rem;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+.main_visual .tit_main_visual {
+	width: 10.5rem;
+	height: 2.4rem;
+	margin: 0 auto 1rem;
+	font-size: 0;
+	color: transparent;
+	background: url("../images/gateway/mo_web/mImgLogo@3x.png") center bottom no-repeat;
+	background-size: contain;
+}
+.main_visual p {
+	font-size: 1.2rem;
+	color: #fff;
+	text-align: center;
+}
+
+
+/*Introduction area*/
+.introduction_area {
+	padding: 3.5rem 2.5rem;
+	background-color: #111;
+}
+.tp_tech li {
+	margin-bottom: 3rem;
+}
+.tp_tech li:last-of-type {
+	margin-bottom: 0;
+}
+.tp_tech li img {
+	float: left;
+	width: 6.5rem;
+	height:6.5rem;
+	margin-right: 2rem;
+}
+.tp_tech li:first-of-type img {
+	padding-bottom: 2rem; /*글자가 너무 길어서 추가함*/
+}
+.tp_tech li em {
+	display: block;
+	line-height: 2;
+	font-size: 1.4rem;
+	letter-spacing: -0.04rem;
+	color: #fff;
+}
+.tp_tech li p {
+	font-size: 1.2rem;
+	letter-spacing: -0.03rem;
+	color: #777;
+}
+
+
+/*Footer area*/
+.tp_footer {
+	padding: 3.5rem 0;
+	text-align: center;
+}
+.dwnl_links_wrapper {
+	padding: 0 2.5rem 3.5rem;
+}
+.dwnl_links_wrapper a {
+	float: left;
+	display: inline-block;
+	width: 48%;
+	padding: 1.3rem 0;
+	margin-bottom: 1rem;
+	border: 1px solid #282828;
+	border-radius: 0.7rem;
+	box-sizing: border-box;
+	text-align: center;
+}
+.dwnl_links_wrapper a:nth-child(odd) {
+	margin-right: 4%;
+}
+.dwnl_links_wrapper a:last-child {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+.dwnl_links_wrapper a img {
+	width: 9.6rem;
+	height: 2.3rem;
+}
+.company_info li {
+	font-size: 1.1rem;
+	color: #555;
+}
+.company_info li a {
+	color: inherit;
+}
+
+
+.copyright {
+	/*갤럭시 노트4에서 &copy모양이 잘 적용되지 않아 적용이 가능한 폰트를 사용해야함*/
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}

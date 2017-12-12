@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/*Fonts*/
+@font-face {
+	font-family: 'NotoSans-Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local("※"), url(../fonts/NotoSans-Regular.woff) format("woff");
+}
+@font-face {
+	font-family: 'NotoSans-Light';
+	font-style: normal;
+	font-weight: normal;
+	src: local("※"), url(../fonts/NotoSans-Light.woff) format("woff");
+}
+@font-face {
+	font-family: 'Roboto-Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local("※"), url(../fonts/Roboto-Regular.woff) format("woff");
+}
+
+
+
+
+/****************************************/
+/*  Name: Titan Play PC ver.
+/*  Version: 1.01 (171130)
+/*  Author: TitanPlatform
+/*  Description : common style
+/****************************************/
+
+/*Reset*/
+html {margin:0;padding:0; font-size:100%;}
+body {margin:0; padding:0;font-family:"NotoSans-Light", "NanumGothic", "NanumGothicOTF", "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;line-height:1.5; ;letter-spacing:0;-webkit-text-size-adjust:none;}
+div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,pre,form,fieldset,input,table,tr,th,td,button,textarea,select {margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6{font-weight:normal}
+img {border:0;vertical-align:top;}
+ul,ol,dl,dt,dd,li {list-style:none;}
+table, th, td {border-collapse:collapse;border-spacing:0;font-weight: normal;}
+caption {display:block;text-indent:-9999em;overflow:hidden;height:0;font-size:0;line-height:0;}
+fieldset, blockquote, iframe, button {border:none;}
+i, em, u, cite {font-style:normal;}
+strong,em, b {font-weight:normal;}
+a {color: inherit; text-decoration:none;}
+button {background:transparent;cursor:pointer;vertical-align:middle;margin:0; font-family: inherit;}
+button,input[type="submit"], input[type="button"], input[type="reset"] {cursor:pointer;-webkit-appearance:none;}
+section, nav, article, aside, header, footer, main {display:block;}
+
+input[type="text"]::-ms-clear,
+input[type="number"]::-ms-clear,
+input[type="search"]::-ms-clear {
+	display: none;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+
+/* 우선 경과를 지켜보고 처리해야 할듯.
+input[type="password"]::-ms-reveal {
+	display: none;
+}
+*/
+
+/*Common Class*/
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.blind {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+.hide {
+	display: none;
+}
+.delete_after:after {
+	display: none !important;
+}
+.delete_before:before {
+	display: none !important;
+}
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.f_magenta {
+	color: #c9338b !important;
+}
+.f_red {
+	color: #ff0002 !important;
+}

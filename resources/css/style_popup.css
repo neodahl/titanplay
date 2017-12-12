@@ -1,0 +1,906 @@
+@charset "utf-8";
+
+
+/****************************************/
+/*  Name: Titan Play PC ver.
+/*  Version: 1.01 (171130)
+/*  Author: TitanPlatform
+/*  Description : Popup Style
+/****************************************/
+
+/*popup basic*/
+.pop_dim {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 100;
+}
+.pop_dim.child_pop {
+	background: none; /*bg 처리 어떻게 할지 고려해봐야겠음*/
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.pop_container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 350px;
+	transform: translate(-50%, -50%);
+	padding: 30px 30px 40px;
+	background-color: #fff;
+	box-sizing: border-box;
+	text-align: center;
+	/*font-family: 'Roboto-Regular';*/
+}
+.pop_container h3 {
+	line-height: 1;
+	margin-bottom: 30px;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: left;
+	cursor: default;
+}
+.btn_close_pop {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	background: url("../images/gateway/inplayer/btn-popup-close.png") center center no-repeat;
+	background-size: contain;
+}
+.btn_area {
+	text-align: center;
+	margin-top: 40px;
+}
+
+
+/*팝업내 스크롤 기본형*/
+.pop_dim .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: rgba(127,127,127,.5);
+}
+.pop_dim .mCSB_scrollTools .mCSB_draggerRail {
+	background-color: transparent;
+}
+
+
+
+/*common style*/
+.ico_caution { /*주의 아이콘*/
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 15px;
+	text-indent: -9999px;
+	background: url("../images/gateway/inplayer/ic-popup-info.png") center center no-repeat;
+	background-size: contain;
+}
+.txt_alert { /*일반 텍스트 메세지*/
+	margin-bottom: 40px;
+	font-size: 14px;
+	color: #000;
+}
+.txt_desc { /*일반 설명구*/
+	margin-top: 8px;
+	font-size: 13px;
+	color: #777;
+	text-align: left;
+	letter-spacing: -0.4px;
+}
+.txt_bold { /*일반 강조*/
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000;
+	text-align: left;
+}
+
+
+
+/*설명구 리스트 - 기본형  사용처: 정보 팝업*/
+.desc_type01 li {
+	position: relative;
+	padding-left: 10px;
+	font-size: 13px;
+	color: #777;
+	text-align: left;
+}
+.desc_type01 li:before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	left: 0;
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #777;
+}
+
+
+
+/*팝업 하단영역 버튼*/
+.pop_container .btn_area button {
+	float: none; /*팝업이 아닌 수정 페이지에서는 float이 적용되어 있다.*/
+	margin-right: 8px;
+}
+.pop_container .btn_area button:last-child {
+	margin-right: 0;
+}
+.pop_container [class^="btn_bg_"] {
+	width: auto; /*상쇄*/
+	min-width: 100px;
+	padding: 0 20px;
+	height: 40px;
+	font-size: 14px;
+}
+.pop_container .btn_bg_gray {
+	background-color: #888888;
+}
+
+
+
+/*팝업 내 인풋 스타일*/
+.pop_container .input_wrapper label {
+	color: #777;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+.pop_container .input_wrapper input {
+	background-color: #eeeeee;
+	color: #000;
+}
+.pop_container .input_wrapper input[type="password"] {
+	font-size: 18px;
+	letter-spacing: 5px;
+}
+/*버튼이 있는 input*/
+.pop_container .input_wrapper.with_button input {
+	float: left;
+	width: 309px;
+}
+.pop_container .input_wrapper.with_button .btn_del_txt {
+	right: 86px;
+}
+.pop_container .input_wrapper.with_button .btn_act {
+	float: right;
+	width: 70px;
+	height: 40px;
+	border-radius: 3px;
+	background-color: #888;
+	color: #fff;
+}
+
+
+
+
+/*로그인*/
+.sign_in_container {
+	width: 430px;
+	padding: 30px 50px;
+	background-color: #fff;
+	color: #777;
+}
+.sign_in_container .btn_close_pop {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	width: 20px;
+	height: 20px;
+	font-size: 0;
+	background: url("../images/gateway/inplayer/btn-popup-close.png") center center no-repeat;
+	background-size: contain;
+}
+.sign_in_container .tit_sign_in {
+	display: block;
+	margin-bottom: 30px;
+	font-size: 42px;
+	font-weight: bold;
+	color: #000;
+	cursor: default;
+	text-align: left;
+	line-height: 1.2;
+}
+.sign_in_container .input_box {
+	position: relative;
+	margin-bottom: 25px;
+}
+.sign_in_container .input_box:nth-of-type(2) {
+	margin-bottom: 40px;
+}
+.sign_in_container .input_box label {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	width: 20px;
+	height: 39px;
+	font-size: 0;
+}
+.sign_in_container .email label {
+	background: url("../images/gateway/inplayer/ic-signin-email.png") center center no-repeat;
+	background-size: contain;
+}
+.sign_in_container .pswd label {
+	background: url("../images/gateway/inplayer/ic-signin-password.png") center center no-repeat;
+	background-size: contain;
+}
+.sign_in_container .input_box input {
+	width: 100%;
+	height: 42px;
+	border: none;
+	border-bottom: 1px solid #999;
+	padding-left : 40px;
+	box-sizing: border-box;
+	background-color: transparent;
+	font-size: 16px;
+	color: #777;
+}
+.sign_in_container .input_box {
+	position: relative;
+}
+.sign_in_container .txt_error {
+	position: absolute;
+	top: 42px;
+	margin-top: 0;
+	padding-left: 0;
+}
+.sign_in_container .txt_error:before {
+	display: none;
+}
+
+
+
+
+.sign_in_container .btn_sign_in {
+	width: 100%;
+	height: 46px;
+	margin-bottom: 30px;
+	border-radius: 3px;
+	background-color: #c9338b;
+	font-size: 16px;
+	color: #fff;
+}
+.under_container {
+	padding-top: 15px;
+	border-top: 1px solid #ddd;
+	font-size: 14px;
+	font-weight: bold;
+	color: #777;
+}
+.under_container .btn_sign_up {
+	float: left;
+	color: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+}
+.under_container .find_pswd {
+	float: right;
+}
+.under_container .btn_sign_up:hover,
+.under_container .find_pswd:hover {
+	text-decoration: underline;
+}
+.btn_fb_login {
+	width: 100%;
+	height: 46px;
+	margin-top: 40px;
+	border-radius: 3px;
+	background-color: #3059af;
+	font-size: 16px;
+	color: #fff;
+}
+.btn_fb_login:before {
+	content: '';
+	display: inline-block;
+	width: 8px;
+	height: 16px;
+	margin-right: 16px;
+	background: url("../images/gateway/inplayer/ic-signin-facebook.png") center center no-repeat;
+	background-size: contain;
+	vertical-align: top;
+	margin-top: 2px;
+}
+.sign_in_container small {
+	display: block;
+	margin-top: 40px;
+	text-align: center;
+	font-size: 13px;
+	cursor: default;
+}
+
+
+/*Sign Up*/
+.signUpPopup .pop_container {
+	width: 445px;
+}
+.signUpPopup .agree_check {
+	margin-top: 20px;
+}
+.signUpPopup .lower_area {
+	width: 260px;
+	margin: 40px auto 30px;
+}
+.signUpPopup .lower_area span {
+	display: block;
+	line-height: 48px;
+}
+.signUpPopup .btn_sign_in,
+.signUpPopup .btnSignUp { /*개발 중복*/
+	width: 100%;
+	height: 46px;
+	border-radius: 3px;
+	background-color: #c9338b;
+	font-size: 16px;
+	color: #fff;
+}
+.signUpPopup .btn_fb_login {
+	margin-top: 0;
+}
+.signUpPopup .lower_area + p {
+	font-size: 13px;
+	color: #999;
+}
+.signUpPopup .lower_area + p a {
+	font-weight: bold;
+}
+.signUpPopup .txt_error,
+.signUpPopup .txt_permit {
+	padding-left: 0;
+}
+.signUpPopup .txt_error:before,
+.signUpPopup .txt_permit:before {
+	display: none;
+}
+/*약관 문구 영역*/
+.terms_wrapper {
+	max-height: 400px;
+	max-width: 540px;
+}
+.terms_wrapper p {
+	padding-right: 20px;
+	white-space: pre-wrap;
+	text-align: left;
+}
+
+
+/*Password Reset*/
+.resetPswdPop .pop_container {
+	width: 445px;
+}
+.resetPswdPop .txt_error {
+	padding-left: 0;
+}
+.resetPswdPop .txt_error:before {
+	display: none;
+}
+.resetPswdPop .txt_desc {
+	margin-top: 5px;
+}
+
+
+/*Password reset NextStep*/
+.resetPswdPopNext .pop_container {
+	width: 445px;
+}
+.user_check_area {
+	padding: 20px 0;
+	margin-bottom: 30px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	text-align: left;
+}
+.user_check_area > span {
+	display: block;
+	margin-bottom: 6px;
+	font-size: 13px;
+	color: #777;
+}
+.user_check_area > em {
+	font-size: 16px;
+}
+
+/*Verifying Email Check & Resend*/
+.check_verifying_email .pop_container {
+	/*verifyingEmail > check_verifying_email - 171127 jsp도 같이 수정 되어야 함 , common_pub.js 와 signinpopup 에서 수정해야 할 것으로 보임*/
+	width: 445px;
+	padding-bottom: 100px;
+}
+.right_bottom_area {
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	display: inline-block;
+}
+.right_bottom_area p {
+	font-size: 13px;
+	color: #999;
+}
+.right_bottom_area button {
+	font-weight: bold;
+	color: #4990e2;
+}
+
+/*Resent Email*/
+.resent_email_Message{
+	text-align: center;
+	font-size:14px;
+	padding: 40px 0 20px 0;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #ddd;
+}
+.resent_email_confirm{
+	text-align: center;
+	font-size:16px;
+	font-weight:bold;
+	color: #4990e2;
+}
+
+
+
+
+
+/*프로필 페이지 - 메일 인증, 메일 재발송*/
+.verifying_email .txt_alert {
+	margin-bottom: 20px;
+}
+.verifying_email .user_check_area {
+	text-align: center;
+}
+.verifying_email .btn_area {
+	margin-top: 30px;
+}
+
+
+
+
+
+
+
+/*프로필 페이지 - 비밀번호 설정, 변경*/
+.type_profile .pop_container {
+	width: 445px;
+}
+.list_pop_input li {
+	margin-bottom: 30px;
+}
+
+/*프로필 페이지 -회원탈퇴*/
+.close_account .pop_container {
+	width: 464px;
+	text-align: left;
+}
+.close_account .account_info_area {
+	padding: 20px 0;
+	margin-bottom: 30px;
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+}
+.close_account .account_info_area em {
+	display: block;
+	margin-bottom: 4px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.close_account .account_info_area p {
+	font-size: 15px;
+	color: #777;
+}
+.close_account .warning_area {
+	margin-bottom: 15px;
+}
+.close_account .warning_area h4 {
+	font-size: 18px;
+	font-weight: bold;
+}
+.close_account .warning_area strong {
+	font-size: 14px;
+	color: #d0011b;
+}
+.check_list_area h4 {
+	margin-bottom: 3px;
+}
+.check_list_area .desc_type01 {
+	margin-bottom: 10px;
+}
+
+.agree_check {
+	margin-bottom: 20px;
+}
+.agree_check input[type="checkbox"] {
+	display: none;
+}
+.agree_check input[type="checkbox"] + label {
+	position: relative;
+	display: block;
+	padding-left: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	transition: all 0.2s linear;
+}
+.agree_check input[type="checkbox"] + label span:empty {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	vertical-align: top;
+	cursor: pointer;
+	transition: background 0.2s linear;
+	background: url("../images/gateway/inplayer/btn-checkbox-null.png") center center no-repeat;
+}
+.agree_check input[type="checkbox"]:checked + label {
+	color: #c9338b;
+}
+.agree_check input[type="checkbox"]:checked + label span:empty {
+	background: url("../images/gateway/inplayer/removeprofile-checkbox-btn-check.png") center center no-repeat;
+}
+
+
+/*Service Information*/
+.tianPlayInfo .pop_container {
+	width: 464px;
+	height: 650px;
+}
+.tab_menu_tpInfo {
+	height: 52px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #333;
+}
+.tab_menu_tpInfo li {
+	float: left;
+	width:33.3%;
+	margin-right: 0;
+	transition: color 0.3s;
+	cursor: pointer;
+}
+.tab_menu_tpInfo li a {
+	display: inline-block;
+	opacity: 1;
+	line-height: 51px;
+	color: #777;
+	font-weight: bold;
+}
+.tab_menu_tpInfo li a:before {
+	display: none;
+}
+.tab_menu_tpInfo li.on {
+	border-bottom: 2px solid #c9338b;
+}
+.tab_menu_tpInfo li a:hover,
+.tab_menu_tpInfo li.on a {
+	color: #c9338b;
+}
+.tianPlayInfo .selectbox_top {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	text-align: left;
+}
+.tianPlayInfo .selectbox_top span {
+	color: #777;
+	font-size: 15px;
+	font-weight: bold;
+}
+.tianPlayInfo .selectbox_options {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+	border-top: none;
+	text-align: left;
+}
+.tianPlayInfo .selectbox_options li:hover {
+	color: #777;
+	font-weight: bold;
+}
+/*Info Accordion*/
+.accd_container_info {
+	display: none;
+	padding-right: 20px;
+	margin-top: 30px;
+	max-height: 370px;
+}
+.accd_item_info {
+	margin: 7px 0;
+}
+.accd_item_info em {
+	display: block;
+	font-size: 16px;
+	color: #000;
+	text-align: left;
+	cursor: pointer;
+}
+.accd_item_info .accd_view_area_info {
+	display: none;
+	margin-top: 5px;
+}
+.accd_view_area_info .desc_type01 li:before {
+	content: '-';
+	top: unset;
+	display: inline;
+	background-color: transparent;
+}
+.accd_view_area_info p {
+	font-size: 13px;
+	color: #777;
+	text-align: left;
+}
+.version_info {
+	margin-top: 180px;
+	margin-left: 30px;
+}
+.version_info img {
+	float: left;
+	display: inline-block;
+	width: 72px;
+	height: 72px;
+	margin-right: 30px;
+}
+.version_info > span {
+	display: block;
+	text-align: left;
+}
+.version_info .current_ver {
+	font-size: 16px;
+	color: #000;
+}
+.version_info .current_ver span {
+	margin-left: 8px;
+}
+.version_info .updated_date {
+	font-size: 13px;
+	color: #777;
+}
+.version_info .updated_date span {
+	margin-left: 6px;
+}
+.version_info .tp_right {
+	margin-top: 10px;
+	font-size: 13px;
+	color: #777;
+}
+
+
+/*Wallet - 환전 동의*/
+.exchange_agreement .pop_container {
+	width: 445px;
+}
+.tit_exchange_info {
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	font-size: 16px;
+	text-align: left;
+}
+
+
+
+/*Secret Request*/
+.pop_secret_request .pop_container {
+	padding-bottom: 74px;
+	width: 445px;
+}
+.pop_secret_request .scroll_wrapper {
+	min-height: 200px;
+	max-height: 350px;
+}
+.secret_request_list li { /*secret follower와 같은 스타일을 사용*/
+	position: relative;
+	padding: 12px;
+	border-top: 1px solid #ddd;
+	text-align: left;
+}
+.secret_request_list li:last-child {
+	border-bottom: 1px solid #ddd;
+}
+.secret_request_list li:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.requester_info .profile_img {
+	float: left;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.requester_info .profile_img img {
+	width: 100%;
+	min-height: 60px;
+}
+.requester_info .user_email {
+	display: block;
+	padding-top: 7px;
+	margin-bottom: 3px;
+	font-size: 16px;
+}
+.requester_info .location,
+.requester_info .nickname {
+	float: left;
+	font-size: 13px;
+	color: #777;
+}
+.requester_info .nickname {
+	display: inline-block;
+	width: 35%;
+}
+.requester_info .location:before {
+	content: '';
+	display: inline-block;
+	width: 8px;
+	height: 11px;
+	margin-right:5px;
+	background: url("../images/gateway/inplayer/ico_location.png") center center no-repeat;
+	vertical-align: -1px;
+}
+.requester_info .nickname:before {
+	content: '·';
+	margin: 0 4px;
+}
+.secret_request_list li .btn_del,
+.Added_email_list ul li .btn_del,
+.secret_following_list li .btn_del {
+	position: absolute;
+	top: 50%;
+	right: 11px;
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	text-indent: -9999px;
+	background: url("../images/gateway/inplayer/btn-delete.png") center center no-repeat;
+}
+.requester_info + div {
+	text-align: right;
+}
+.btn_refuse {
+	margin-right: 10px;
+	font-weight: bold;
+	color: #777;
+}
+.btn_approve {
+	font-weight: bold;
+	color: #4a90e2;
+}
+
+
+
+
+/*Secret Follower*/
+.pop_secret_follower .pop_container {
+	width: 445px;
+}
+.pop_secret_follower .scroll_wrapper {
+	min-height: 300px;
+	max-height: 515px;
+}
+.pop_secret_follower .btn_bg_magenta {
+	padding: 0 34px;
+}
+
+
+/*Add Secret Follower*/
+.pop_add_secret_follower .pop_container {
+	width: 445px;
+}
+.pop_add_secret_follower .static_mssg_box {
+	height: 50px;
+}
+.pop_add_secret_follower .txt_error {
+	padding-left: 0;
+}
+.pop_add_secret_follower .txt_error:before {
+	display: none;
+}
+.pop_add_secret_follower .scroll_wrapper {
+	min-height: 150px;
+	max-height: 365px;
+}
+.Added_email_list h4 {
+	margin-bottom: 8px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #777;
+	text-align: left;
+}
+.Added_email_list ul li {
+	position: relative;
+	height: 40px;
+	padding-left: 12px;
+	margin-bottom: 8px;
+	background-color: #f5f5f5;
+	text-align: left;
+}
+.Added_email_list ul li span {
+	font-size: 14px;
+	line-height: 40px;
+}
+
+
+
+
+
+/*Secret Following*/
+.pop_secret_following .pop_container {
+	width: 445px;
+	padding-bottom: 70px;
+}
+.pop_secret_following .scroll_wrapper {
+	min-height: 350px;
+	max-height: 559px;
+}
+.secret_following_list li {
+	position: relative;
+	padding: 12px;
+	border-top: 1px solid #ddd;
+	text-align: left;
+}
+.secret_following_list li:last-child {
+	border-bottom: 1px solid #ddd;
+}
+.secret_following_list li .profile_img {
+	float: left;
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.secret_following_list li .profile_img img {
+	width: 100%;
+	height: 100%;
+}
+.secret_following_list li .secret_ch_name {
+	display: block;
+	max-width: 70%;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+.secret_following_list li .secret_ch_name:hover {
+	text-decoration: underline;
+}
+.secret_following_list .info_box {
+	color: #777;
+	font-size: 13px;
+}
+.info_box .shared_count:before {
+	content: '';
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	margin-right: 5px;
+	background: url("../images/gateway/inplayer/icon_folder_gray.png") center center no-repeat;
+}
+.info_box .secret_following_list .nickname:before {
+	content: '·';
+	margin: 0 4px;
+}
+.info_box .secret_ch_number {
+	display: inline-block;
+}
+.info_box .secret_ch_number:hover {
+	text-decoration: underline;
+}
+.info_box .secret_ch_number:before {
+	content: '';
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	margin-right: 5px;
+	background: url("../images/gateway/inplayer/icon_secret_ch_lock.png") center center no-repeat;
+}
+
+.no_list {
+	font-size: 16px;
+	color: #333;
+	margin-top: 100px;
+}
+

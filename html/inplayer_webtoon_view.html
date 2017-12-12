@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Webtoon View - TiTAN Play</title>
+	<!-- slider css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/slick-theme.css">
+	<!-- custom scrollbar css -->
+	<link rel="stylesheet" href="../resources/css/jquery.mCustomScrollbar.min.css">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_common.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_inplayer.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_popup.css">
+	<!-- jQuery -->
+	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
+	<!-- slider js -->
+	<script type="text/javascript" src="../resources/js/slick.min.js"></script>
+</head>
+<body>
+
+
+<div class="inplayer_wrapper hide_scrollbar" data-mcs-theme="minimal-dark">
+	<!-- [Start] Header area -->
+	<header class="inplayer_header_wrapper">
+		<div class="inplayer_header_container clearfix">
+			<ul class="left_list clearfix">
+				<li>
+					<a href="inplayer.html">Home</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_main.html">Channel</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_mcn.html">MCN</a>
+				</li>
+				<li class="on">
+					<a href="inplayer_webtoon_main.html">Webtoon</a>
+				</li>
+				<li>
+					<a href="inplayer_secret_main.html">Secret</a>
+				</li>
+			</ul>
+			<div class="rigt_item_wrapper">
+				<ul class="clearfix">
+					<li>
+						<div class="search_box">
+							<label class="blind">검색어 입력</label>
+							<input type="search" class="input_search" title="검색">
+							<button class="btn_del_txt">delete</button>
+						</div>
+					</li>
+					<li>
+						<button type="button" class="btn_upload" title="업로드">upload</button>
+					</li>
+					<!-- [Start] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_folder" title="파일 열기">folder</button>
+					</li>
+					<!-- [End] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_setting" title="설정">setting</button>
+					</li>
+					<li>
+						<button type="button" class="btn_info" title="정보" data-call-pop="tianPlayInfo">information</button>
+					</li>
+					<li>
+						<button type="button" class="btn_sign_in" data-call-pop="signInPopup">Sign in</button>
+
+						<!-- [Start] 로그인시 -->
+						<!-- <span class="btn_user">
+							<img src="../resources/images/gateway/smaple_user_img.jpg">
+						</span>
+						<div class="user_pop">
+							<ul>
+								<li>
+									<a href="inplayer_myPage.html">My Page</a>
+								</li>
+								<li>
+									<a href="inplayer_mychannel.html">My Channel</a>
+								</li>
+								<li>
+									<a href="#signOut">Sign Out</a>
+								</li>
+							</ul>
+						</div> -->
+						<!-- [End] 로그인시 -->
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- [End] Header area -->
+
+	<!-- [Start] Main container -->
+	<div class="inplayer_main_container">
+
+		<!-- basic_webtoon_item -->
+
+		<div class="wbt_detail_toparea">
+			<a href="javascript:history.back()" class="btn_back">back to page</a>
+			<em class="tit_wbt">Webtoon Title</em>
+			<span class="label_wbt_serial">연재</span>
+			<span class="label_wbt_concluded">완결</span>
+		</div>
+		<div class="wbt_detail_info">
+			<div class="thumbnail_area">
+				<img src="../resources/images/gateway/sample_webtoon.png" alt="Webtoon Thumbnail">
+				<span class="webtoon_rating grade_19">19</span>
+				<span class="upload_label">UP</span>
+			</div>
+			<em class="tit_wbt">Webtoon Title</em>
+			<span class="user_nick">Writer's Name</span>
+			<p class="wbt_desc">Lorem ipsum dolor sit amet,<br>consectetur adipisicing elit, sed do eiusmod</p>
+			<div class="tag_wrapper">
+				<span>MUSIC</span>
+				<span>MCN</span>
+				<span>winvertion</span>
+				<span>clueworks</span>
+			</div>
+			<button type="button" class="btn_see_ep01">첫화부터 보기</button>
+		</div>
+
+		<div class="wbt_episode_container">
+			<span class="wbt_ep_top">Episodes 200</span>
+			<ul class="episode_wrapper">
+				<!-- [Start] 에피소드 아이템 -->
+				<li>
+					<a href="#none" class="ep_thumb_area">
+						<img src="../resources/images/gateway/sample_episode.png" alt="Episode Thumbnail">
+						<span class="upload_label">UP</span>
+						<span class="webtoon_rating grade_19">19</span>
+					</a>
+					<a href="#none" class="ep_title">Episode Title</a>
+					<span class="uploaded_date">10m ago</span>
+					<span class="ep_label_white">Free</span>
+				</li>
+				<!-- [End] 에피소드 아이템 -->
+
+				<li>
+					<a href="#none" class="ep_thumb_area">
+						<img src="../resources/images/gateway/sample_episode.png" alt="Episode Thumbnail">
+						<span class="upload_label">UP</span>
+					</a>
+					<a href="#none" class="ep_title">Episode Title</a>
+					<span class="uploaded_date">2017.10.31</span>
+					<span class="ep_label_magenta ico_Tcash">500</span>
+				</li>
+				<li>
+					<a href="#none" class="ep_thumb_area">
+						<img src="../resources/images/gateway/sample_episode.png" alt="Episode Thumbnail">
+					</a>
+					<a href="#none" class="ep_title">Episode Title</a>
+					<span class="uploaded_date">2017.10.31</span>
+					<span class="ep_label_white">Purchased</span>
+				</li>
+
+			</ul>
+		</div>
+
+
+
+
+	</div>
+	<!-- [End] Main container -->
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- custom scroll bar js -->
+<script type="text/javascript" src="../resources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+
+	/*슬라이더 관련 스크립트*/
+	// Slider -  webtoon common style
+	$(document).ready(function(){
+		$('.common_webtoon_slider').slick({
+			slidesToShow: 6,
+			slidesToScroll: 6,
+			variableWidth: true,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 5,
+						slidesToScroll: 5
+					}
+				},
+				{
+					breakpoint: 1004,
+					settings: {
+						slidesToShow: 4,
+						slidesToScroll: 4
+					}
+				}
+			]
+		});
+	})
+
+
+</script>
+
+
+
+
+<!-- 공통 js -->
+<script type="text/javascript" src="../resources/js/common_pub.js"></script>
+</body>
+</html>

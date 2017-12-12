@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>타이탄 플레이 - 마이채널</title>
+	<!-- slider css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/slick-theme.css">
+	<!-- custom scrollbar css -->
+	<link rel="stylesheet" href="../resources/css/jquery.mCustomScrollbar.min.css">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_common.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_inplayer.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_popup.css">
+	<!-- jQuery -->
+	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
+	<!-- slider js -->
+	<script type="text/javascript" src="../resources/js/slick.min.js"></script>
+</head>
+<body>
+
+
+<div class="inplayer_wrapper hide_scrollbar" data-mcs-theme="minimal-dark">
+	<!-- [Start] Header area -->
+	<header class="inplayer_header_wrapper">
+		<div class="inplayer_header_container clearfix">
+			<ul class="left_list clearfix">
+				<li class="on">
+					<a href="inplayer.html">Home</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_main.html">Channel</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_mcn.html">MCN</a>
+				</li>
+				<li>
+					<a href="inplayer_webtoon_main.html">Webtoon</a>
+				</li>
+				<li>
+					<a href="inplayer_secret_main.html">Secret</a>
+				</li>
+			</ul>
+			<div class="rigt_item_wrapper">
+				<ul class="clearfix">
+					<li>
+						<div class="search_box">
+							<label class="blind">검색어 입력</label>
+							<input type="search" class="input_search" title="검색">
+							<button class="btn_del_txt">delete</button>
+						</div>
+					</li>
+					<li>
+						<button type="button" class="btn_upload" title="업로드">upload</button>
+					</li>
+					<!-- [Start] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_folder" title="파일 열기">folder</button>
+					</li>
+					<!-- [End] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_setting" title="설정">setting</button>
+					</li>
+					<li>
+						<button type="button" class="btn_info" title="플레이어 정보">information</button>
+					</li>
+					<li>
+						<!-- <button type="button" class="btn_sign_in" data-call-pop="signInPopup">Sign in</button> -->
+
+						<!-- [Start] 로그인시 -->
+						<span class="btn_user">
+							<img src="../resources/images/gateway/smaple_user_img.jpg">
+						</span>
+						<div class="user_pop">
+							<ul>
+								<li>
+									<a href="inplayer_myPage.html">My Page</a>
+								</li>
+								<li>
+									<a href="inplayer_mychannel.html">My Channel</a>
+								</li>
+								<li>
+									<a href="#signOut">Sign Out</a>
+								</li>
+							</ul>
+						</div>
+						<!-- [End] 로그인시 -->
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- [End] Header area -->
+
+	<!-- [Start] Main container -->
+	<div class="inplayer_main_container">
+		<div class="my_ch_top_area">
+			<em class="ch_title">Neodahl’s Channel Let's get it! (Ch.103823)</em>
+			<span class="followers">Followed <span>12,030</span></span>
+			<a href="inplayer_edit_mychannel.html" class="btn_ch_setting" title="채널 설정">channel setting</a>
+		</div>
+		<!-- [Start] My Videos -->
+		<div class="list_container">
+			<div class="list_top_area">
+				<h2>My Videos</h2>
+				<!-- <a href="inplayer_mychannel_myVideos.html" class="see_more">See More</a> -->
+			</div>
+
+			<p class="my_ch_no_ctnt">
+				<a href="#none">업로드</a>한 내 영상이 없습니다.
+			</p>
+
+		</div>
+		<!-- [End] My Videos -->
+		<!-- [Start] Added Videos -->
+		<div class="list_container">
+			<div class="list_top_area">
+				<h2>Added Videos</h2>
+				<!-- <a href="inplayer_mychannel_addVideos.html" class="see_more">See More</a> -->
+			</div>
+
+			<p class="my_ch_no_ctnt">채널에 담기 한 영상이 없습니다.</p>
+
+		</div>
+		<!-- [End] Added Videos -->
+
+		<!-- [Start] Follow Channels -->
+		<div class="list_container follow_list">
+			<div class="list_top_area">
+				<h2>Follow Channels</h2>
+				<!-- <a href="inplayer_mychannel_followChannels.html" class="see_more">See More</a> -->
+			</div>
+
+			<p class="my_ch_no_ctnt">팔로우 한 채널이 없습니다.</p>
+
+		</div>
+		<!-- [End] Follow Channels -->
+
+	</div>
+	<!-- [End] Main container -->
+</div>
+
+
+
+
+<!--
+*** 팝업 작업 사항***
+- 팝업은 최상단 div.pop_dim 에 클래스 또는 id를 추가하여 display 시킨다.
+ -->
+
+<!-- [Start] Popup - 삭제 -->
+<div class="pop_dim pop_delete_ctnt">
+	<div class="pop_container">
+		<button type="button" class="btn_close_pop" data-close-pop="close">close popup</button>
+		<i class="ico_caution">caution</i>
+		<p class="txt_alert">Are you sure you want to delete<br>this content?</p>
+		<div class="btn_area">
+			<button type="button" class="btn_bg_gray" data-close-pop="close">Cancel</button>
+			<button type="button" class="btn_bg_magenta">OK</button>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - 삭제 -->
+
+
+<!-- [Start] Popup - 이용할 수 없는 콘텐츠 -->
+<div class="pop_dim">
+	<div class="pop_container">
+		<button type="button" class="btn_close_pop" data-close-pop="close">close popup</button>
+		<i class="ico_caution">caution</i>
+		<p class="txt_alert">You can not use this content</p>
+		<div class="btn_area">
+			<button type="button" class="btn_bg_magenta" data-close-pop="close">OK</button>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - 이용할 수 없는 콘텐츠 -->
+
+
+
+<!-- custom scroll bar js -->
+<script type="text/javascript" src="../resources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script type="text/javascript">
+	/*슬라이더 관련 스크립트*/
+	// Slider -  channel common style
+	$(document).ready(function(){
+		$('.common_channel_slider').slick({
+			slidesToShow: 7,
+			slidesToScroll: 7,
+			variableWidth: true,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 6,
+						slidesToScroll: 6
+					}
+				},
+				{
+					breakpoint: 1004,
+					settings: {
+						slidesToShow: 5,
+						slidesToScroll: 5
+					}
+				}
+			]
+		});
+	})
+
+	/*콘텐츠 수정 팝업*/
+	$('.btn_edit').on('click', function(){
+		$(this).toggleClass('on');
+		$(this).siblings('.edit_pop').toggleClass('on');
+	});
+	$(document).mouseup(function(e){
+		if( !$('.edit_pop').is(e.target) && $('.edit_pop').has(e.target).length === 0 ) {
+			$('.edit_pop').removeClass('on');
+			$('.btn_edit').removeClass('on');
+		}
+	});
+
+
+
+
+</script>
+<!-- 공통 js -->
+<script type="text/javascript" src="../resources/js/common_pub.js"></script>
+</body>
+</html>

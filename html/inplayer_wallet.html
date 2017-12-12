@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Wallet - TiTAN Play</title>
+	<!-- custom scrollbar css -->
+	<link rel="stylesheet" href="../resources/css/jquery.mCustomScrollbar.min.css">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_common.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_inplayer.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_wallet.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style_popup.css">
+	<!-- jQuery -->
+	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+
+<div class="inplayer_wrapper hide_scrollbar" data-mcs-theme="minimal-dark">
+	<!-- [Start] Header area -->
+	<header class="inplayer_header_wrapper">
+		<div class="inplayer_header_container clearfix">
+			<ul class="left_list clearfix">
+				<li class="on">
+					<a href="inplayer.html">Home</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_main.html">Channel</a>
+				</li>
+				<li>
+					<a href="inplayer_channel_mcn.html">MCN</a>
+				</li>
+				<li>
+					<a href="inplayer_webtoon_main.html">Webtoon</a>
+				</li>
+				<li>
+					<a href="inplayer_secret_main.html">Secret</a>
+				</li>
+			</ul>
+			<div class="rigt_item_wrapper">
+				<ul class="clearfix">
+					<li>
+						<div class="search_box">
+							<label class="blind">검색어 입력</label>
+							<input type="search" class="input_search" title="검색">
+							<button class="btn_del_txt">delete</button>
+						</div>
+					</li>
+					<li>
+						<button type="button" class="btn_upload" title="업로드">upload</button>
+					</li>
+					<!-- [Start] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_folder" title="파일 열기">folder</button>
+					</li>
+					<!-- [End] 로그인시 보여짐 -->
+					<li>
+						<button type="button" class="btn_setting" title="설정">setting</button>
+					</li>
+					<li>
+						<button type="button" class="btn_info" title="플레이어 정보">information</button>
+					</li>
+					<li>
+						<!-- <button type="button" class="btn_sign_in" data-call-pop="signInPopup">Sign in</button> -->
+
+						<!-- [Start] 로그인시 -->
+						<span class="btn_user">
+							<img src="../resources/images/gateway/smaple_user_img.jpg">
+						</span>
+						<div class="user_pop">
+							<ul>
+								<li>
+									<a href="inplayer_myPage.html">My Page</a>
+								</li>
+								<li>
+									<a href="inplayer_mychannel.html">My Channel</a>
+								</li>
+								<li>
+									<a href="#signOut">Sign Out</a>
+								</li>
+							</ul>
+						</div>
+						<!-- [End] 로그인시 -->
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- [End] Header area -->
+
+	<!-- [Start] Main container -->
+	<div class="inplayer_main_container">
+
+		<div class="wallet_top_area">
+			<h2><a href="javascript:history.back()" class="btn_back">back to page</a>My Wallet</h2>
+			<div class="display_area clearfix">
+				<h3>My T-Cash</h3>
+				<div class="right_area">
+					<i class="icon_Tcash">T-Cash</i>
+					<em>10,000</em>
+					<!-- <a href="inplayer_wallet_refill.html" class="btn_refill">Refill</a> -->
+					<button class="btn_refill">Refill</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab_panel_wallet">
+			<ul class="tab_menu_wallet">
+				<li class="on">
+					<a href="#tCashHistory">T-Cash History</a>
+				</li>
+				<li>
+					<a href="#salesHistory">Sales History</a>
+				</li>
+				<li>
+					<a href="#exchange">Exchange</a>
+				</li>
+			</ul>
+			<div class="tab_container_wallet">
+
+				<!-- [Start] Tab Contents - T-Cash History -->
+				<div class="tab_content_wallet on">
+					<div class="tab_panel_TcashHistory">
+						<ul class="tab_menu_TcashHistory clearfix">
+							<li class="on unbind_cont">
+								<a href="#All">All</a>
+							</li>
+							<li class="unbind_cont">
+								<a href="#Use">Use(-)</a>
+							</li>
+							<li class="unbind_cont">
+								<a href="#Add">Add(+)</a>
+							</li>
+						</ul>
+						<div class="tab_container_TcashHistory">
+							<!-- [Start] T-Cash History - All -->
+							<div class="tab_content_TcashHistory on">
+								<div class="history_table_wrapper">
+									<div class="selectbox_wrapper">
+										<div class="selectbox_top">
+											<span class="seleted_value">Last 90 days</span>
+										</div>
+										<ul class="selectbox_options">
+											<li value="option01">Last 90 days</li>
+											<li value="option02">Last 30 days</li>
+											<li value="option03">Last 7 days</li>
+											<li value="option04">Today</li>
+										</ul>
+									</div>
+									<table class="history_table">
+										<caption>
+											<strong>T-cash 사용 내역</strong>
+											<p>date, description, income and outgoings</p>
+										</caption>
+										<colgroup>
+											<col style="width: 15%">
+											<col>
+											<col style="width: 15%">
+											<col style="width: 110px">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">Date</th>
+												<th scope="col">Description</th>
+												<th scope="col" id="testButton">Use(-) / Add(+)</th>
+												<th scope="col"></th>
+											</tr>
+										</thead>
+										<tbody id="test">
+											<tr>
+												<td>2017.08.10 14:20</td>
+												<td>Refilled</td>
+												<td>
+													<span>+ 100</span>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>2017.08.10 14:20</td>
+												<td>Gift</td>
+												<td>
+													<span>+ 6500</span>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>2017.08.10 14:20</td>
+												<td>Daily income</td>
+												<td>
+													<span>+ 50</span>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>2017.08.10 14:20</td>
+												<td>Exchange</td>
+												<td class="cash_minus">- 50</td>
+												<td>
+													<button type="button" class="btn_cancel_purchase" data-call-pop="pop_cancel_purchase">구매취소</button>
+												</td>
+											</tr>
+											<tr>
+												<td>2017.08.10 14:20</td>
+												<td>Purchase content</td>
+												<td class="cash_minus">- 500</td>
+												<td>
+													<button type="button" class="btn_cancel_purchase" data-call-pop="pop_cancel_purchase">Cancel Purchase</button>
+												</td>
+											</tr>
+											<tr>
+												<td>2017.08.10 14:20</td>
+												<td>Purchase content</td>
+												<td>+ 500</td>
+												<td></td>
+											</tr>
+											<tr class="no_history">
+												<td colspan="4">There are nothing to listing.</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="4">
+													<p class="under_description">You can only see up to 90 days of history.</p>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="4">
+													<div class="pagination">
+														<a href="#prev" class="prev_page">previous page</a>
+														<a href="#none" class="on">1</a>
+														<a href="#none">2</a>
+														<a href="#none">3</a>
+														<a href="#none">4</a>
+														<a href="#none">5</a>
+														<a href="#none">6</a>
+														<a href="#none">7</a>
+														<a href="#none">8</a>
+														<a href="#none">9</a>
+														<a href="#none">10</a>
+														<a href="#next" class="next_page">next page</a>
+													</div>
+												</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+							</div>
+							<!-- [End] T-Cash History - All -->
+							<!-- [Start] T-Cash History - Use -->
+							<div class="tab_content_TcashHistory">
+								<div class="history_table_wrapper">
+									<div class="selectbox_wrapper">
+										<div class="selectbox_top">
+											<span class="seleted_value">Last 90 days</span>
+										</div>
+										<ul class="selectbox_options">
+											<li value="option01">Last 90 days</li>
+											<li value="option02">Last 30 days</li>
+											<li value="option03">Last 7 days</li>
+											<li value="option04">Today</li>
+										</ul>
+									</div>
+									<table class="history_table">
+										<caption>
+											<strong>T-cash 사용 내역</strong>
+											<p>date, description, income and outgoings</p>
+										</caption>
+										<colgroup>
+											<col style="width: 20%">
+											<col>
+											<col style="width: 20%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">Date</th>
+												<th scope="col">Description</th>
+												<th scope="col">Use(-) / Add(+)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="no_history">
+												<td colspan="4">There are nothing to listing.</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="4">
+													<div class="pagination">
+														<a href="#none" class="on">1</a>
+													</div>
+												</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+							</div>
+							<!-- [End] T-Cash History - Use -->
+							<!-- [Start] T-Cash History - Add -->
+							<div class="tab_content_TcashHistory">
+								<div class="history_table_wrapper">
+									<div class="selectbox_wrapper">
+										<div class="selectbox_top">
+											<span class="seleted_value">Last 90 days</span>
+										</div>
+										<ul class="selectbox_options">
+											<li value="option01">Last 90 days</li>
+											<li value="option02">Last 30 days</li>
+											<li value="option03">Last 7 days</li>
+											<li value="option04">Today</li>
+										</ul>
+									</div>
+									<table class="history_table">
+										<caption>
+											<strong>T-cash 사용 내역</strong>
+											<p>date, description, income and outgoings</p>
+										</caption>
+										<colgroup>
+											<col style="width: 20%">
+											<col>
+											<col style="width: 20%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">Date</th>
+												<th scope="col">Description</th>
+												<th scope="col">Use(-) / Add(+)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2017.08.10 14:20</td>
+												<td>Refilled</td>
+												<td>
+													<span>+ 100</span>
+												</td>
+											</tr>
+											<tr>
+												<td>2017.08.10 14:20</td>
+												<td>Gift</td>
+												<td>
+													<span>+ 6500</span>
+												</td>
+											</tr>
+											<tr>
+												<td>2017.08.10 14:20</td>
+												<td>Daily income</td>
+												<td>
+													<span>+ 50</span>
+												</td>
+											</tr>
+											<tr>
+												<td>2017.08.10 14:20</td>
+												<td>Purchase content</td>
+												<td>+ 500</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="4">
+													<p class="under_description">You can only see up to 90 days of history.</p>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="4">
+													<div class="pagination">
+														<a href="#prev" class="prev_page">previous page</a>
+														<a href="#none" class="on">1</a>
+														<a href="#none">2</a>
+														<a href="#none">3</a>
+														<a href="#none">4</a>
+														<a href="#none">5</a>
+														<a href="#none">6</a>
+														<a href="#none">7</a>
+														<a href="#none">8</a>
+														<a href="#none">9</a>
+														<a href="#none">10</a>
+														<a href="#next" class="next_page">next page</a>
+													</div>
+												</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+							</div>
+							<!-- [End] T-Cash History - Add -->
+						</div>
+					</div>
+				</div>
+				<!-- [End] Tab Contents - T-Cash History -->
+
+				<!-- [Start] Tab Contents - Sales History -->
+				<div class="tab_content_wallet">
+					<div class="history_table_wrapper">
+						<div class="sales_top_area clearfix">
+							<span class="total_count">Total <span>95</span></span>
+							<div class="selectbox_wrapper">
+								<div class="selectbox_top">
+									<span class="seleted_value">Last 90 days</span>
+								</div>
+								<ul class="selectbox_options">
+									<li value="option01">Last 90 days</li>
+									<li value="option02">Last 30 days</li>
+									<li value="option03">Last 7 days</li>
+									<li value="option04">Today</li>
+								</ul>
+							</div>
+						</div>
+						<table class="history_table type_sales">
+							<caption>
+								<strong>T-cash 사용 내역</strong>
+								<p>date, description, income and outgoings</p>
+							</caption>
+							<colgroup>
+								<col style="width: 20%">
+								<col>
+								<col style="width: 20%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">Date</th>
+									<th scope="col">Description</th>
+									<th scope="col">Use(-) / Add(+)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2017.08.10 14:20</td>
+									<td>Contents Title 1</td>
+									<td>
+										<span class="t_cash">100</span>
+									</td>
+								</tr>
+								<tr>
+									<td>2017.08.10 14:20</td>
+									<td>Contents Title 2</td>
+									<td>
+										<span class="t_cash">300</span>
+									</td>
+								</tr>
+								<tr>
+									<td>2017.08.10 14:20</td>
+									<td>Contents Title 3</td>
+									<td>
+										<span>Refunded</span>
+									</td>
+								</tr>
+								<tr>
+									<td>2017.08.10 14:20</td>
+									<td>Contents Title 4</td>
+									<td>
+										<span class="t_cash">100</span>
+									</td>
+								</tr>
+								<tr>
+									<td>2017.08.10 14:20</td>
+									<td>Contents Title 5</td>
+									<td>
+										<span class="t_cash">300</span>
+									</td>
+								</tr>
+								<tr>
+									<td>2017.08.10 14:20</td>
+									<td>Contents Title 6</td>
+									<td>
+										<span>Refunded</span>
+									</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="4">
+										<p class="under_description">You can only see up to 90 days of history.</p>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="4">
+										<div class="pagination">
+											<a href="#prev" class="prev_page">previous page</a>
+											<a href="#none" class="on">1</a>
+											<a href="#none">2</a>
+											<a href="#none">3</a>
+											<a href="#none">4</a>
+											<a href="#none">5</a>
+											<a href="#none">6</a>
+											<a href="#none">7</a>
+											<a href="#none">8</a>
+											<a href="#none">9</a>
+											<a href="#none">10</a>
+											<a href="#next" class="next_page">next page</a>
+										</div>
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+				<!-- [End] Tab Contents - Sales History -->
+
+				<!-- [Start] Tab Contents - Exchange -->
+				<div class="tab_content_wallet">
+					<div class="tab_panel_Exchange">
+						<ul class="tab_menu_Exchange clearfix">
+							<li class="on">
+								<a href="#All">Request</a>
+							</li>
+							<li>
+								<a href="#Use">Status</a>
+							</li>
+						</ul>
+						<div class="tab_container_Exchange">
+							<!-- [Start] Exchange - Request -->
+							<div class="tab_content_Exchange on">
+
+								<div class="request_panel">
+									<div class="total_sales">
+										<em>Total sales</em>
+										<strong class="ico_Tcash">7,000</strong>
+									</div>
+									<div class="exchangable">
+										<em>Exchangable</em>
+										<ul>
+											<li>
+												<span>T-Cash (Service Available)</span>
+												<strong class="ico_Tcash">3,500</strong>
+											</li>
+											<li>
+												<span>Cash price (Bank Account)</span>
+												<strong class="refund">$ 31.19</strong>
+											</li>
+										</ul>
+
+									</div>
+								</div>
+
+
+
+
+								<div class="request_under_area">
+									<em>Request Amount</em>
+
+									<div class="select_refund">
+										<input type="radio" name="refund" id="refund1" checked>
+										<label for="refund1">
+											<span></span>T-Cash
+										</label>
+										<input type="radio" name="refund" id="refund2">
+										<label for="refund2">
+											<span></span>Cash Price
+										</label>
+									</div>
+
+
+									<div class="input_wrapper">
+										<label for="request">Request Amount</label>
+										<input type="number" name="request_amount" id="request">
+										<button type="button" class="btn_del_txt">delete all text</button>
+									</div>
+									<p class="txt_error on">You can apply for the remaining amount at <span>T2500</span>, <span>$22.28</span></p>
+
+
+									<span class="tit_check_info">Exchangeable? </span>
+									<ul class="info_list">
+										<li>total sales amount  is not available for TiTAN service. It is available through exchange request.<br>The Exchange request is possible when total sales amount T1000 more</li>
+									</ul>
+
+									<span class="tit_check_info">After make request to exchange, please send us an Email with information below.</span>
+									<ul class="info_list">
+										<li>Paypal Account that you want to receive exchange amount</li>
+										<li>Your TiTAN Play account and Profile Name</li>
+										<li>Requested Amount</li>
+										<li>Transaction can take up to 14 business days to process.</li>
+									</ul>
+
+
+									<div class="exchange_check">
+										<input type="checkbox" id="exchange_agree">
+										<label for="exchange_agree"><span></span>I checked every inform that I write. I’ll take every damages from dismissed information.</label>
+									</div>
+									<div class="btn_area changableBtn">
+										<button type="button" class="btn_bg_magenta">T-Cash conversion request</button>
+										<button type="button" class="btn_bg_magenta hide">Cash payment request</button>
+									</div>
+								</div>
+							</div>
+							<!-- [End] Exchange - Request -->
+
+							<!-- [Start] Exchange - Status -->
+							<div class="tab_content_Exchange">
+								<div class="history_table_wrapper">
+									<div class="selectbox_wrapper">
+										<div class="selectbox_top">
+											<span class="seleted_value">Last 90 days</span>
+										</div>
+										<ul class="selectbox_options">
+											<li value="option01">Last 90 days</li>
+											<li value="option02">Last 30 days</li>
+											<li value="option03">Last 7 days</li>
+											<li value="option04">Today</li>
+										</ul>
+									</div>
+									<table class="history_table type_exchange">
+										<caption>
+											<strong>T-cash 사용 내역</strong>
+											<p>date, description, income and outgoings</p>
+										</caption>
+										<colgroup>
+											<col style="width: 20%">
+											<col>
+											<col style="width: 20%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">Date</th>
+												<th scope="col">Request</th>
+												<th scope="col">Stauts</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2017.08.10 14:20</td>
+												<td>T 7,000 ($63.15)</td>
+												<td>
+													<span>Processing</span>
+												</td>
+											</tr>
+											<tr>
+												<td>2017.08.10 14:20</td>
+												<td>T 5,500 ($43.75)</td>
+												<td>
+													<span class="done">Done (2017.08.10)</span>
+												</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="4">
+													<div class="pagination">
+														<a href="#prev" class="prev_page">previous page</a>
+														<a href="#none" class="on">1</a>
+														<a href="#none">2</a>
+														<a href="#none">3</a>
+														<a href="#none">4</a>
+														<a href="#none">5</a>
+														<a href="#none">6</a>
+														<a href="#none">7</a>
+														<a href="#none">8</a>
+														<a href="#none">9</a>
+														<a href="#none">10</a>
+														<a href="#next" class="next_page">next page</a>
+													</div>
+												</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+							</div>
+							<!-- [End] Exchange - Status -->
+
+						</div>
+					</div>
+				</div>
+				<!-- [End] Tab Contents - Exchange -->
+
+			</div>
+		</div>
+
+
+
+	</div>
+	<!-- [End] Main container -->
+</div>
+
+
+<!-- [Start] Popup - 환전 동의 -->
+<div class="pop_dim exchange_agreement">
+	<div class="pop_container">
+		<h3>Agreement for exchange</h3>
+		<button type="button" class="btn_close_pop" data-close-pop="close_pop">close popup</button>
+
+		<div>
+			<em class="tit_exchange_info">Agreement for exchange T-Cash(earned) to cash</em>
+			<ul class="desc_type01">
+				<li>10% fees will charge to your exchange amount. this fees including transaction fee.</li>
+				<li>exchange transaction CANNOT be restore.</li>
+				<li>this transaction can take 7 to 14 business hours to process.</li>
+
+			</ul>
+		</div>
+
+		<div class="btn_area">
+			<button type="button" class="btn_bg_magenta">I agree</button>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - 환전 동의 -->
+
+
+<!-- [Start] Popup - 콘텐츠 구매 취소 -->
+<div class="pop_dim pop_cancel_purchase">
+	<div class="pop_container">
+		<button type="button" class="btn_close_pop" data-close-pop="close_pop">close popup</button>
+		<i class="ico_caution">caution</i>
+		<p class="txt_alert">구매취소하시겠습니까?</p>
+		<div class="btn_area">
+			<button type="button" class="btn_bg_gray" data-close-pop="close_pop">취소</button>
+			<button type="button" class="btn_bg_magenta">확인</button>
+		</div>
+	</div>
+</div>
+<!-- [End] Popup - 콘텐츠 구매 취소 -->
+
+
+
+<!-- custom scroll bar js -->
+<script type="text/javascript" src="../resources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+<script type="text/javascript">
+
+	/*체크박스 클릭시 팝업 노출*/
+	$('.exchange_check label').on('click', function(){
+		if( $('input:checkbox[id="exchange_agree"]').is(':checked') == false) {
+			$('.exchange_agreement').show();
+		}
+	});
+
+	/*환전 버튼 선택에 따른 하단 결과 버튼 변경*/
+	$('input:radio[id="refund1"]').on('click', function(){
+		$('.changableBtn button').eq(0).removeClass('hide');
+		$('.changableBtn button').eq(1).addClass('hide');
+	});
+	$('input:radio[id="refund2"]').on('click', function(){
+		$('.changableBtn button').eq(1).removeClass('hide');
+		$('.changableBtn button').eq(0).addClass('hide');
+	});
+
+
+</script>
+
+
+<!-- 공통 js -->
+<script type="text/javascript" src="../resources/js/common_pub.js"></script>
+</body>
+</html>
