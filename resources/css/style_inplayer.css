@@ -265,6 +265,7 @@ li.on .search_box .input_search {
 	width: 30px !important;
 	height: 30px !important;
 	background: url("../images/gateway/inplayer/btn-delete.png") center center no-repeat;
+	background-size: auto !important;
 	vertical-align: top;
 	outline: none;
 }
