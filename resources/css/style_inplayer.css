@@ -193,33 +193,38 @@ body {
 	width: 18px;
 	height: 30px;
 	text-indent: -9999px;
-	opacity: 0.5;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
 	transition: all 0.3s;
+	opacity: 0.5;
 }
 .inplayer_header_container .rigt_item_wrapper ul li.on button,
 .inplayer_header_container .rigt_item_wrapper ul li button:hover {
 	opacity: 1;
 }
 .inplayer_header_container .rigt_item_wrapper .btn_search {
-	background: url("../images/gateway/inplayer/icon_search_hover.png") center center no-repeat;
-	background-size: contain;
+	background-image: url("../images/gateway/inplayer/icon_search_hover.png");
 }
 .inplayer_header_container .rigt_item_wrapper .btn_upload {
-	background: url("../images/gateway/inplayer/icon_uproad_hover.png") center center no-repeat;
-	background-size: contain;
+	background-image: url("../images/gateway/inplayer/icon_uproad_hover.png");
 }
 .inplayer_header_container .rigt_item_wrapper .btn_folder {
-	background: url("../images/gateway/inplayer/icon_folder_hover.png") center center no-repeat;
-	background-size: contain;
+	background-image: url("../images/gateway/inplayer/icon_folder_hover.png");
 }
 .inplayer_header_container .rigt_item_wrapper .btn_setting {
-	background: url("../images/gateway/inplayer/icon_setting_hover.png") center center no-repeat;
-	background-size: contain;
+	background-image: url("../images/gateway/inplayer/icon_setting_hover.png");
 }
 .inplayer_header_container .rigt_item_wrapper .btn_info {
-	background: url("../images/gateway/inplayer/icon_info_hover.png") center center no-repeat;
-	background-size: contain;
+	background-image: url("../images/gateway/inplayer/icon_info_hover.png");
 }
+.inplayer_header_container .rigt_item_wrapper .btn_vod {
+	background-image: url("../images/gateway/inplayer/icon_vod_hover.png");
+}
+.inplayer_header_container .rigt_item_wrapper .btn_camera {
+	background-image: url("../images/gateway/inplayer/icon_camera_hover.png");
+}
+
 
 /*Header - Search*/
 li.on .search_box {
