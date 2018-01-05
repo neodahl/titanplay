@@ -89,19 +89,19 @@ $('.btn_del_txt').on('click', function(){
 
 /*Header - 사용자 메뉴 팝업*/
 $('.btn_user').on('click', function(){
-    $('.user_pop').toggleClass('on'); /*사용자 이미지 재클릭시 on 사라지지 않음. 다시 확인해야함.*/
+    $('.user_pop').toggleClass('on');
 });
+// 사용자 메뉴 팝업 외 클릭시
+$(document).mouseup(exceptLayer);
 
-/*사용자 메뉴 팝업 외 클릭시*/
-$(document).mouseup(function(e){
+function exceptLayer(e){
     var targetLayer = $('.user_pop');
+    var profileimg = $('.btn_user img');
 
-    if( !targetLayer.is(e.target) && targetLayer.has(e.target).length === 0 ) {
+    if( !targetLayer.is(e.target) && targetLayer.has(e.target).length === 0 && !profileimg.is(e.target) ) {
         targetLayer.removeClass('on');
     }
-});
-
-
+};
 
 
 
